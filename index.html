@@ -1,1766 +1,1231 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<title>Trust&Co Web Services | Payment Gateway & Digital Solutions</title>
 
-<meta name="description"
-content="Trust&Co Web Services — A newly established technology business providing payment gateway solutions, web development, e-commerce, AI and digital solutions.">
+<meta name="description" content="Trust&Co Web Services is a newly established business providing payment gateway solutions, website development, e-commerce, AI integration and digital business solutions.">
 
 <meta name="theme-color" content="#050505">
 
-<title>
-Trust&Co Web Services | Payment Gateway & Digital Solutions
-</title>
-
-
 <style>
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-background:#050505;
-color:#fff;
-font-family:
-Inter,
--apple-system,
-BlinkMacSystemFont,
-"Segoe UI",
-Arial,
-sans-serif;
-overflow-x:hidden;
+    background:#050505;
+    color:#fff;
+    font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+    overflow-x:hidden;
 }
 
 a{
-text-decoration:none;
-color:inherit;
+    text-decoration:none;
+    color:inherit;
 }
 
 button,
 input,
 textarea,
 select{
-font:inherit;
+    font:inherit;
 }
 
 :root{
-
---red:#e50914;
---red2:#ff303a;
---white:#fff;
---muted:#929292;
---line:rgba(255,255,255,.10);
---panel:rgba(255,255,255,.045);
-
+    --red:#e50914;
+    --red2:#ff303a;
+    --white:#fff;
+    --muted:#929292;
+    --line:rgba(255,255,255,.10);
+    --panel:rgba(255,255,255,.045);
 }
 
 ::selection{
-background:var(--red);
-color:#fff;
+    background:var(--red);
+    color:#fff;
+}
+
+::-webkit-scrollbar{
+    width:7px;
+}
+
+::-webkit-scrollbar-track{
+    background:#050505;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#333;
+    border-radius:20px;
 }
 
 
-/* =========================
+/* =========================================================
 NAVIGATION
-========================= */
+========================================================= */
 
 nav{
-
-position:fixed;
-top:0;
-left:0;
-right:0;
-
-z-index:1000;
-
-padding:18px 5%;
-
-background:rgba(5,5,5,.72);
-
-backdrop-filter:blur(22px);
-
-border-bottom:
-1px solid rgba(255,255,255,.07);
-
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:1000;
+    padding:18px 5%;
+    background:rgba(5,5,5,.75);
+    backdrop-filter:blur(22px);
+    border-bottom:1px solid rgba(255,255,255,.07);
 }
 
 .nav{
-
-max-width:1400px;
-margin:auto;
-
-display:flex;
-align-items:center;
-justify-content:space-between;
-
+    max-width:1400px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
 .logo{
-
-font-size:25px;
-font-weight:900;
-letter-spacing:-1.7px;
-
+    font-size:25px;
+    font-weight:900;
+    letter-spacing:-1.7px;
 }
 
 .logo span{
-color:var(--red);
+    color:var(--red);
 }
 
 .navlinks{
-
-display:flex;
-gap:30px;
-
-color:#aaa;
-
-font-size:14px;
-
+    display:flex;
+    gap:28px;
+    color:#aaa;
+    font-size:14px;
 }
 
 .navlinks a{
-
-transition:.25s;
-
+    transition:.25s;
 }
 
 .navlinks a:hover{
-
-color:#fff;
-
+    color:#fff;
 }
 
 .navbtn{
-
-padding:12px 20px;
-
-background:var(--red);
-
-border-radius:50px;
-
-font-weight:800;
-
-transition:.3s;
-
+    padding:12px 20px;
+    background:var(--red);
+    border-radius:50px;
+    font-weight:800;
+    transition:.3s;
 }
 
 .navbtn:hover{
-
-transform:translateY(-2px);
-
-box-shadow:
-0 12px 35px rgba(229,9,20,.35);
-
+    transform:translateY(-2px);
+    box-shadow:0 12px 35px rgba(229,9,20,.35);
 }
 
 .menu{
-
-display:none;
-
-font-size:25px;
-
-cursor:pointer;
-
+    display:none;
+    font-size:25px;
+    cursor:pointer;
 }
 
 
-/* =========================
+/* =========================================================
 HERO
-========================= */
+========================================================= */
 
 .hero{
-
-min-height:100vh;
-
-padding:
-135px 5%
-80px;
-
-display:flex;
-align-items:center;
-
-position:relative;
-
-overflow:hidden;
-
+    min-height:100vh;
+    padding:140px 5% 80px;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
 }
 
 .grid{
-
-position:absolute;
-
-inset:0;
-
-background-image:
-
-linear-gradient(
-rgba(255,255,255,.035) 1px,
-transparent 1px
-),
-
-linear-gradient(
-90deg,
-rgba(255,255,255,.035) 1px,
-transparent 1px
-);
-
-background-size:75px 75px;
-
-mask-image:
-linear-gradient(
-to bottom,
-#000,
-transparent 90%
-);
-
+    position:absolute;
+    inset:0;
+    background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+    background-size:75px 75px;
+    mask-image:linear-gradient(to bottom,#000,transparent 90%);
 }
 
 .glow{
-
-position:absolute;
-
-right:-250px;
-top:50px;
-
-width:700px;
-height:700px;
-
-border-radius:50%;
-
-background:
-radial-gradient(
-circle,
-rgba(229,9,20,.20),
-transparent 68%
-);
-
-filter:blur(20px);
-
+    position:absolute;
+    right:-250px;
+    top:50px;
+    width:700px;
+    height:700px;
+    border-radius:50%;
+    background:radial-gradient(circle,rgba(229,9,20,.20),transparent 68%);
+    filter:blur(20px);
 }
 
 .hero-inner{
-
-width:100%;
-
-max-width:1400px;
-
-margin:auto;
-
-display:grid;
-
-grid-template-columns:
-1.05fr .95fr;
-
-gap:50px;
-
-align-items:center;
-
-position:relative;
-
-z-index:2;
-
+    width:100%;
+    max-width:1400px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:50px;
+    align-items:center;
+    position:relative;
+    z-index:2;
 }
 
 .eyebrow{
-
-color:var(--red);
-
-font-size:12px;
-
-font-weight:850;
-
-letter-spacing:3px;
-
-text-transform:uppercase;
-
-margin-bottom:22px;
-
+    color:var(--red);
+    font-size:12px;
+    font-weight:850;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:22px;
 }
 
 .hero h1{
-
-font-size:
-clamp(48px,6.8vw,92px);
-
-line-height:.93;
-
-letter-spacing:-6px;
-
+    font-size:clamp(48px,6.8vw,92px);
+    line-height:.93;
+    letter-spacing:-6px;
 }
 
 .hero h1 span{
-
-color:var(--red);
-
+    color:var(--red);
 }
 
 .hero-text{
+    max-width:680px;
+    margin-top:28px;
+    font-size:18px;
+    line-height:1.75;
+    color:#999;
+}
 
-max-width:650px;
+.new-business{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:9px 14px;
+    margin-top:26px;
+    border:1px solid rgba(229,9,20,.35);
+    background:rgba(229,9,20,.07);
+    border-radius:100px;
+    color:#ddd;
+    font-size:12px;
+}
 
-margin-top:28px;
-
-font-size:18px;
-
-line-height:1.75;
-
-color:#999;
-
+.new-dot{
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:var(--red);
+    box-shadow:0 0 14px var(--red);
 }
 
 .buttons{
-
-display:flex;
-
-gap:12px;
-
-flex-wrap:wrap;
-
-margin-top:34px;
-
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:34px;
 }
 
 .btn{
-
-display:inline-flex;
-
-align-items:center;
-
-justify-content:center;
-
-gap:8px;
-
-padding:14px 22px;
-
-border:0;
-
-border-radius:100px;
-
-background:var(--red);
-
-color:#fff;
-
-font-weight:800;
-
-cursor:pointer;
-
-transition:.3s;
-
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:14px 22px;
+    border:0;
+    border-radius:100px;
+    background:var(--red);
+    color:#fff;
+    font-weight:800;
+    cursor:pointer;
+    transition:.3s;
 }
 
 .btn:hover{
-
-transform:translateY(-3px);
-
-background:var(--red2);
-
-box-shadow:
-0 15px 45px rgba(229,9,20,.30);
-
+    transform:translateY(-3px);
+    background:var(--red2);
+    box-shadow:0 15px 45px rgba(229,9,20,.30);
 }
 
 .btn.white{
+    background:#fff;
+    color:#050505;
+}
 
-background:#fff;
+.btn.outline{
+    background:transparent;
+    border:1px solid rgba(255,255,255,.15);
+}
 
-color:#050505;
-
+.btn.outline:hover{
+    background:#fff;
+    color:#050505;
 }
 
 
-/* =========================
+/* =========================================================
 TECH VISUAL
-========================= */
+========================================================= */
 
 .visual{
-
-height:530px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-position:relative;
-
+    height:530px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
 }
 
 .core{
-
-width:190px;
-height:190px;
-
-border:
-1px solid rgba(255,255,255,.25);
-
-border-radius:50%;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-font-size:35px;
-
-font-weight:900;
-
-position:relative;
-
-box-shadow:
-
-0 0 100px rgba(229,9,20,.17),
-
-inset 0 0 70px rgba(229,9,20,.08);
-
-animation:
-spin 18s linear infinite;
-
+    width:190px;
+    height:190px;
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:35px;
+    font-weight:900;
+    position:relative;
+    box-shadow:
+        0 0 100px rgba(229,9,20,.17),
+        inset 0 0 70px rgba(229,9,20,.08);
+    animation:spin 18s linear infinite;
 }
 
 .core:before,
 .core:after{
-
-content:"";
-
-position:absolute;
-
-border-radius:50%;
-
-border:
-1px solid rgba(229,9,20,.55);
-
+    content:"";
+    position:absolute;
+    border-radius:50%;
+    border:1px solid rgba(229,9,20,.55);
 }
 
 .core:before{
-inset:25px;
+    inset:25px;
 }
 
 .core:after{
-
-inset:55px;
-
-border-color:
-rgba(255,255,255,.18);
-
+    inset:55px;
+    border-color:rgba(255,255,255,.18);
 }
 
 .coretext{
-
-position:relative;
-
-z-index:5;
-
-animation:
-reverseSpin 18s linear infinite;
-
+    position:relative;
+    z-index:5;
+    animation:reverseSpin 18s linear infinite;
 }
 
 .coretext span{
-
-color:var(--red);
-
+    color:var(--red);
 }
 
 .orbit{
-
-position:absolute;
-
-width:330px;
-height:330px;
-
-border:
-1px solid rgba(255,255,255,.08);
-
-border-radius:50%;
-
-animation:
-spin 25s linear infinite reverse;
-
+    position:absolute;
+    width:330px;
+    height:330px;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:50%;
+    animation:spin 25s linear infinite reverse;
 }
 
 .orbit.two{
-
-width:450px;
-height:450px;
-
-animation-duration:36s;
-
+    width:450px;
+    height:450px;
+    animation-duration:36s;
 }
 
 .node{
-
-position:absolute;
-
-width:12px;
-height:12px;
-
-border-radius:50%;
-
-background:var(--red);
-
-box-shadow:
-0 0 25px var(--red);
-
+    position:absolute;
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:var(--red);
+    box-shadow:0 0 25px var(--red);
 }
 
-.n1{
-top:5%;
-left:50%;
-}
-
-.n2{
-right:3%;
-top:50%;
-}
-
-.n3{
-bottom:5%;
-left:50%;
-}
-
-.n4{
-left:3%;
-top:50%;
-}
-
-.n5{
-top:17%;
-right:15%;
-}
-
-.n6{
-bottom:17%;
-left:15%;
-}
+.n1{top:5%;left:50%}
+.n2{right:3%;top:50%}
+.n3{bottom:5%;left:50%}
+.n4{left:3%;top:50%}
+.n5{top:17%;right:15%}
+.n6{bottom:17%;left:15%}
 
 .packet{
-
-position:absolute;
-
-width:6px;
-height:6px;
-
-border-radius:50%;
-
-background:#fff;
-
-box-shadow:
-0 0 14px #fff;
-
-animation:
-packet 4s linear infinite;
-
+    position:absolute;
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:#fff;
+    box-shadow:0 0 14px #fff;
+    animation:packet 4s linear infinite;
 }
 
-.p1{
-left:18%;
-top:50%;
-}
-
-.p2{
-left:50%;
-top:18%;
-animation-delay:1s;
-}
-
-.p3{
-right:18%;
-top:50%;
-animation-delay:2s;
-}
-
-.p4{
-left:50%;
-bottom:18%;
-animation-delay:3s;
-}
+.p1{left:18%;top:50%}
+.p2{left:50%;top:18%;animation-delay:1s}
+.p3{right:18%;top:50%;animation-delay:2s}
+.p4{left:50%;bottom:18%;animation-delay:3s}
 
 @keyframes spin{
-
-to{
-transform:rotate(360deg);
-}
-
+    to{transform:rotate(360deg)}
 }
 
 @keyframes reverseSpin{
-
-to{
-transform:rotate(-360deg);
-}
-
+    to{transform:rotate(-360deg)}
 }
 
 @keyframes packet{
-
-0%{
-transform:translateX(0);
-opacity:0;
-}
-
-15%{
-opacity:1;
-}
-
-100%{
-transform:translateX(150px);
-opacity:0;
-}
-
+    0%{transform:translateX(0);opacity:0}
+    15%{opacity:1}
+    100%{transform:translateX(150px);opacity:0}
 }
 
 
-/* =========================
-GENERAL SECTIONS
-========================= */
+/* =========================================================
+GENERAL
+========================================================= */
 
 section{
-
-padding:
-125px 5%;
-
+    padding:125px 5%;
 }
 
 .container{
-
-max-width:1400px;
-
-margin:auto;
-
+    max-width:1400px;
+    margin:auto;
 }
 
 .title{
-
-max-width:800px;
-
-margin-bottom:58px;
-
+    max-width:850px;
+    margin-bottom:58px;
 }
 
 .title h2{
-
-font-size:
-clamp(42px,5vw,68px);
-
-line-height:.98;
-
-letter-spacing:-4px;
-
+    font-size:clamp(42px,5vw,68px);
+    line-height:.98;
+    letter-spacing:-4px;
 }
 
 .title p{
-
-color:#8c8c8c;
-
-font-size:17px;
-
-line-height:1.75;
-
-margin-top:20px;
-
+    color:#8c8c8c;
+    font-size:17px;
+    line-height:1.75;
+    margin-top:20px;
 }
 
 
-/* =========================
-NEW BUSINESS BADGE
-========================= */
-
-.new-business{
-
-display:inline-flex;
-
-align-items:center;
-
-gap:10px;
-
-padding:9px 14px;
-
-border:
-1px solid rgba(229,9,20,.35);
-
-background:
-rgba(229,9,20,.07);
-
-border-radius:100px;
-
-font-size:12px;
-
-color:#ddd;
-
-margin-top:28px;
-
-}
-
-.new-business-dot{
-
-width:7px;
-height:7px;
-
-background:var(--red);
-
-border-radius:50%;
-
-box-shadow:
-0 0 12px var(--red);
-
-}
-
-
-/* =========================
-PAYMENT
-========================= */
+/* =========================================================
+PAYMENTS
+========================================================= */
 
 .payment{
-
-background:
-radial-gradient(
-circle at 80% 20%,
-rgba(229,9,20,.08),
-transparent 35%
-);
-
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(229,9,20,.08),
+            transparent 35%
+        );
 }
 
 .flow{
-
-display:grid;
-
-grid-template-columns:
-repeat(5,1fr);
-
-gap:14px;
-
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:14px;
 }
 
 .flowcard{
-
-min-height:230px;
-
-padding:28px;
-
-border:
-1px solid var(--line);
-
-background:
-var(--panel);
-
-border-radius:25px;
-
-transition:.35s;
-
+    min-height:230px;
+    padding:28px;
+    border:1px solid var(--line);
+    background:var(--panel);
+    border-radius:25px;
+    transition:.35s;
 }
 
 .flowcard:hover{
-
-transform:
-translateY(-8px);
-
-border-color:
-rgba(229,9,20,.5);
-
+    transform:translateY(-8px);
+    border-color:rgba(229,9,20,.5);
 }
 
 .number{
-
-color:var(--red);
-
-font-size:12px;
-
-font-weight:900;
-
-letter-spacing:2px;
-
+    color:var(--red);
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:2px;
 }
 
 .flowcard h3{
-
-margin-top:65px;
-
-font-size:20px;
-
+    margin-top:65px;
+    font-size:20px;
 }
 
 .flowcard p{
-
-margin-top:10px;
-
-color:#858585;
-
-font-size:14px;
-
-line-height:1.6;
-
+    margin-top:10px;
+    color:#858585;
+    font-size:14px;
+    line-height:1.6;
 }
 
 
-/* =========================
+/* =========================================================
 PROCESS
-========================= */
+========================================================= */
 
 .dark{
-
-background:#080808;
-
+    background:#080808;
 }
 
 .process{
-
-display:grid;
-
-grid-template-columns:
-repeat(4,1fr);
-
-gap:16px;
-
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
 }
 
 .processcard{
-
-min-height:220px;
-
-padding:30px;
-
-border-top:
-1px solid var(--red);
-
-background:
-linear-gradient(
-180deg,
-rgba(255,255,255,.035),
-transparent
-);
-
+    min-height:220px;
+    padding:30px;
+    border-top:1px solid var(--red);
+    background:linear-gradient(
+        180deg,
+        rgba(255,255,255,.035),
+        transparent
+    );
 }
 
 .processnumber{
-
-font-size:50px;
-
-font-weight:900;
-
-color:#333;
-
+    font-size:50px;
+    font-weight:900;
+    color:#333;
 }
 
 .processcard h3{
-
-margin-top:20px;
-
+    margin-top:20px;
 }
 
 .processcard p{
-
-margin-top:10px;
-
-color:#858585;
-
-line-height:1.65;
-
+    margin-top:10px;
+    color:#858585;
+    line-height:1.65;
 }
 
 
-/* =========================
+/* =========================================================
 SERVICES
-========================= */
+========================================================= */
 
 .services{
-
-display:grid;
-
-grid-template-columns:
-repeat(3,1fr);
-
-gap:16px;
-
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
 }
 
 .service{
-
-min-height:250px;
-
-padding:32px;
-
-border:
-1px solid var(--line);
-
-border-radius:25px;
-
-background:
-linear-gradient(
-145deg,
-rgba(255,255,255,.05),
-rgba(255,255,255,.015)
-);
-
-transition:.35s;
-
+    min-height:250px;
+    padding:32px;
+    border:1px solid var(--line);
+    border-radius:25px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.05),
+            rgba(255,255,255,.015)
+        );
+    transition:.35s;
 }
 
 .service:hover{
-
-transform:
-translateY(-7px);
-
-border-color:
-rgba(229,9,20,.5);
-
+    transform:translateY(-7px);
+    border-color:rgba(229,9,20,.5);
 }
 
 .serviceicon{
-
-font-size:28px;
-
-color:var(--red);
-
+    font-size:28px;
+    color:var(--red);
 }
 
 .service h3{
-
-margin-top:55px;
-
-font-size:21px;
-
+    margin-top:55px;
+    font-size:21px;
 }
 
 .service p{
-
-margin-top:10px;
-
-color:#888;
-
-font-size:14px;
-
-line-height:1.65;
-
+    margin-top:10px;
+    color:#888;
+    font-size:14px;
+    line-height:1.65;
 }
 
 
-/* =========================
+/* =========================================================
 AI SECTION
-========================= */
+========================================================= */
 
 .ai-section{
-
-background:
-
-radial-gradient(
-circle at 50% 50%,
-rgba(229,9,20,.10),
-transparent 45%
-),
-
-#070707;
-
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(229,9,20,.10),
+            transparent 45%
+        ),
+        #070707;
 }
 
 .ai-box{
-
-border:
-1px solid var(--line);
-
-border-radius:35px;
-
-padding:65px;
-
-background:
-linear-gradient(
-145deg,
-rgba(255,255,255,.055),
-rgba(255,255,255,.015)
-);
-
-display:grid;
-
-grid-template-columns:
-1fr 1fr;
-
-gap:60px;
-
-align-items:center;
-
+    border:1px solid var(--line);
+    border-radius:35px;
+    padding:65px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.055),
+            rgba(255,255,255,.015)
+        );
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
 }
 
 .ai-box h2{
-
-font-size:
-clamp(40px,5vw,65px);
-
-letter-spacing:-4px;
-
-line-height:.98;
-
+    font-size:clamp(40px,5vw,65px);
+    letter-spacing:-4px;
+    line-height:.98;
 }
 
 .ai-box p{
-
-margin-top:20px;
-
-color:#999;
-
-line-height:1.7;
-
+    margin-top:20px;
+    color:#999;
+    line-height:1.7;
 }
 
 .ai-points{
-
-display:grid;
-
-gap:12px;
-
+    display:grid;
+    gap:12px;
 }
 
 .ai-point{
-
-padding:17px 20px;
-
-border:
-1px solid var(--line);
-
-border-radius:15px;
-
-background:
-rgba(255,255,255,.025);
-
-color:#bbb;
-
+    padding:17px 20px;
+    border:1px solid var(--line);
+    border-radius:15px;
+    background:rgba(255,255,255,.025);
+    color:#bbb;
 }
 
 .ai-point b{
-
-color:#fff;
-
+    color:#fff;
 }
 
 
-/* =========================
-ABOUT / NEW BUSINESS
-========================= */
+/* =========================================================
+ABOUT / REAL BUSINESS INFORMATION
+========================================================= */
 
 .aboutbox{
-
-border:
-1px solid var(--line);
-
-border-radius:30px;
-
-padding:50px;
-
-background:
-linear-gradient(
-145deg,
-rgba(229,9,20,.07),
-rgba(255,255,255,.02)
-);
-
+    border:1px solid var(--line);
+    border-radius:30px;
+    padding:50px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(229,9,20,.07),
+            rgba(255,255,255,.02)
+        );
 }
 
 .aboutbox h3{
-
-font-size:30px;
-
-letter-spacing:-1px;
-
+    font-size:30px;
+    letter-spacing:-1px;
 }
 
 .aboutbox p{
-
-margin-top:18px;
-
-max-width:900px;
-
-color:#999;
-
-font-size:16px;
-
-line-height:1.8;
-
+    margin-top:18px;
+    max-width:950px;
+    color:#999;
+    font-size:16px;
+    line-height:1.8;
 }
 
 .aboutfacts{
-
-display:grid;
-
-grid-template-columns:
-repeat(3,1fr);
-
-gap:14px;
-
-margin-top:35px;
-
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+    margin-top:35px;
 }
 
 .fact{
-
-padding:25px;
-
-border:
-1px solid var(--line);
-
-border-radius:18px;
-
-background:
-rgba(255,255,255,.025);
-
+    padding:25px;
+    border:1px solid var(--line);
+    border-radius:18px;
+    background:rgba(255,255,255,.025);
 }
 
 .fact strong{
-
-display:block;
-
-font-size:22px;
-
+    display:block;
+    font-size:21px;
 }
 
 .fact span{
-
-display:block;
-
-margin-top:7px;
-
-font-size:13px;
-
-color:#777;
-
+    display:block;
+    margin-top:7px;
+    font-size:13px;
+    color:#777;
 }
 
 
-/* =========================
+/* =========================================================
 CONTACT
-========================= */
+========================================================= */
 
 .contact{
-
-background:
-radial-gradient(
-circle at 15% 60%,
-rgba(229,9,20,.10),
-transparent 35%
-);
-
+    background:
+        radial-gradient(
+            circle at 15% 60%,
+            rgba(229,9,20,.10),
+            transparent 35%
+        );
 }
 
 .contact-grid{
-
-display:grid;
-
-grid-template-columns:
-1fr 1fr;
-
-gap:80px;
-
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
 }
 
 .contact h2{
-
-font-size:
-clamp(45px,5.5vw,75px);
-
-line-height:.95;
-
-letter-spacing:-5px;
-
+    font-size:clamp(45px,5.5vw,75px);
+    line-height:.95;
+    letter-spacing:-5px;
 }
 
 .contactdesc{
-
-color:#999;
-
-font-size:17px;
-
-line-height:1.7;
-
-margin:
-25px 0 35px;
-
-max-width:600px;
-
+    color:#999;
+    font-size:17px;
+    line-height:1.7;
+    margin:25px 0 35px;
+    max-width:600px;
 }
 
 .contactbox{
-
-padding:30px;
-
-border:
-1px solid var(--line);
-
-border-radius:25px;
-
-background:
-var(--panel);
-
+    padding:30px;
+    border:1px solid var(--line);
+    border-radius:25px;
+    background:var(--panel);
 }
 
 .contactbox a{
+    display:block;
+    font-size:18px;
+    font-weight:750;
+    margin:18px 0;
+}
 
-display:block;
-
-font-size:19px;
-
-font-weight:750;
-
-margin:17px 0;
-
+.contactbox small{
+    color:#666;
+    line-height:1.6;
 }
 
 .form{
+    display:grid;
+    gap:12px;
+}
 
-display:grid;
-
-gap:12px;
-
+.form label{
+    font-size:12px;
+    color:#777;
+    margin-bottom:-5px;
 }
 
 .form input,
 .form textarea,
 .form select{
-
-width:100%;
-
-background:#0b0b0b;
-
-border:
-1px solid var(--line);
-
-border-radius:13px;
-
-color:#fff;
-
-padding:15px;
-
-outline:none;
-
+    width:100%;
+    background:#0b0b0b;
+    border:1px solid var(--line);
+    border-radius:13px;
+    color:#fff;
+    padding:15px;
+    outline:none;
 }
 
 .form input:focus,
 .form textarea:focus,
 .form select:focus{
-
-border-color:
-var(--red);
-
+    border-color:var(--red);
 }
 
 .form textarea{
-
-min-height:140px;
-
-resize:vertical;
-
+    min-height:140px;
+    resize:vertical;
 }
 
 .form small{
-
-color:#666;
-
-line-height:1.6;
-
+    color:#666;
+    line-height:1.6;
 }
 
 
-/* =========================
+/* =========================================================
+FAQ
+========================================================= */
+
+.faq{
+    display:grid;
+    gap:12px;
+    max-width:950px;
+}
+
+.faq-item{
+    border:1px solid var(--line);
+    border-radius:16px;
+    overflow:hidden;
+    background:rgba(255,255,255,.025);
+}
+
+.faq-question{
+    width:100%;
+    border:0;
+    background:none;
+    color:#fff;
+    padding:20px;
+    text-align:left;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    font-weight:750;
+}
+
+.faq-answer{
+    display:none;
+    padding:0 20px 20px;
+    color:#888;
+    line-height:1.7;
+    font-size:14px;
+}
+
+.faq-item.open .faq-answer{
+    display:block;
+}
+
+
+/* =========================================================
+LEGAL
+========================================================= */
+
+.legal{
+    background:#080808;
+}
+
+.legal-nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:40px;
+}
+
+.legal-nav button{
+    padding:11px 16px;
+    border:1px solid var(--line);
+    border-radius:50px;
+    background:#111;
+    color:#aaa;
+    cursor:pointer;
+}
+
+.legal-nav button.active,
+.legal-nav button:hover{
+    background:var(--red);
+    color:#fff;
+    border-color:var(--red);
+}
+
+.legal-page{
+    display:none;
+    max-width:1000px;
+    padding:40px;
+    border:1px solid var(--line);
+    border-radius:25px;
+    background:rgba(255,255,255,.025);
+}
+
+.legal-page.active{
+    display:block;
+}
+
+.legal-page h3{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.legal-page h4{
+    margin-top:28px;
+    margin-bottom:8px;
+    color:#fff;
+}
+
+.legal-page p,
+.legal-page li{
+    color:#8c8c8c;
+    line-height:1.8;
+    font-size:14px;
+}
+
+.legal-page ul{
+    padding-left:20px;
+}
+
+
+/* =========================================================
 FOOTER
-========================= */
+========================================================= */
 
 footer{
-
-padding:40px 5%;
-
-border-top:
-1px solid var(--line);
-
+    padding:45px 5%;
+    border-top:1px solid var(--line);
 }
 
 .footer{
+    max-width:1400px;
+    margin:auto;
+}
 
-max-width:1400px;
-
-margin:auto;
-
-display:flex;
-
-justify-content:space-between;
-
-gap:30px;
-
-color:#707070;
-
-font-size:13px;
-
+.footer-top{
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
 }
 
 .footer strong{
+    color:#fff;
+    font-size:18px;
+}
 
-color:#fff;
+.footer-text{
+    margin-top:8px;
+    color:#666;
+    font-size:13px;
+    line-height:1.7;
+}
 
-font-size:18px;
+.footer-links{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    color:#777;
+    font-size:13px;
+}
 
+.footer-links a:hover{
+    color:#fff;
+}
+
+.footer-bottom{
+    margin-top:35px;
+    padding-top:25px;
+    border-top:1px solid var(--line);
+    color:#555;
+    font-size:12px;
 }
 
 
-/* =========================
+/* =========================================================
 AI CHAT
-========================= */
+========================================================= */
 
 .ai-button{
-
-position:fixed;
-
-right:25px;
-
-bottom:25px;
-
-z-index:2000;
-
-width:65px;
-height:65px;
-
-border:0;
-
-border-radius:50%;
-
-background:
-var(--red);
-
-color:#fff;
-
-font-size:25px;
-
-cursor:pointer;
-
-box-shadow:
-0 15px 60px rgba(229,9,20,.45);
-
-animation:
-breathe 3s infinite;
-
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    z-index:2000;
+    width:65px;
+    height:65px;
+    border:0;
+    border-radius:50%;
+    background:var(--red);
+    color:#fff;
+    font-size:25px;
+    cursor:pointer;
+    box-shadow:0 15px 60px rgba(229,9,20,.45);
+    animation:breathe 3s infinite;
 }
 
 @keyframes breathe{
-
-50%{
-
-transform:scale(1.06);
-
-box-shadow:
-0 15px 80px rgba(229,9,20,.65);
-
-}
-
+    50%{
+        transform:scale(1.06);
+        box-shadow:0 15px 80px rgba(229,9,20,.65);
+    }
 }
 
 .chat{
-
-position:fixed;
-
-right:25px;
-
-bottom:105px;
-
-z-index:1999;
-
-width:400px;
-
-height:590px;
-
-background:#101010;
-
-border:
-1px solid var(--line);
-
-border-radius:27px;
-
-box-shadow:
-0 30px 100px rgba(0,0,0,.75);
-
-display:none;
-
-flex-direction:column;
-
-overflow:hidden;
-
+    position:fixed;
+    right:25px;
+    bottom:105px;
+    z-index:1999;
+    width:410px;
+    height:610px;
+    background:#101010;
+    border:1px solid var(--line);
+    border-radius:27px;
+    box-shadow:0 30px 100px rgba(0,0,0,.75);
+    display:none;
+    flex-direction:column;
+    overflow:hidden;
 }
 
 .chat.active{
-
-display:flex;
-
+    display:flex;
 }
 
 .chathead{
-
-padding:20px;
-
-border-bottom:
-1px solid var(--line);
-
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
+    padding:20px;
+    border-bottom:1px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
 .chathead-title{
-
-display:flex;
-
-align-items:center;
-
-gap:10px;
-
+    display:flex;
+    align-items:center;
+    gap:10px;
 }
 
 .ai-orb{
-
-width:34px;
-height:34px;
-
-border-radius:50%;
-
-background:
-var(--red);
-
-display:grid;
-
-place-items:center;
-
-box-shadow:
-0 0 25px rgba(229,9,20,.4);
-
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    background:var(--red);
+    display:grid;
+    place-items:center;
+    box-shadow:0 0 25px rgba(229,9,20,.4);
 }
 
 .close{
-
-border:0;
-
-background:none;
-
-color:#fff;
-
-font-size:23px;
-
-cursor:pointer;
-
+    border:0;
+    background:none;
+    color:#fff;
+    font-size:23px;
+    cursor:pointer;
 }
 
 .chatbody{
-
-flex:1;
-
-padding:18px;
-
-overflow:auto;
-
+    flex:1;
+    padding:18px;
+    overflow:auto;
 }
 
 .message{
-
-padding:13px 15px;
-
-background:#1a1a1a;
-
-border-radius:16px;
-
-color:#bbb;
-
-font-size:14px;
-
-line-height:1.55;
-
-margin-bottom:10px;
-
+    padding:13px 15px;
+    background:#1a1a1a;
+    border-radius:16px;
+    color:#bbb;
+    font-size:14px;
+    line-height:1.55;
+    margin-bottom:10px;
 }
 
 .message.user{
+    background:var(--red);
+    color:#fff;
+    margin-left:35px;
+}
 
-background:
-var(--red);
-
-color:#fff;
-
-margin-left:35px;
-
+.typing{
+    display:none;
+    color:#777;
+    font-size:12px;
+    padding:8px 12px;
 }
 
 .quick{
-
-display:flex;
-
-flex-wrap:wrap;
-
-gap:7px;
-
-margin-top:10px;
-
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    margin-top:10px;
 }
 
 .quick button{
-
-border:
-1px solid rgba(255,255,255,.13);
-
-background:#151515;
-
-color:#ddd;
-
-padding:9px 11px;
-
-border-radius:20px;
-
-cursor:pointer;
-
-font-size:12px;
-
+    border:1px solid rgba(255,255,255,.13);
+    background:#151515;
+    color:#ddd;
+    padding:9px 11px;
+    border-radius:20px;
+    cursor:pointer;
+    font-size:12px;
 }
 
 .quick button:hover{
-
-border-color:
-var(--red);
-
+    border-color:var(--red);
 }
 
 .chatinput{
-
-padding:12px;
-
-border-top:
-1px solid var(--line);
-
-display:flex;
-
-gap:8px;
-
+    padding:12px;
+    border-top:1px solid var(--line);
+    display:flex;
+    gap:8px;
 }
 
 .chatinput input{
-
-flex:1;
-
-min-width:0;
-
-padding:12px;
-
-background:#080808;
-
-border:
-1px solid var(--line);
-
-border-radius:12px;
-
-color:#fff;
-
-outline:none;
-
+    flex:1;
+    min-width:0;
+    padding:12px;
+    background:#080808;
+    border:1px solid var(--line);
+    border-radius:12px;
+    color:#fff;
+    outline:none;
 }
 
 .send{
-
-width:46px;
-
-border:0;
-
-border-radius:12px;
-
-background:
-var(--red);
-
-color:#fff;
-
-cursor:pointer;
-
+    width:46px;
+    border:0;
+    border-radius:12px;
+    background:var(--red);
+    color:#fff;
+    cursor:pointer;
 }
 
 
-/* =========================
+/* =========================================================
 MOBILE
-========================= */
+========================================================= */
 
 @media(max-width:950px){
 
-.navlinks,
-.navbtn{
+    .navlinks,
+    .navbtn{
+        display:none;
+    }
 
-display:none;
+    .menu{
+        display:block;
+    }
 
-}
+    .hero-inner,
+    .contact-grid,
+    .ai-box{
+        grid-template-columns:1fr;
+    }
 
-.menu{
+    .visual{
+        height:400px;
+    }
 
-display:block;
+    .flow{
+        grid-template-columns:1fr 1fr;
+    }
 
-}
-
-.hero-inner,
-.contact-grid,
-.ai-box{
-
-grid-template-columns:1fr;
-
-}
-
-.visual{
-
-height:400px;
-
-}
-
-.flow{
-
-grid-template-columns:
-1fr 1fr;
-
-}
-
-.services,
-.process,
-.aboutfacts{
-
-grid-template-columns:
-1fr 1fr;
-
-}
+    .services,
+    .process,
+    .aboutfacts{
+        grid-template-columns:1fr 1fr;
+    }
 
 }
 
 @media(max-width:600px){
 
-section{
+    section{
+        padding:85px 5%;
+    }
 
-padding:
-85px 5%;
+    .hero{
+        padding-top:115px;
+    }
 
-}
+    .hero h1{
+        font-size:48px;
+        letter-spacing:-3px;
+    }
 
-.hero{
+    .hero-text{
+        font-size:16px;
+    }
 
-padding-top:110px;
+    .core{
+        width:150px;
+        height:150px;
+    }
 
-}
+    .orbit{
+        width:260px;
+        height:260px;
+    }
 
-.hero h1{
+    .orbit.two{
+        width:340px;
+        height:340px;
+    }
 
-font-size:48px;
+    .flow,
+    .services,
+    .process,
+    .aboutfacts{
+        grid-template-columns:1fr;
+    }
 
-letter-spacing:-3px;
+    .ai-box{
+        padding:35px 25px;
+    }
 
-}
+    .aboutbox{
+        padding:30px 22px;
+    }
 
-.hero p{
+    .contact h2{
+        letter-spacing:-3px;
+    }
 
-font-size:16px;
+    .chat{
+        right:15px;
+        bottom:95px;
+        width:calc(100% - 30px);
+        height:560px;
+    }
 
-}
+    .ai-button{
+        right:15px;
+        bottom:15px;
+    }
 
-.core{
-
-width:150px;
-height:150px;
-
-}
-
-.orbit{
-
-width:260px;
-height:260px;
-
-}
-
-.orbit.two{
-
-width:340px;
-height:340px;
-
-}
-
-.flow,
-.services,
-.process,
-.aboutfacts{
-
-grid-template-columns:1fr;
-
-}
-
-.ai-box{
-
-padding:35px 25px;
-
-}
-
-.contact h2{
-
-letter-spacing:-3px;
-
-}
-
-.chat{
-
-right:15px;
-
-bottom:95px;
-
-width:
-calc(100% - 30px);
-
-height:560px;
-
-}
-
-.ai-button{
-
-right:15px;
-
-bottom:15px;
-
-}
-
-.footer{
-
-flex-direction:column;
-
-}
+    .footer-top{
+        flex-direction:column;
+    }
 
 }
 
 @media(prefers-reduced-motion:reduce){
 
-*{
-
-animation:none!important;
-
-transition:none!important;
-
-scroll-behavior:auto!important;
-
-}
+    *,
+    *:before,
+    *:after{
+        animation:none!important;
+        transition:none!important;
+        scroll-behavior:auto!important;
+    }
 
 }
 
 </style>
-
 </head>
 
 
 <body>
 
 
-<!-- =========================
+<!-- =====================================================
 NAVIGATION
-========================= -->
+===================================================== -->
 
 <nav>
 
@@ -1772,25 +1237,17 @@ Trust<span>&</span>Co
 
 <div class="navlinks">
 
-<a href="#services">
-Services
-</a>
+<a href="#services">Services</a>
 
-<a href="#payments">
-Payment Gateway
-</a>
+<a href="#payments">Payment Gateway</a>
 
-<a href="#ai">
-AI
-</a>
+<a href="#ai">AI Assistant</a>
 
-<a href="#about">
-About
-</a>
+<a href="#about">About</a>
 
-<a href="#contact">
-Contact
-</a>
+<a href="#faq">FAQ</a>
+
+<a href="#contact">Contact</a>
 
 </div>
 
@@ -1798,8 +1255,7 @@ Contact
 Get Started ↗
 </a>
 
-<div class="menu"
-onclick="toggleMobile()">
+<div class="menu" onclick="toggleMobile()">
 ☰
 </div>
 
@@ -1808,9 +1264,9 @@ onclick="toggleMobile()">
 </nav>
 
 
-<!-- =========================
+<!-- =====================================================
 HERO
-========================= -->
+===================================================== -->
 
 <section class="hero">
 
@@ -1818,16 +1274,13 @@ HERO
 
 <div class="glow"></div>
 
-
 <div class="hero-inner">
 
 
 <div>
 
 <div class="eyebrow">
-
-NEW BUSINESS · ESTABLISHED 2026
-
+NEW BUSINESS · 2026
 </div>
 
 
@@ -1841,49 +1294,42 @@ A fresh approach to
 
 <p class="hero-text">
 
-Trust&Co Web Services is a newly established technology
-business focused on payment gateway solutions, professional
-web development, e-commerce, AI and digital business solutions.
+Trust&Co Web Services is a newly established business
+focused on payment gateway solutions, professional
+website development, e-commerce, AI integration and
+digital business solutions.
 
 </p>
 
 
 <div class="new-business">
 
-<div class="new-business-dot"></div>
+<div class="new-dot"></div>
 
-Newly established business · 2026
+Established 28 August 2026 · Mumbai
 
 </div>
 
 
 <div class="buttons">
 
-
-<a href="#contact"
-class="btn">
-
+<a href="#contact" class="btn">
 Start an Enquiry ↗
-
 </a>
-
 
 <a
 href="https://wa.me/918097361210"
 target="_blank"
 class="btn white">
 
-WhatsApp Trust&Co →
+WhatsApp Us →
 
 </a>
 
-
 </div>
 
 </div>
 
-
-<!-- TECHNOLOGY VISUAL -->
 
 <div class="visual">
 
@@ -1894,13 +1340,10 @@ WhatsApp Trust&Co →
 <div class="core">
 
 <div class="coretext">
-
 T<span>&</span>C
-
 </div>
 
 </div>
-
 
 <div class="node n1"></div>
 <div class="node n2"></div>
@@ -1908,7 +1351,6 @@ T<span>&</span>C
 <div class="node n4"></div>
 <div class="node n5"></div>
 <div class="node n6"></div>
-
 
 <div class="packet p1"></div>
 <div class="packet p2"></div>
@@ -1922,12 +1364,11 @@ T<span>&</span>C
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
 PAYMENT GATEWAY
-========================= -->
+===================================================== -->
 
-<section id="payments"
-class="payment">
+<section id="payments" class="payment">
 
 <div class="container">
 
@@ -1935,26 +1376,22 @@ class="payment">
 <div class="title">
 
 <div class="eyebrow">
-
 01 / PAYMENT INFRASTRUCTURE
-
 </div>
 
-
 <h2>
-
-Payments,
-built for modern businesses.
-
+Payments, engineered for business.
 </h2>
-
 
 <p>
 
-Trust&Co helps businesses explore suitable payment gateway
-solutions and supports the onboarding and integration journey,
-subject to the requirements and approval of the relevant
-payment provider.
+Trust&Co helps businesses explore suitable payment
+gateway solutions and assists with the relevant
+onboarding and integration journey.
+
+Final onboarding, approval, processing and compliance
+remain subject to the requirements and decisions of
+the relevant payment provider.
 
 </p>
 
@@ -1966,13 +1403,9 @@ payment provider.
 
 <div class="flowcard">
 
-<div class="number">
-01
-</div>
+<div class="number">01</div>
 
-<h3>
-Business
-</h3>
+<h3>Business</h3>
 
 <p>
 Understand the business and payment requirements.
@@ -1983,16 +1416,12 @@ Understand the business and payment requirements.
 
 <div class="flowcard">
 
-<div class="number">
-02
-</div>
+<div class="number">02</div>
 
-<h3>
-Checkout
-</h3>
+<h3>Checkout</h3>
 
 <p>
-Create a smooth online payment experience.
+Build a suitable online payment experience.
 </p>
 
 </div>
@@ -2000,16 +1429,12 @@ Create a smooth online payment experience.
 
 <div class="flowcard">
 
-<div class="number">
-03
-</div>
+<div class="number">03</div>
 
-<h3>
-Gateway
-</h3>
+<h3>Gateway</h3>
 
 <p>
-Connect with a suitable payment gateway provider.
+Connect with a suitable payment-processing provider.
 </p>
 
 </div>
@@ -2017,13 +1442,9 @@ Connect with a suitable payment gateway provider.
 
 <div class="flowcard">
 
-<div class="number">
-04
-</div>
+<div class="number">04</div>
 
-<h3>
-Processing
-</h3>
+<h3>Processing</h3>
 
 <p>
 Transactions are processed through the relevant provider.
@@ -2034,16 +1455,12 @@ Transactions are processed through the relevant provider.
 
 <div class="flowcard">
 
-<div class="number">
-05
-</div>
+<div class="number">05</div>
 
-<h3>
-Confirmation
-</h3>
+<h3>Confirmation</h3>
 
 <p>
-The merchant receives the transaction outcome.
+The merchant receives the relevant transaction outcome.
 </p>
 
 </div>
@@ -2056,13 +1473,11 @@ The merchant receives the transaction outcome.
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
 PROCESS
-========================= -->
+===================================================== -->
 
-<section
-id="process"
-class="dark">
+<section id="process" class="dark">
 
 <div class="container">
 
@@ -2094,7 +1509,7 @@ Understand
 </h3>
 
 <p>
-We understand your business and technology requirements.
+We understand your business, website and payment requirements.
 </p>
 
 </div>
@@ -2159,9 +1574,9 @@ and approvals are completed.
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
 SERVICES
-========================= -->
+===================================================== -->
 
 <section id="services">
 
@@ -2175,12 +1590,12 @@ SERVICES
 </div>
 
 <h2>
-Built for businesses starting their next chapter.
+Technology for your next business move.
 </h2>
 
 <p>
-Our services cover payment technology, websites, digital
-commerce and intelligent customer experiences.
+Our services are focused on payment technology,
+web development and practical digital solutions.
 </p>
 
 </div>
@@ -2200,8 +1615,8 @@ Payment Gateway Solutions
 </h3>
 
 <p>
-Explore payment gateway solutions and receive assistance
-with relevant onboarding and integration requirements.
+Explore suitable payment gateway solutions and receive
+assistance with relevant onboarding and integration.
 </p>
 
 </div>
@@ -2218,8 +1633,8 @@ Website Development
 </h3>
 
 <p>
-Professional websites designed to give modern businesses
-a strong digital presence.
+Professional websites designed to establish a strong
+digital presence and generate enquiries.
 </p>
 
 </div>
@@ -2232,7 +1647,7 @@ a strong digital presence.
 </div>
 
 <h3>
-E-commerce
+E-commerce Solutions
 </h3>
 
 <p>
@@ -2253,7 +1668,7 @@ Custom Web Solutions
 </h3>
 
 <p>
-Technology solutions designed around specific business needs.
+Tailored technology solutions for specific business requirements.
 </p>
 
 </div>
@@ -2270,8 +1685,8 @@ AI Integration
 </h3>
 
 <p>
-AI-powered customer enquiry handling, automation and
-business workflows.
+AI-powered enquiry handling, automation and customer
+interaction solutions.
 </p>
 
 </div>
@@ -2288,7 +1703,7 @@ Digital Solutions
 </h3>
 
 <p>
-Practical digital technology designed to improve business
+Technology designed to improve digital business
 operations and customer experiences.
 </p>
 
@@ -2302,12 +1717,11 @@ operations and customer experiences.
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
 AI
-========================= -->
+===================================================== -->
 
-<section id="ai"
-class="ai-section">
+<section id="ai" class="ai-section">
 
 <div class="container">
 
@@ -2318,25 +1732,20 @@ class="ai-section">
 <div>
 
 <div class="eyebrow">
-
 04 / TRUST&CO AI
-
 </div>
 
 
 <h2>
-
-Your first conversation
-can start with AI.
-
+Your first conversation can start with AI.
 </h2>
 
 
 <p>
 
-Trust&Co AI is designed to understand what a visitor needs,
-ask relevant questions and prepare a structured business
-enquiry for the Trust&Co team.
+Trust&Co AI helps visitors identify the service they
+need, understand the basic process and prepare a
+structured enquiry for the Trust&Co team.
 
 </p>
 
@@ -2360,50 +1769,27 @@ Talk to Trust&Co AI ✦
 
 
 <div class="ai-point">
-
-<b>01</b>
-Understand visitor intent
-
+<b>01</b> Understand visitor intent
 </div>
 
-
 <div class="ai-point">
-
-<b>02</b>
-Ask relevant questions
-
+<b>02</b> Ask relevant business questions
 </div>
 
-
 <div class="ai-point">
-
-<b>03</b>
-Identify the required service
-
+<b>03</b> Identify the required service
 </div>
 
-
 <div class="ai-point">
-
-<b>04</b>
-Collect business information
-
+<b>04</b> Qualify the enquiry
 </div>
 
-
 <div class="ai-point">
-
-<b>05</b>
-Prepare a structured enquiry
-
+<b>05</b> Prepare a structured summary
 </div>
 
-
 <div class="ai-point">
-
-<b>06</b>
-Hand off directly to WhatsApp
-
+<b>06</b> Direct handoff to WhatsApp
 </div>
 
 
@@ -2416,9 +1802,9 @@ Hand off directly to WhatsApp
 </section>
 
 
-<!-- =========================
-ABOUT / NEW BUSINESS
-========================= -->
+<!-- =====================================================
+ABOUT / REAL BUSINESS
+===================================================== -->
 
 <section id="about">
 
@@ -2443,19 +1829,23 @@ A technology-first mindset.
 
 
 <h3>
-Trust&Co Web Services
+TRUST&CO WEB SERVICES
 </h3>
 
 
 <p>
 
-Trust&Co Web Services is a newly established business
-focused on providing payment gateway solutions, web
-development and digital technology services.
+Trust&Co Web Services is a newly established
+proprietorship business based in Mumbai.
 
-The business is building its digital presence from the
-ground up with a focus on professional service, clear
-communication and technology-driven customer experiences.
+The business focuses on payment gateway services,
+web development, e-commerce, AI integration and
+other business-support technology services.
+
+Trust&Co is building its operations and digital
+presence from the ground up with an emphasis on
+professional communication, practical technology
+and customer-focused service.
 
 </p>
 
@@ -2466,11 +1856,11 @@ communication and technology-driven customer experiences.
 <div class="fact">
 
 <strong>
-2026
+Omkar Dilip Kurlekar
 </strong>
 
 <span>
-Established
+Proprietor
 </span>
 
 </div>
@@ -2479,11 +1869,11 @@ Established
 <div class="fact">
 
 <strong>
-Micro
+28 August 2026
 </strong>
 
 <span>
-Enterprise classification for 2026–27
+Date of incorporation / registration of enterprise
 </span>
 
 </div>
@@ -2492,11 +1882,142 @@ Enterprise classification for 2026–27
 <div class="fact">
 
 <strong>
+Micro Enterprise
+</strong>
+
+<span>
+Classification for 2026–27
+</span>
+
+</div>
+
+
+</div>
+
+
+<div style="
+margin-top:30px;
+padding-top:25px;
+border-top:1px solid var(--line);
+color:#777;
+font-size:13px;
+line-height:1.8;
+">
+
+<strong style="color:#aaa">
+Udyam Registration:
+</strong>
+
+UDYAM-MH-18-0580594
+
+<br>
+
+<strong style="color:#aaa">
+GSTIN:
+</strong>
+
+To be updated
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+REGISTERED BUSINESS ADDRESS
+===================================================== -->
+
+<section class="dark">
+
+<div class="container">
+
+
+<div class="title">
+
+<div class="eyebrow">
+06 / REGISTERED BUSINESS INFORMATION
+</div>
+
+<h2>
+Real business details.
+</h2>
+
+<p>
+The following business information is displayed
+for transparency and customer communication.
+</p>
+
+</div>
+
+
+<div class="aboutbox">
+
+
+<h3>
+Registered / Official Business Address
+</h3>
+
+
+<p>
+
+<strong style="color:#fff">
+Trust&Co Web Services
+</strong>
+
+<br><br>
+
+Flat/Door/Block No. B 205<br>
+Shantidoot Building<br>
+Village/Town: Charkop Sector-2, Block 2<br>
+Road/Street/Lane: RSC 2<br>
+Mumbai, Maharashtra – 400067<br>
+Mumbai Suburban, Maharashtra, India
+
+</p>
+
+
+<div class="aboutfacts">
+
+
+<div class="fact">
+
+<strong>
+Owner
+</strong>
+
+<span>
+Omkar Dilip Kurlekar
+</span>
+
+</div>
+
+
+<div class="fact">
+
+<strong>
+Position
+</strong>
+
+<span>
+Proprietor
+</span>
+
+</div>
+
+
+<div class="fact">
+
+<strong>
+Business Activity
+</strong>
+
+<span>
 Services
-</strong>
-
-<span>
-Primary business activity
 </span>
 
 </div>
@@ -2511,12 +2032,196 @@ Primary business activity
 </section>
 
 
-<!-- =========================
-CONTACT
-========================= -->
+<!-- =====================================================
+FAQ
+===================================================== -->
 
-<section id="contact"
-class="contact">
+<section id="faq">
+
+<div class="container">
+
+
+<div class="title">
+
+<div class="eyebrow">
+07 / FAQ
+</div>
+
+<h2>
+Questions, answered simply.
+</h2>
+
+</div>
+
+
+<div class="faq">
+
+
+<div class="faq-item">
+
+<button class="faq-question"
+onclick="toggleFAQ(this)">
+
+What payment gateway services do you provide?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-answer">
+
+Trust&Co helps businesses explore suitable payment
+gateway solutions and assists with relevant onboarding
+and integration requirements. Final approval and
+availability depend on the relevant payment provider.
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-question"
+onclick="toggleFAQ(this)">
+
+How does payment gateway onboarding work?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-answer">
+
+We first understand the business and its requirements,
+then identify a suitable solution and assist with the
+relevant onboarding and integration process. The
+payment provider makes the final onboarding decision.
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-question"
+onclick="toggleFAQ(this)">
+
+Can you help with website integration?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-answer">
+
+Yes. Website development and payment-related
+integration assistance are among the services offered
+by Trust&Co, subject to the requirements of the
+relevant platform or provider.
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-question"
+onclick="toggleFAQ(this)">
+
+Do you provide website development?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-answer">
+
+Yes. Trust&Co provides professional website development,
+custom web solutions and digital business solutions.
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-question"
+onclick="toggleFAQ(this)">
+
+Can Trust&Co help with e-commerce websites?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-answer">
+
+Yes. Trust&Co provides e-commerce website and digital
+commerce development services.
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-question"
+onclick="toggleFAQ(this)">
+
+How can I contact Trust&Co?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-answer">
+
+WhatsApp: 8097361210<br>
+Email: trustcoservices28@gmail.com
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-question"
+onclick="toggleFAQ(this)">
+
+Can I speak to a human?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-answer">
+
+Yes. Contact Trust&Co directly on WhatsApp at
+8097361210 or use the contact details on this website.
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+CONTACT
+===================================================== -->
+
+<section id="contact" class="contact">
 
 <div class="container">
 
@@ -2528,17 +2233,12 @@ class="contact">
 
 
 <div class="eyebrow">
-
-06 / START A CONVERSATION
-
+08 / START A CONVERSATION
 </div>
 
 
 <h2>
-
-Tell us
-what you're building.
-
+Tell us what you're building.
 </h2>
 
 
@@ -2563,8 +2263,7 @@ DIRECT CONTACT
 href="https://wa.me/918097361210"
 target="_blank">
 
-💬 WhatsApp
-<br>
+💬 WhatsApp<br>
 8097361210
 
 </a>
@@ -2573,8 +2272,7 @@ target="_blank">
 <a
 href="mailto:trustcoservices28@gmail.com">
 
-📧 Email
-<br>
+📧 Email<br>
 trustcoservices28@gmail.com
 
 </a>
@@ -2594,147 +2292,157 @@ trustcoservices28@gmail.com
 </a>
 
 
-</div>
+<small>
+
+Registered business location:<br>
+
+B 205, Shantidoot Building,
+Charkop Sector-2, Block 2,
+RSC 2, Mumbai, Maharashtra – 400067.
+
+</small>
+
 
 </div>
 
+</div>
 
-<!-- AI LEAD FORM -->
+
+<!-- =====================================================
+AI LEAD FORM
+===================================================== -->
 
 <form
 class="form"
 id="leadForm">
 
 
+<label>
+Your Name *
+</label>
+
 <input
 id="leadName"
 type="text"
-placeholder="Your Name"
+placeholder="Your full name"
 required
 >
 
+
+<label>
+Company / Business Name
+</label>
 
 <input
 id="leadCompany"
 type="text"
-placeholder="Company / Business Name"
+placeholder="Company or business name"
 >
 
+
+<label>
+Email *
+</label>
 
 <input
 id="leadEmail"
 type="email"
-placeholder="Email Address"
+placeholder="Email address"
 required
 >
 
+
+<label>
+Phone / WhatsApp *
+</label>
 
 <input
 id="leadPhone"
 type="tel"
-placeholder="Phone / WhatsApp Number"
+placeholder="Phone or WhatsApp number"
 required
 >
 
 
-<select
-id="leadBusiness"
-required>
+<label>
+Business Type *
+</label>
+
+<select id="leadBusiness" required>
 
 <option value="">
-Tell us about your business
+Select business type
 </option>
 
-<option>
-New Business / Startup
-</option>
+<option>New Business / Startup</option>
 
-<option>
-Small Business
-</option>
+<option>Small Business</option>
 
-<option>
-Established Business
-</option>
+<option>Established Business</option>
 
-<option>
-E-commerce Business
-</option>
+<option>E-commerce Business</option>
 
-<option>
-Agency
-</option>
+<option>Agency</option>
 
-<option>
-Professional / Individual
-</option>
+<option>Professional / Individual</option>
 
-<option>
-Other
-</option>
+<option>Other</option>
 
 </select>
 
 
-<select
-id="leadService"
-required>
+<label>
+What do you need? *
+</label>
+
+<select id="leadService" required>
 
 <option value="">
-What do you need?
+Select a service
 </option>
 
-<option>
-Payment Gateway
-</option>
+<option>Payment Gateway</option>
 
-<option>
-Website Development
-</option>
+<option>Website Development</option>
 
-<option>
-E-commerce
-</option>
+<option>E-commerce</option>
 
-<option>
-AI Integration
-</option>
+<option>AI Integration</option>
 
-<option>
-Custom Web Solution
-</option>
+<option>Custom Web Solution</option>
 
-<option>
-Digital Solutions
-</option>
+<option>Digital Solutions</option>
 
-<option>
-Multiple Services
-</option>
+<option>Multiple Services</option>
 
-<option>
-I'm Not Sure
-</option>
+<option>I'm Not Sure</option>
 
 </select>
 
+
+<label>
+Tell us about your requirement *
+</label>
 
 <textarea
 id="leadRequirements"
-placeholder="Tell us what you need..."
+placeholder="Describe your business and what you need..."
 required
 ></textarea>
 
 
-<select
-id="leadContact">
+<label>
+Preferred contact
+</label>
+
+<select id="leadContact">
 
 <option value="WhatsApp">
-Send to WhatsApp
+WhatsApp
 </option>
 
 <option value="Email">
-Send by Email
+Email
 </option>
 
 <option value="Both">
@@ -2755,8 +2463,8 @@ Prepare My Enquiry ✦
 
 <small>
 
-Your enquiry will be automatically structured
-and prepared for direct contact with Trust&Co.
+Your enquiry is formatted automatically.
+WhatsApp is the primary direct contact channel.
 
 </small>
 
@@ -2771,13 +2479,564 @@ and prepared for direct contact with Trust&Co.
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
+LEGAL
+===================================================== -->
+
+<section id="legal" class="legal">
+
+<div class="container">
+
+
+<div class="title">
+
+<div class="eyebrow">
+09 / LEGAL & PRIVACY
+</div>
+
+<h2>
+Business policies.
+</h2>
+
+<p>
+Please review the policies below before using the website
+or submitting an enquiry.
+</p>
+
+</div>
+
+
+<div class="legal-nav">
+
+<button
+class="legal-tab active"
+onclick="showLegal('privacy',this)">
+Privacy Policy
+</button>
+
+<button
+class="legal-tab"
+onclick="showLegal('terms',this)">
+Terms & Conditions
+</button>
+
+<button
+class="legal-tab"
+onclick="showLegal('cookies',this)">
+Cookie Policy
+</button>
+
+<button
+class="legal-tab"
+onclick="showLegal('payment',this)">
+Payment Gateway Disclaimer
+</button>
+
+<button
+class="legal-tab"
+onclick="showLegal('ai',this)">
+AI Disclosure
+</button>
+
+</div>
+
+
+<!-- PRIVACY -->
+
+<div
+id="privacy"
+class="legal-page active">
+
+<h3>
+Privacy Policy
+</h3>
+
+<p>
+Effective date: 2026
+</p>
+
+
+<h4>
+1. About this policy
+</h4>
+
+<p>
+
+This Privacy Policy explains how Trust&Co Web Services
+may handle information submitted through this website,
+including information provided through enquiry forms,
+email links and WhatsApp contact links.
+
+</p>
+
+
+<h4>
+2. Information that may be submitted
+</h4>
+
+<ul>
+
+<li>Name</li>
+
+<li>Company or business name</li>
+
+<li>Email address</li>
+
+<li>Phone or WhatsApp number</li>
+
+<li>Business type</li>
+
+<li>Service requested</li>
+
+<li>Information contained in an enquiry</li>
+
+</ul>
+
+
+<h4>
+3. How information is used
+</h4>
+
+<p>
+
+Information submitted by visitors may be used to respond
+to enquiries, understand requirements, communicate about
+requested services and provide customer support.
+
+</p>
+
+
+<h4>
+4. WhatsApp and email
+</h4>
+
+<p>
+
+When a visitor chooses WhatsApp or email, the visitor's
+device or browser may open the relevant external
+communication service. Those services are governed by
+their own privacy policies and terms.
+
+</p>
+
+
+<h4>
+5. Data sharing
+</h4>
+
+<p>
+
+Trust&Co does not intentionally sell submitted enquiry
+information as a product. Information may be shared where
+reasonably necessary to respond to an enquiry, provide a
+requested service, comply with applicable law or protect
+the business and its users.
+
+</p>
+
+
+<h4>
+6. Security
+</h4>
+
+<p>
+
+Reasonable measures should be used to protect business
+information. No internet transmission or electronic
+storage method can be represented as completely risk-free.
+
+</p>
+
+
+<h4>
+7. Contact
+</h4>
+
+<p>
+
+Trust&Co Web Services<br>
+Proprietor: Omkar Dilip Kurlekar<br>
+Email: trustcoservices28@gmail.com<br>
+WhatsApp: 8097361210
+
+</p>
+
+</div>
+
+
+<!-- TERMS -->
+
+<div
+id="terms"
+class="legal-page">
+
+<h3>
+Terms & Conditions
+</h3>
+
+<p>
+Effective date: 2026
+</p>
+
+
+<h4>
+1. About Trust&Co
+</h4>
+
+<p>
+
+Trust&Co Web Services is a proprietorship business
+providing payment gateway assistance, website
+development, e-commerce, AI integration and digital
+technology services.
+
+</p>
+
+
+<h4>
+2. Website information
+</h4>
+
+<p>
+
+The information on this website is provided for general
+business and service information. Specific commercial
+terms, pricing, availability and implementation
+requirements may vary according to the project and
+relevant service provider.
+
+</p>
+
+
+<h4>
+3. Payment gateway services
+</h4>
+
+<p>
+
+Trust&Co is not itself a bank, payment network or
+payment-processing institution merely by providing
+assistance with payment gateway solutions.
+
+Payment gateway onboarding, approval, transaction
+processing, settlement and compliance are subject to
+the relevant provider's policies, eligibility criteria
+and decisions.
+
+</p>
+
+
+<h4>
+4. Customer responsibility
+</h4>
+
+<p>
+
+Customers are responsible for providing accurate
+information and complying with applicable laws,
+regulations, platform requirements and provider
+requirements relating to their business.
+
+</p>
+
+
+<h4>
+5. Website development
+</h4>
+
+<p>
+
+Website development projects may be subject to separate
+commercial terms, scope, timelines, deliverables and
+payment arrangements agreed with the customer.
+
+</p>
+
+
+<h4>
+6. No guarantee of third-party approval
+</h4>
+
+<p>
+
+Trust&Co does not guarantee approval by any payment
+gateway, bank, financial institution, marketplace,
+platform or other third party unless such guarantee is
+expressly provided in a separate valid written agreement.
+
+</p>
+
+
+<h4>
+7. Intellectual property
+</h4>
+
+<p>
+
+Unless otherwise agreed in writing, website content,
+software, designs and other deliverables remain subject
+to the applicable ownership and licensing terms agreed
+for the particular project.
+
+</p>
+
+
+<h4>
+8. Contact
+</h4>
+
+<p>
+
+Trust&Co Web Services<br>
+Omkar Dilip Kurlekar — Proprietor<br>
+WhatsApp: 8097361210<br>
+Email: trustcoservices28@gmail.com
+
+</p>
+
+</div>
+
+
+<!-- COOKIES -->
+
+<div
+id="cookies"
+class="legal-page">
+
+<h3>
+Cookie Policy
+</h3>
+
+<p>
+Effective date: 2026
+</p>
+
+
+<h4>
+1. Website cookies
+</h4>
+
+<p>
+
+This website is designed to operate without requiring
+advertising cookies or unnecessary tracking cookies.
+
+</p>
+
+
+<h4>
+2. Essential functionality
+</h4>
+
+<p>
+
+The website may use browser storage or temporary technical
+mechanisms where necessary for functionality such as
+maintaining an AI conversation during a visitor session.
+
+</p>
+
+
+<h4>
+3. Third-party services
+</h4>
+
+<p>
+
+External services such as WhatsApp, email providers or
+future analytics platforms may have their own cookies,
+tracking technologies and privacy policies.
+
+</p>
+
+
+<h4>
+4. Future changes
+</h4>
+
+<p>
+
+If Trust&Co introduces analytics, advertising or other
+third-party technologies that require additional disclosure
+or consent, this policy should be updated accordingly.
+
+</p>
+
+</div>
+
+
+<!-- PAYMENT DISCLAIMER -->
+
+<div
+id="payment"
+class="legal-page">
+
+<h3>
+Payment Gateway Disclaimer
+</h3>
+
+
+<h4>
+1. Role of Trust&Co
+</h4>
+
+<p>
+
+Trust&Co Web Services provides business assistance and
+technology services relating to payment gateway solutions.
+The exact role performed for a particular customer depends
+on the agreed service.
+
+</p>
+
+
+<h4>
+2. Third-party providers
+</h4>
+
+<p>
+
+Payment processing may involve third-party payment
+providers, banks, financial institutions or other
+technology platforms.
+
+</p>
+
+
+<h4>
+3. Approval
+</h4>
+
+<p>
+
+The relevant payment provider independently determines
+whether a business is eligible for onboarding and what
+documentation, verification and compliance requirements
+apply.
+
+</p>
+
+
+<h4>
+4. Transaction processing
+</h4>
+
+<p>
+
+Trust&Co does not represent that it independently operates
+a payment network, bank or payment-processing infrastructure
+unless specifically stated and legally applicable.
+
+</p>
+
+
+<h4>
+5. Compliance
+</h4>
+
+<p>
+
+Customers are responsible for ensuring that their business,
+products, services and transactions comply with applicable
+law and the requirements of their payment provider.
+
+</p>
+
+</div>
+
+
+<!-- AI DISCLOSURE -->
+
+<div
+id="ai"
+class="legal-page">
+
+<h3>
+Trust&Co AI Disclosure
+</h3>
+
+
+<h4>
+1. AI assistant
+</h4>
+
+<p>
+
+Trust&Co AI is a website-based digital assistant designed
+to help visitors understand Trust&Co's services and prepare
+business enquiries.
+
+</p>
+
+
+<h4>
+2. Not a human representative
+</h4>
+
+<p>
+
+Trust&Co AI is not a human employee or representative.
+Visitors can contact Trust&Co directly whenever human
+assistance is required.
+
+</p>
+
+
+<h4>
+3. General information
+</h4>
+
+<p>
+
+AI responses are intended for general informational and
+enquiry-handling purposes. The assistant should not be
+treated as legal, financial, tax or regulatory advice.
+
+</p>
+
+
+<h4>
+4. Provider decisions
+</h4>
+
+<p>
+
+The AI cannot guarantee payment gateway approval,
+transaction processing, settlement, pricing or any
+third-party provider decision.
+
+</p>
+
+
+<h4>
+5. Human handoff
+</h4>
+
+<p>
+
+Visitors may contact Trust&Co directly through WhatsApp
+at 8097361210 or email at trustcoservices28@gmail.com.
+
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
 FOOTER
-========================= -->
+===================================================== -->
 
 <footer>
 
 <div class="footer">
+
+
+<div class="footer-top">
 
 
 <div>
@@ -2786,22 +3045,82 @@ FOOTER
 Trust&Co Web Services
 </strong>
 
+<div class="footer-text">
 
-<div style="margin-top:8px">
+Payment Gateway Solutions |
+Web Development |
+E-commerce |
+AI & Digital Solutions
 
-Payment Gateway Solutions ·
-Web Development ·
-Digital Solutions
+<br><br>
+
+Omkar Dilip Kurlekar — Proprietor
+
+<br>
+
+B 205, Shantidoot Building,
+Charkop Sector-2, Block 2,
+RSC 2, Mumbai, Maharashtra – 400067
 
 </div>
 
 </div>
 
 
-<div>
+<div class="footer-links">
 
-© 2026 Trust&Co Web Services.
-All rights reserved.
+<a href="#services">
+Services
+</a>
+
+<a href="#payments">
+Payment Gateway
+</a>
+
+<a href="#ai">
+AI Assistant
+</a>
+
+<a href="#about">
+About
+</a>
+
+<a href="#faq">
+FAQ
+</a>
+
+<a href="#contact">
+Contact
+</a>
+
+<a href="#legal"
+onclick="showLegal('privacy',document.querySelector('.legal-tab'))">
+Privacy Policy
+</a>
+
+<a href="#legal"
+onclick="showLegal('terms',document.querySelectorAll('.legal-tab')[1])">
+Terms & Conditions
+</a>
+
+</div>
+
+
+</div>
+
+
+<div class="footer-bottom">
+
+© 2026 Trust&Co Web Services. All rights reserved.
+
+&nbsp; · &nbsp;
+
+Udyam Registration:
+UDYAM-MH-18-0580594
+
+&nbsp; · &nbsp;
+
+GSTIN: To be updated
 
 </div>
 
@@ -2811,9 +3130,9 @@ All rights reserved.
 </footer>
 
 
-<!-- =========================
+<!-- =====================================================
 AI CHAT
-========================= -->
+===================================================== -->
 
 <div
 class="chat"
@@ -2841,7 +3160,7 @@ Trust&Co AI
 style="
 font-size:11px;
 color:#777;
-margin-top:2px
+margin-top:2px;
 ">
 
 Business Enquiry Assistant
@@ -2862,7 +3181,6 @@ onclick="closeAI()">
 
 </button>
 
-
 </div>
 
 
@@ -2875,8 +3193,8 @@ id="chatBody">
 
 Hello. I'm Trust&Co AI.
 
-I'll help understand what your business needs
-and guide you toward the right Trust&Co service.
+I'll help you understand our services and
+prepare your business enquiry.
 
 </div>
 
@@ -2893,47 +3211,44 @@ What are you looking for today?
 
 <button
 onclick="quick('I need a payment gateway')">
-
 Payment Gateway
-
 </button>
 
 
 <button
 onclick="quick('I need a website')">
-
 Website
-
 </button>
 
 
 <button
 onclick="quick('I need an e-commerce website')">
-
 E-commerce
-
 </button>
 
 
 <button
 onclick="quick('I need AI integration')">
-
 AI
-
 </button>
 
 
 <button
 onclick="quick('I want to speak to a human')">
-
 Human
-
 </button>
 
 
 </div>
 
 
+</div>
+
+
+<div
+class="typing"
+id="typing">
+Trust&Co AI is thinking…
 </div>
 
 
@@ -2944,27 +3259,23 @@ Human
 id="chatInput"
 placeholder="Tell me what you need..."
 onkeydown="
-if(event.key==='Enter')
-sendAI()
+if(event.key==='Enter') sendAI()
 ">
 
 
 <button
 class="send"
 onclick="sendAI()">
-
 ➤
-
 </button>
 
 
 </div>
 
-
 </div>
 
 
-<!-- AI FLOATING BUTTON -->
+<!-- FLOATING AI BUTTON -->
 
 <button
 class="ai-button"
@@ -2978,399 +3289,411 @@ aria-label="Open Trust&Co AI">
 
 <script>
 
-
-/* =========================
-MOBILE MENU
-========================= */
+/* =========================================================
+MOBILE NAVIGATION
+========================================================= */
 
 function toggleMobile(){
 
-const links=
-document.querySelector(".navlinks");
+    const links =
+        document.querySelector(".navlinks");
 
-if(
-links.style.display==="flex"
-){
+    if(links.style.display === "flex"){
 
-links.style.display="";
+        links.style.display = "";
 
-}else{
+    }else{
 
-links.style.display="flex";
+        links.style.display = "flex";
+        links.style.position = "absolute";
+        links.style.top = "70px";
+        links.style.left = "5%";
+        links.style.right = "5%";
+        links.style.padding = "25px";
+        links.style.flexDirection = "column";
+        links.style.background = "#101010";
+        links.style.border =
+            "1px solid rgba(255,255,255,.1)";
+        links.style.borderRadius = "20px";
 
-links.style.position="absolute";
-
-links.style.top="70px";
-
-links.style.left="5%";
-
-links.style.right="5%";
-
-links.style.padding="25px";
-
-links.style.flexDirection="column";
-
-links.style.background="#101010";
-
-links.style.border=
-"1px solid rgba(255,255,255,.1)";
-
-links.style.borderRadius="20px";
-
-}
+    }
 
 }
 
 
-/* =========================
-AI
-========================= */
+/* =========================================================
+AI OPEN / CLOSE
+========================================================= */
 
 function openAI(){
 
-document
-.getElementById("chat")
-.classList
-.add("active");
+    document
+        .getElementById("chat")
+        .classList
+        .add("active");
 
-setTimeout(function(){
+    setTimeout(function(){
 
-document
-.getElementById("chatInput")
-.focus();
+        document
+            .getElementById("chatInput")
+            .focus();
 
-},100);
+    },100);
 
 }
 
 
 function closeAI(){
 
-document
-.getElementById("chat")
-.classList
-.remove("active");
+    document
+        .getElementById("chat")
+        .classList
+        .remove("active");
 
 }
 
+
+/* =========================================================
+AI QUICK ACTION
+========================================================= */
 
 function quick(text){
 
-const input=
-document.getElementById("chatInput");
+    const input =
+        document.getElementById("chatInput");
 
-input.value=text;
+    input.value = text;
 
-sendAI();
+    sendAI();
 
 }
 
 
-/* =========================
-AI RESPONSE ENGINE
-========================= */
+/* =========================================================
+ADD AI MESSAGE
+========================================================= */
+
+function addAIMessage(text){
+
+    const body =
+        document.getElementById("chatBody");
+
+    const message =
+        document.createElement("div");
+
+    message.className = "message";
+
+    message.textContent = text;
+
+    body.appendChild(message);
+
+    body.scrollTop = body.scrollHeight;
+
+}
+
+
+/* =========================================================
+ADD USER MESSAGE
+========================================================= */
+
+function addUserMessage(text){
+
+    const body =
+        document.getElementById("chatBody");
+
+    const message =
+        document.createElement("div");
+
+    message.className =
+        "message user";
+
+    message.textContent = text;
+
+    body.appendChild(message);
+
+    body.scrollTop = body.scrollHeight;
+
+}
+
+
+/* =========================================================
+TRUST&CO AI
+========================================================= */
 
 function sendAI(){
 
-const input=
-document.getElementById("chatInput");
+    const input =
+        document.getElementById("chatInput");
 
-const body=
-document.getElementById("chatBody");
+    const text =
+        input.value.trim();
 
-const text=
-input.value.trim();
+    if(!text)
+        return;
 
-if(!text)
-return;
+    addUserMessage(text);
 
+    input.value = "";
 
-const user=
-document.createElement("div");
+    const typing =
+        document.getElementById("typing");
 
-user.className=
-"message user";
-
-user.textContent=text;
-
-body.appendChild(user);
-
-input.value="";
-
-body.scrollTop=
-body.scrollHeight;
+    typing.style.display = "block";
 
 
-const lower=
-text.toLowerCase();
-
-let response="";
+    const lower =
+        text.toLowerCase();
 
 
-if(
+    let response = "";
 
-lower.includes("payment") ||
-lower.includes("gateway") ||
-lower.includes("upi") ||
-lower.includes("checkout")
 
-){
+    if(
+        lower.includes("payment") ||
+        lower.includes("gateway") ||
+        lower.includes("upi") ||
+        lower.includes("checkout") ||
+        lower.includes("merchant")
+    ){
 
-response=
+        response =
+        "Payment Gateway Solutions are one of our primary services. " +
+        "Trust&Co can understand your business requirements, " +
+        "help identify a suitable solution and assist with the " +
+        "relevant onboarding and integration process. " +
+        "Final approval is made by the relevant payment provider. " +
+        "If you want, submit your business details and I'll prepare " +
+        "a WhatsApp enquiry for 8097361210.";
 
-"Payment Gateway is Trust&Co's primary service. " +
+    }
 
-"We can understand your business model, " +
+    else if(
+        lower.includes("website") ||
+        lower.includes("web development") ||
+        lower.includes("web")
+    ){
 
-"payment requirements and onboarding needs, " +
+        response =
+        "Trust&Co provides professional website development " +
+        "and custom web solutions. Tell me what your business " +
+        "does and what type of website you need. I can then " +
+        "help structure your enquiry.";
 
-"then assist you with the relevant payment " +
+    }
 
-"gateway solution subject to provider approval. " +
+    else if(
+        lower.includes("ecommerce") ||
+        lower.includes("e-commerce") ||
+        lower.includes("online store")
+    ){
 
-"If you'd like, submit your requirements and " +
+        response =
+        "We provide e-commerce website solutions for businesses " +
+        "that want to sell products or services online. " +
+        "Tell me what you plan to sell and what features you need.";
 
-"I can prepare the enquiry for WhatsApp.";
+    }
+
+    else if(
+        lower.includes("ai") ||
+        lower.includes("automation")
+    ){
+
+        response =
+        "Trust&Co provides AI integration and digital automation " +
+        "solutions. Tell me what you would like AI to handle, " +
+        "and I'll help structure the requirement.";
+
+    }
+
+    else if(
+        lower.includes("human") ||
+        lower.includes("person") ||
+        lower.includes("expert") ||
+        lower.includes("call")
+    ){
+
+        response =
+        "Absolutely. You can contact the Trust&Co team directly. " +
+        "WhatsApp: 8097361210. " +
+        "Email: trustcoservices28@gmail.com. " +
+        "You can also call 8097361210 or 7718925425.";
+
+    }
+
+    else if(
+        lower.includes("price") ||
+        lower.includes("cost") ||
+        lower.includes("charge") ||
+        lower.includes("pricing")
+    ){
+
+        response =
+        "Pricing depends on the actual business requirement and " +
+        "service scope. I don't want to invent a price. " +
+        "Submit your requirements and the Trust&Co team can " +
+        "discuss the applicable commercial terms.";
+
+    }
+
+    else if(
+        lower.includes("gst") ||
+        lower.includes("gstin")
+    ){
+
+        response =
+        "Trust&Co's GSTIN is currently not displayed because the " +
+        "GST details are being updated. Please contact Trust&Co " +
+        "directly for the latest verified GST information.";
+
+    }
+
+    else if(
+        lower.includes("address") ||
+        lower.includes("office") ||
+        lower.includes("location")
+    ){
+
+        response =
+        "The official business address displayed for Trust&Co Web " +
+        "Services is: B 205, Shantidoot Building, Charkop Sector-2, " +
+        "Block 2, RSC 2, Mumbai, Maharashtra – 400067.";
+
+    }
+
+    else if(
+        lower.includes("owner") ||
+        lower.includes("proprietor") ||
+        lower.includes("founder")
+    ){
+
+        response =
+        "Trust&Co Web Services is a proprietorship business. " +
+        "The proprietor is Omkar Dilip Kurlekar.";
+
+    }
+
+    else{
+
+        response =
+        "I can help with Payment Gateway Solutions, Website " +
+        "Development, E-commerce, AI Integration, Custom Web " +
+        "Solutions and Digital Services. Tell me what your " +
+        "business needs and I'll guide you.";
+
+    }
+
+
+    setTimeout(function(){
+
+        typing.style.display = "none";
+
+        addAIMessage(response);
+
+    },550);
 
 }
 
 
-else if(
-
-lower.includes("website") ||
-lower.includes("web")
-
-){
-
-response=
-
-"We provide professional website development " +
-
-"and custom web solutions. " +
-
-"Tell me what your business does, what type " +
-
-"of website you need and whether you already " +
-
-"have a website.";
-
-}
-
-
-else if(
-
-lower.includes("ecommerce") ||
-lower.includes("e-commerce") ||
-lower.includes("store")
-
-){
-
-response=
-
-"We can help create a modern e-commerce website. " +
-
-"Tell me what you plan to sell, your expected " +
-
-"requirements and whether you already have a website.";
-
-}
-
-
-else if(
-
-lower.includes("ai") ||
-lower.includes("automation")
-
-){
-
-response=
-
-"We can help with AI-powered customer enquiry " +
-
-"handling, automation and digital workflows. " +
-
-"Tell me what you'd like the AI to handle.";
-
-}
-
-
-else if(
-
-lower.includes("human") ||
-lower.includes("person") ||
-lower.includes("call")
-
-){
-
-response=
-
-"Absolutely. You can contact the Trust&Co team directly. " +
-
-"WhatsApp: 8097361210. " +
-
-"Phone: 8097361210 / 7718925425. " +
-
-"Email: trustcoservices28@gmail.com";
-
-}
-
-
-else if(
-
-lower.includes("price") ||
-lower.includes("cost") ||
-lower.includes("charges")
-
-){
-
-response=
-
-"I don't have verified pricing information available. " +
-
-"I won't invent a price. " +
-
-"I can prepare your requirements so the Trust&Co team " +
-
-"can discuss the appropriate solution with you.";
-
-}
-
-
-else if(
-
-lower.includes("gst") ||
-lower.includes("registration")
-
-){
-
-response=
-
-"Trust&Co is a newly established business. " +
-
-"For current tax or registration details, please " +
-
-"contact the Trust&Co team directly so you receive " +
-
-"the latest verified information.";
-
-}
-
-
-else{
-
-response=
-
-"I can help you with Payment Gateway Services, " +
-
-"Website Development, E-commerce, AI Integration " +
-
-"and Custom Web Solutions. " +
-
-"Tell me what your business needs and I'll guide you.";
-
-}
-
-
-setTimeout(function(){
-
-const ai=
-document.createElement("div");
-
-ai.className="message";
-
-ai.textContent=response;
-
-body.appendChild(ai);
-
-body.scrollTop=
-body.scrollHeight;
-
-},450);
-
-}
-
-
-/* =========================
-SMART LEAD ENQUIRY
-========================= */
+/* =========================================================
+SMART LEAD FORM
+========================================================= */
 
 document
-.getElementById("leadForm")
-.addEventListener(
-"submit",
-function(event){
+    .getElementById("leadForm")
+    .addEventListener(
+        "submit",
+        function(event){
 
-event.preventDefault();
-
-
-const name=
-document
-.getElementById("leadName")
-.value
-.trim();
+            event.preventDefault();
 
 
-const company=
-document
-.getElementById("leadCompany")
-.value
-.trim();
+            const name =
+                document
+                .getElementById("leadName")
+                .value
+                .trim();
 
 
-const email=
-document
-.getElementById("leadEmail")
-.value
-.trim();
+            const company =
+                document
+                .getElementById("leadCompany")
+                .value
+                .trim();
 
 
-const phone=
-document
-.getElementById("leadPhone")
-.value
-.trim();
+            const email =
+                document
+                .getElementById("leadEmail")
+                .value
+                .trim();
 
 
-const business=
-document
-.getElementById("leadBusiness")
-.value;
+            const phone =
+                document
+                .getElementById("leadPhone")
+                .value
+                .trim();
 
 
-const service=
-document
-.getElementById("leadService")
-.value;
+            const business =
+                document
+                .getElementById("leadBusiness")
+                .value;
 
 
-const requirements=
-document
-.getElementById("leadRequirements")
-.value
-.trim();
+            const service =
+                document
+                .getElementById("leadService")
+                .value;
 
 
-const contact=
-document
-.getElementById("leadContact")
-.value;
+            const requirements =
+                document
+                .getElementById("leadRequirements")
+                .value
+                .trim();
 
 
-/* =========================
-AI-GENERATED ENQUIRY SUMMARY
-========================= */
+            const contact =
+                document
+                .getElementById("leadContact")
+                .value;
 
-const message=
 
-`NEW TRUST&CO WEBSITE ENQUIRY
+            /*
+            AI-STYLE LEAD QUALIFICATION
+            */
 
-Hello Trust&Co Team,
+            let priority = "Standard Enquiry";
 
-I would like to discuss a business requirement.
+            if(
+                service === "Payment Gateway" ||
+                service === "Multiple Services"
+            ){
 
-━━━━━━━━━━━━━━━━━━
+                priority =
+                    "Priority Business Enquiry";
 
-CLIENT INFORMATION
+            }
+
+
+            /*
+            STRUCTURED MESSAGE
+            */
+
+            const message =
+
+`NEW TRUST&CO WEB SERVICES ENQUIRY
+
+━━━━━━━━━━━━━━━━━━━━
+
+LEAD STATUS
+${priority}
+
+━━━━━━━━━━━━━━━━━━━━
+
+CLIENT DETAILS
 
 Name:
 ${name}
@@ -3384,174 +3707,236 @@ ${email}
 Phone / WhatsApp:
 ${phone}
 
-━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━
 
 BUSINESS PROFILE
 
 Business Type:
 ${business}
 
-━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━
 
 SERVICE REQUIRED
 
 ${service}
 
-━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━
 
-REQUIREMENTS
+BUSINESS REQUIREMENT
 
 ${requirements}
 
-━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━
 
 PREFERRED CONTACT
 
 ${contact}
 
-━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━
+
+BUSINESS INFORMATION
+
+Trust&Co Web Services
+Omkar Dilip Kurlekar — Proprietor
+Established: 28 August 2026
+Udyam: UDYAM-MH-18-0580594
+
+Registered Business Address:
+B 205, Shantidoot Building,
+Charkop Sector-2, Block 2,
+RSC 2, Mumbai,
+Maharashtra – 400067
+
+━━━━━━━━━━━━━━━━━━━━
 
 SOURCE
 
 Trust&Co Website
-AI Business Enquiry Assistant
+Trust&Co AI Enquiry Assistant
 
-Please review my requirements and contact me.
+Please review this enquiry and contact the client.
 
 Thank you,
 ${name}`;
 
 
-/* =========================
-PRIMARY WHATSAPP
-8097361210
-========================= */
+            /*
+            PRIMARY WHATSAPP
+            */
 
-const whatsappNumber=
-"918097361210";
+            const whatsappURL =
 
-
-const whatsappURL=
-
-"https://wa.me/" +
-whatsappNumber +
-"?text=" +
-encodeURIComponent(message);
+                "https://wa.me/918097361210" +
+                "?text=" +
+                encodeURIComponent(message);
 
 
-/* =========================
-EMAIL
-========================= */
+            /*
+            EMAIL
+            */
 
-const emailAddress=
-"trustcoservices28@gmail.com";
+            const emailURL =
 
-
-const emailSubject=
-"New Trust&Co Business Enquiry - " +
-service;
-
-
-const emailURL=
-
-"mailto:" +
-emailAddress +
-"?subject=" +
-encodeURIComponent(emailSubject) +
-"&body=" +
-encodeURIComponent(message);
+                "mailto:trustcoservices28@gmail.com" +
+                "?subject=" +
+                encodeURIComponent(
+                    "New Trust&Co Enquiry - " + service
+                ) +
+                "&body=" +
+                encodeURIComponent(message);
 
 
-/* =========================
-SEND
-========================= */
+            /*
+            OPEN WHATSAPP
+            */
 
-if(contact==="WhatsApp"){
+            if(contact === "WhatsApp"){
 
-window.open(
-whatsappURL,
-"_blank"
-);
+                window.open(
+                    whatsappURL,
+                    "_blank"
+                );
+
+            }
+
+
+            /*
+            OPEN EMAIL
+            */
+
+            else if(contact === "Email"){
+
+                window.location.href =
+                    emailURL;
+
+            }
+
+
+            /*
+            BOTH
+            */
+
+            else{
+
+                window.open(
+                    whatsappURL,
+                    "_blank"
+                );
+
+                setTimeout(function(){
+
+                    window.location.href =
+                        emailURL;
+
+                },900);
+
+            }
+
+
+            /*
+            RESET
+            */
+
+            setTimeout(function(){
+
+                document
+                    .getElementById("leadForm")
+                    .reset();
+
+            },1000);
+
+        }
+    );
+
+
+/* =========================================================
+FAQ
+========================================================= */
+
+function toggleFAQ(button){
+
+    const item =
+        button.parentElement;
+
+    item.classList.toggle("open");
+
+    const symbol =
+        button.querySelector("span");
+
+    if(item.classList.contains("open")){
+
+        symbol.textContent = "−";
+
+    }else{
+
+        symbol.textContent = "+";
+
+    }
 
 }
 
 
-else if(contact==="Email"){
+/* =========================================================
+LEGAL TABS
+========================================================= */
 
-window.location.href=
-emailURL;
+function showLegal(id,button){
 
-}
+    document
+        .querySelectorAll(".legal-page")
+        .forEach(function(page){
 
+            page.classList.remove("active");
 
-else{
-
-window.open(
-whatsappURL,
-"_blank"
-);
-
-setTimeout(
-function(){
-
-window.location.href=
-emailURL;
-
-},
-900
-);
-
-}
+        });
 
 
-/* SUCCESS */
+    document
+        .querySelectorAll(".legal-tab")
+        .forEach(function(tab){
 
-setTimeout(
-function(){
+            tab.classList.remove("active");
 
-alert(
+        });
 
-"Your enquiry has been prepared.\n\n" +
 
-"WhatsApp will open with your complete " +
+    const page =
+        document.getElementById(id);
 
-"enquiry addressed to Trust&Co."
+    if(page)
+        page.classList.add("active");
 
-);
 
-},
-300
-);
-
+    if(button)
+        button.classList.add("active");
 
 }
-);
 
 
-/* =========================
+/* =========================================================
 CLOSE MOBILE NAV
-========================= */
+========================================================= */
 
 document
-.querySelectorAll(".navlinks a")
-.forEach(function(link){
+    .querySelectorAll(".navlinks a")
+    .forEach(function(link){
 
-link.addEventListener(
-"click",
-function(){
+        link.addEventListener(
+            "click",
+            function(){
 
-if(window.innerWidth<=950){
+                if(window.innerWidth <= 950){
 
-document
-.querySelector(".navlinks")
-.style.display="";
+                    document
+                        .querySelector(".navlinks")
+                        .style.display = "";
 
-}
+                }
 
-});
+            }
+        );
 
-});
-
+    });
 
 </script>
 
