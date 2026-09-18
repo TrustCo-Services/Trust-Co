@@ -1,746 +1,1882 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="Trust&Co Web Services — Payment Gateway Services, Web Development, E-commerce, AI and Digital Solutions.">
-<title>Trust&Co Web Services | Intelligent Payment & Web Solutions</title>
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Trust&Co Web Services — A newly established technology business providing payment gateway solutions, web development, e-commerce, AI and digital solutions.">
+
+<meta name="theme-color" content="#050505">
+
+<title>
+Trust&Co Web Services | Payment Gateway & Digital Solutions
+</title>
+
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
 body{
 background:#050505;
 color:#fff;
-font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-overflow-x:hidden
+font-family:
+Inter,
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Arial,
+sans-serif;
+overflow-x:hidden;
 }
-a{text-decoration:none;color:inherit}
-button,input,textarea,select{font:inherit}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+button,
+input,
+textarea,
+select{
+font:inherit;
+}
+
 :root{
+
 --red:#e50914;
 --red2:#ff303a;
 --white:#fff;
---muted:#8f8f8f;
---line:rgba(255,255,255,.1);
---panel:rgba(255,255,255,.045)
-}
-::selection{background:var(--red);color:#fff}
+--muted:#929292;
+--line:rgba(255,255,255,.10);
+--panel:rgba(255,255,255,.045);
 
-/* NAVIGATION */
+}
+
+::selection{
+background:var(--red);
+color:#fff;
+}
+
+
+/* =========================
+NAVIGATION
+========================= */
+
 nav{
+
 position:fixed;
 top:0;
 left:0;
 right:0;
+
 z-index:1000;
+
 padding:18px 5%;
-background:rgba(5,5,5,.7);
+
+background:rgba(5,5,5,.72);
+
 backdrop-filter:blur(22px);
-border-bottom:1px solid rgba(255,255,255,.07)
+
+border-bottom:
+1px solid rgba(255,255,255,.07);
+
 }
+
 .nav{
+
 max-width:1400px;
 margin:auto;
+
 display:flex;
 align-items:center;
-justify-content:space-between
+justify-content:space-between;
+
 }
+
 .logo{
+
 font-size:25px;
 font-weight:900;
-letter-spacing:-1.7px
+letter-spacing:-1.7px;
+
 }
-.logo span{color:var(--red)}
+
+.logo span{
+color:var(--red);
+}
+
 .navlinks{
+
 display:flex;
 gap:30px;
+
 color:#aaa;
-font-size:14px
-}
-.navlinks a:hover{color:#fff}
-.navbtn{
-padding:12px 20px;
-background:var(--red);
-border-radius:50px;
-font-weight:750;
-transition:.3s
-}
-.navbtn:hover{
-transform:translateY(-2px);
-box-shadow:0 12px 35px rgba(229,9,20,.35)
-}
-.menu{
-display:none;
-font-size:25px;
-cursor:pointer
+
+font-size:14px;
+
 }
 
-/* HERO */
+.navlinks a{
+
+transition:.25s;
+
+}
+
+.navlinks a:hover{
+
+color:#fff;
+
+}
+
+.navbtn{
+
+padding:12px 20px;
+
+background:var(--red);
+
+border-radius:50px;
+
+font-weight:800;
+
+transition:.3s;
+
+}
+
+.navbtn:hover{
+
+transform:translateY(-2px);
+
+box-shadow:
+0 12px 35px rgba(229,9,20,.35);
+
+}
+
+.menu{
+
+display:none;
+
+font-size:25px;
+
+cursor:pointer;
+
+}
+
+
+/* =========================
+HERO
+========================= */
+
 .hero{
+
 min-height:100vh;
-padding:130px 5% 80px;
+
+padding:
+135px 5%
+80px;
+
 display:flex;
 align-items:center;
+
 position:relative;
-overflow:hidden
+
+overflow:hidden;
+
 }
+
 .grid{
+
 position:absolute;
+
 inset:0;
+
 background-image:
-linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
-linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+
+linear-gradient(
+rgba(255,255,255,.035) 1px,
+transparent 1px
+),
+
+linear-gradient(
+90deg,
+rgba(255,255,255,.035) 1px,
+transparent 1px
+);
+
 background-size:75px 75px;
-mask-image:linear-gradient(to bottom,#000,transparent 90%)
+
+mask-image:
+linear-gradient(
+to bottom,
+#000,
+transparent 90%
+);
+
 }
+
 .glow{
+
 position:absolute;
+
 right:-250px;
 top:50px;
+
 width:700px;
 height:700px;
+
 border-radius:50%;
-background:radial-gradient(circle,rgba(229,9,20,.2),transparent 68%);
-filter:blur(20px)
-}
-.hero-inner{
-width:100%;
-max-width:1400px;
-margin:auto;
-display:grid;
-grid-template-columns:1.05fr .95fr;
-gap:50px;
-align-items:center;
-position:relative;
-z-index:2
-}
-.eyebrow{
-color:var(--red);
-font-size:12px;
-font-weight:850;
-letter-spacing:3px;
-text-transform:uppercase;
-margin-bottom:22px
-}
-h1{
-font-size:clamp(48px,6.8vw,92px);
-line-height:.93;
-letter-spacing:-6px
-}
-h1 span{color:var(--red)}
-.hero p{
-max-width:650px;
-margin-top:28px;
-font-size:18px;
-line-height:1.75;
-color:#999
-}
-.buttons{
-display:flex;
-gap:12px;
-flex-wrap:wrap;
-margin-top:34px
-}
-.btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-gap:8px;
-padding:14px 22px;
-border:0;
-border-radius:100px;
-background:var(--red);
-color:#fff;
-font-weight:800;
-cursor:pointer;
-transition:.3s
-}
-.btn:hover{
-transform:translateY(-3px);
-background:var(--red2);
-box-shadow:0 15px 45px rgba(229,9,20,.3)
-}
-.btn.white{
-background:#fff;
-color:#050505
+
+background:
+radial-gradient(
+circle,
+rgba(229,9,20,.20),
+transparent 68%
+);
+
+filter:blur(20px);
+
 }
 
-/* TECH VISUAL */
-.visual{
-height:530px;
-display:flex;
+.hero-inner{
+
+width:100%;
+
+max-width:1400px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:
+1.05fr .95fr;
+
+gap:50px;
+
 align-items:center;
-justify-content:center;
-position:relative
+
+position:relative;
+
+z-index:2;
+
 }
+
+.eyebrow{
+
+color:var(--red);
+
+font-size:12px;
+
+font-weight:850;
+
+letter-spacing:3px;
+
+text-transform:uppercase;
+
+margin-bottom:22px;
+
+}
+
+.hero h1{
+
+font-size:
+clamp(48px,6.8vw,92px);
+
+line-height:.93;
+
+letter-spacing:-6px;
+
+}
+
+.hero h1 span{
+
+color:var(--red);
+
+}
+
+.hero-text{
+
+max-width:650px;
+
+margin-top:28px;
+
+font-size:18px;
+
+line-height:1.75;
+
+color:#999;
+
+}
+
+.buttons{
+
+display:flex;
+
+gap:12px;
+
+flex-wrap:wrap;
+
+margin-top:34px;
+
+}
+
+.btn{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:8px;
+
+padding:14px 22px;
+
+border:0;
+
+border-radius:100px;
+
+background:var(--red);
+
+color:#fff;
+
+font-weight:800;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-3px);
+
+background:var(--red2);
+
+box-shadow:
+0 15px 45px rgba(229,9,20,.30);
+
+}
+
+.btn.white{
+
+background:#fff;
+
+color:#050505;
+
+}
+
+
+/* =========================
+TECH VISUAL
+========================= */
+
+.visual{
+
+height:530px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+position:relative;
+
+}
+
 .core{
+
 width:190px;
 height:190px;
-border:1px solid rgba(255,255,255,.25);
+
+border:
+1px solid rgba(255,255,255,.25);
+
 border-radius:50%;
+
 display:flex;
 align-items:center;
 justify-content:center;
+
 font-size:35px;
+
 font-weight:900;
+
 position:relative;
+
 box-shadow:
+
 0 0 100px rgba(229,9,20,.17),
+
 inset 0 0 70px rgba(229,9,20,.08);
-animation:spin 18s linear infinite
+
+animation:
+spin 18s linear infinite;
+
 }
+
 .core:before,
 .core:after{
+
 content:"";
+
 position:absolute;
+
 border-radius:50%;
-border:1px solid rgba(229,9,20,.55)
+
+border:
+1px solid rgba(229,9,20,.55);
+
 }
-.core:before{inset:25px}
+
+.core:before{
+inset:25px;
+}
+
 .core:after{
+
 inset:55px;
-border-color:rgba(255,255,255,.18)
+
+border-color:
+rgba(255,255,255,.18);
+
 }
+
 .coretext{
+
 position:relative;
+
 z-index:5;
-animation:reverseSpin 18s linear infinite
+
+animation:
+reverseSpin 18s linear infinite;
+
 }
-.coretext span{color:var(--red)}
+
+.coretext span{
+
+color:var(--red);
+
+}
+
 .orbit{
+
 position:absolute;
+
 width:330px;
 height:330px;
-border:1px solid rgba(255,255,255,.08);
+
+border:
+1px solid rgba(255,255,255,.08);
+
 border-radius:50%;
-animation:spin 25s linear infinite reverse
+
+animation:
+spin 25s linear infinite reverse;
+
 }
+
 .orbit.two{
+
 width:450px;
 height:450px;
-animation-duration:36s
+
+animation-duration:36s;
+
 }
+
 .node{
+
 position:absolute;
+
 width:12px;
 height:12px;
+
 border-radius:50%;
+
 background:var(--red);
-box-shadow:0 0 25px var(--red)
+
+box-shadow:
+0 0 25px var(--red);
+
 }
-.n1{top:5%;left:50%}
-.n2{right:3%;top:50%}
-.n3{bottom:5%;left:50%}
-.n4{left:3%;top:50%}
-.n5{top:17%;right:15%}
-.n6{bottom:17%;left:15%}
+
+.n1{
+top:5%;
+left:50%;
+}
+
+.n2{
+right:3%;
+top:50%;
+}
+
+.n3{
+bottom:5%;
+left:50%;
+}
+
+.n4{
+left:3%;
+top:50%;
+}
+
+.n5{
+top:17%;
+right:15%;
+}
+
+.n6{
+bottom:17%;
+left:15%;
+}
+
 .packet{
+
 position:absolute;
+
 width:6px;
 height:6px;
+
 border-radius:50%;
+
 background:#fff;
-box-shadow:0 0 14px #fff;
-animation:packet 4s linear infinite
+
+box-shadow:
+0 0 14px #fff;
+
+animation:
+packet 4s linear infinite;
+
 }
-.p1{left:18%;top:50%}
-.p2{left:50%;top:18%;animation-delay:1s}
-.p3{right:18%;top:50%;animation-delay:2s}
-.p4{left:50%;bottom:18%;animation-delay:3s}
-@keyframes spin{to{transform:rotate(360deg)}}
-@keyframes reverseSpin{to{transform:rotate(-360deg)}}
+
+.p1{
+left:18%;
+top:50%;
+}
+
+.p2{
+left:50%;
+top:18%;
+animation-delay:1s;
+}
+
+.p3{
+right:18%;
+top:50%;
+animation-delay:2s;
+}
+
+.p4{
+left:50%;
+bottom:18%;
+animation-delay:3s;
+}
+
+@keyframes spin{
+
+to{
+transform:rotate(360deg);
+}
+
+}
+
+@keyframes reverseSpin{
+
+to{
+transform:rotate(-360deg);
+}
+
+}
+
 @keyframes packet{
-0%{transform:translateX(0);opacity:0}
-15%{opacity:1}
-100%{transform:translateX(150px);opacity:0}
+
+0%{
+transform:translateX(0);
+opacity:0;
 }
 
-/* SECTIONS */
-section{padding:125px 5%}
-.container{max-width:1400px;margin:auto}
+15%{
+opacity:1;
+}
+
+100%{
+transform:translateX(150px);
+opacity:0;
+}
+
+}
+
+
+/* =========================
+GENERAL SECTIONS
+========================= */
+
+section{
+
+padding:
+125px 5%;
+
+}
+
+.container{
+
+max-width:1400px;
+
+margin:auto;
+
+}
+
 .title{
+
 max-width:800px;
-margin-bottom:58px
+
+margin-bottom:58px;
+
 }
+
 .title h2{
-font-size:clamp(42px,5vw,68px);
+
+font-size:
+clamp(42px,5vw,68px);
+
 line-height:.98;
-letter-spacing:-4px
+
+letter-spacing:-4px;
+
 }
+
 .title p{
+
 color:#8c8c8c;
+
 font-size:17px;
+
 line-height:1.75;
-margin-top:20px
-}
 
-/* PAYMENT */
-.payment{
-background:radial-gradient(circle at 80% 20%,rgba(229,9,20,.08),transparent 35%)
-}
-.flow{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:14px
-}
-.flowcard{
-min-height:230px;
-padding:28px;
-border:1px solid var(--line);
-background:var(--panel);
-border-radius:25px;
-transition:.35s
-}
-.flowcard:hover{
-transform:translateY(-8px);
-border-color:rgba(229,9,20,.5)
-}
-.number{
-color:var(--red);
-font-size:12px;
-font-weight:900;
-letter-spacing:2px
-}
-.flowcard h3{
-margin-top:65px;
-font-size:20px
-}
-.flowcard p{
-margin-top:10px;
-color:#858585;
-font-size:14px;
-line-height:1.6
-}
-
-/* SERVICES */
-.services{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:16px
-}
-.service{
-min-height:250px;
-padding:32px;
-border:1px solid var(--line);
-border-radius:25px;
-background:linear-gradient(145deg,rgba(255,255,255,.05),rgba(255,255,255,.015));
-transition:.35s
-}
-.service:hover{
-transform:translateY(-7px);
-border-color:rgba(229,9,20,.5)
-}
-.serviceicon{
-font-size:28px;
-color:var(--red)
-}
-.service h3{
-margin-top:55px;
-font-size:21px
-}
-.service p{
-margin-top:10px;
-color:#888;
-font-size:14px;
-line-height:1.65
-}
-
-/* PROCESS */
-.dark{background:#080808}
-.process{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:16px
-}
-.processcard{
-min-height:220px;
-padding:30px;
-border-top:1px solid var(--red);
-background:linear-gradient(180deg,rgba(255,255,255,.035),transparent)
-}
-.processnumber{
-font-size:50px;
-font-weight:900;
-color:#333
-}
-.processcard h3{margin-top:20px}
-.processcard p{
-margin-top:10px;
-color:#858585;
-line-height:1.65
-}
-
-/* TRUST */
-.trust{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:16px
-}
-.trustcard{
-min-height:220px;
-padding:35px;
-border:1px solid var(--line);
-border-radius:25px;
-background:var(--panel)
-}
-.trusticon{
-font-size:28px;
-color:var(--red)
-}
-.trustcard h3{margin-top:45px}
-.trustcard p{
-margin-top:10px;
-color:#858585;
-line-height:1.65
-}
-
-/* AI SECTION */
-.ai-section{
-background:
-radial-gradient(circle at 50% 50%,rgba(229,9,20,.1),transparent 45%),
-#070707
-}
-.ai-box{
-border:1px solid var(--line);
-border-radius:35px;
-padding:70px;
-background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.015));
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center
-}
-.ai-box h2{
-font-size:clamp(40px,5vw,65px);
-letter-spacing:-4px
-}
-.ai-box p{
 margin-top:20px;
-color:#999;
-line-height:1.7
-}
-.ai-points{
-display:grid;
-gap:12px
-}
-.ai-point{
-padding:17px 20px;
-border:1px solid var(--line);
-border-radius:15px;
-background:rgba(255,255,255,.025);
-color:#bbb
-}
-.ai-point b{color:#fff}
 
-/* CONTACT */
-.contact-grid{
+}
+
+
+/* =========================
+NEW BUSINESS BADGE
+========================= */
+
+.new-business{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:9px 14px;
+
+border:
+1px solid rgba(229,9,20,.35);
+
+background:
+rgba(229,9,20,.07);
+
+border-radius:100px;
+
+font-size:12px;
+
+color:#ddd;
+
+margin-top:28px;
+
+}
+
+.new-business-dot{
+
+width:7px;
+height:7px;
+
+background:var(--red);
+
+border-radius:50%;
+
+box-shadow:
+0 0 12px var(--red);
+
+}
+
+
+/* =========================
+PAYMENT
+========================= */
+
+.payment{
+
+background:
+radial-gradient(
+circle at 80% 20%,
+rgba(229,9,20,.08),
+transparent 35%
+);
+
+}
+
+.flow{
+
 display:grid;
-grid-template-columns:1fr 1fr;
-gap:80px
+
+grid-template-columns:
+repeat(5,1fr);
+
+gap:14px;
+
 }
-.contact h2{
-font-size:clamp(45px,5.5vw,75px);
-line-height:.95;
-letter-spacing:-5px
-}
-.contactdesc{
-color:#999;
-font-size:17px;
-line-height:1.7;
-margin:25px 0 35px;
-max-width:600px
-}
-.contactbox{
-padding:30px;
-border:1px solid var(--line);
+
+.flowcard{
+
+min-height:230px;
+
+padding:28px;
+
+border:
+1px solid var(--line);
+
+background:
+var(--panel);
+
 border-radius:25px;
-background:var(--panel)
+
+transition:.35s;
+
 }
-.contactbox a{
-display:block;
-font-size:19px;
-font-weight:750;
-margin:17px 0
+
+.flowcard:hover{
+
+transform:
+translateY(-8px);
+
+border-color:
+rgba(229,9,20,.5);
+
 }
-.form{
+
+.number{
+
+color:var(--red);
+
+font-size:12px;
+
+font-weight:900;
+
+letter-spacing:2px;
+
+}
+
+.flowcard h3{
+
+margin-top:65px;
+
+font-size:20px;
+
+}
+
+.flowcard p{
+
+margin-top:10px;
+
+color:#858585;
+
+font-size:14px;
+
+line-height:1.6;
+
+}
+
+
+/* =========================
+PROCESS
+========================= */
+
+.dark{
+
+background:#080808;
+
+}
+
+.process{
+
 display:grid;
-gap:12px
+
+grid-template-columns:
+repeat(4,1fr);
+
+gap:16px;
+
 }
+
+.processcard{
+
+min-height:220px;
+
+padding:30px;
+
+border-top:
+1px solid var(--red);
+
+background:
+linear-gradient(
+180deg,
+rgba(255,255,255,.035),
+transparent
+);
+
+}
+
+.processnumber{
+
+font-size:50px;
+
+font-weight:900;
+
+color:#333;
+
+}
+
+.processcard h3{
+
+margin-top:20px;
+
+}
+
+.processcard p{
+
+margin-top:10px;
+
+color:#858585;
+
+line-height:1.65;
+
+}
+
+
+/* =========================
+SERVICES
+========================= */
+
+.services{
+
+display:grid;
+
+grid-template-columns:
+repeat(3,1fr);
+
+gap:16px;
+
+}
+
+.service{
+
+min-height:250px;
+
+padding:32px;
+
+border:
+1px solid var(--line);
+
+border-radius:25px;
+
+background:
+linear-gradient(
+145deg,
+rgba(255,255,255,.05),
+rgba(255,255,255,.015)
+);
+
+transition:.35s;
+
+}
+
+.service:hover{
+
+transform:
+translateY(-7px);
+
+border-color:
+rgba(229,9,20,.5);
+
+}
+
+.serviceicon{
+
+font-size:28px;
+
+color:var(--red);
+
+}
+
+.service h3{
+
+margin-top:55px;
+
+font-size:21px;
+
+}
+
+.service p{
+
+margin-top:10px;
+
+color:#888;
+
+font-size:14px;
+
+line-height:1.65;
+
+}
+
+
+/* =========================
+AI SECTION
+========================= */
+
+.ai-section{
+
+background:
+
+radial-gradient(
+circle at 50% 50%,
+rgba(229,9,20,.10),
+transparent 45%
+),
+
+#070707;
+
+}
+
+.ai-box{
+
+border:
+1px solid var(--line);
+
+border-radius:35px;
+
+padding:65px;
+
+background:
+linear-gradient(
+145deg,
+rgba(255,255,255,.055),
+rgba(255,255,255,.015)
+);
+
+display:grid;
+
+grid-template-columns:
+1fr 1fr;
+
+gap:60px;
+
+align-items:center;
+
+}
+
+.ai-box h2{
+
+font-size:
+clamp(40px,5vw,65px);
+
+letter-spacing:-4px;
+
+line-height:.98;
+
+}
+
+.ai-box p{
+
+margin-top:20px;
+
+color:#999;
+
+line-height:1.7;
+
+}
+
+.ai-points{
+
+display:grid;
+
+gap:12px;
+
+}
+
+.ai-point{
+
+padding:17px 20px;
+
+border:
+1px solid var(--line);
+
+border-radius:15px;
+
+background:
+rgba(255,255,255,.025);
+
+color:#bbb;
+
+}
+
+.ai-point b{
+
+color:#fff;
+
+}
+
+
+/* =========================
+ABOUT / NEW BUSINESS
+========================= */
+
+.aboutbox{
+
+border:
+1px solid var(--line);
+
+border-radius:30px;
+
+padding:50px;
+
+background:
+linear-gradient(
+145deg,
+rgba(229,9,20,.07),
+rgba(255,255,255,.02)
+);
+
+}
+
+.aboutbox h3{
+
+font-size:30px;
+
+letter-spacing:-1px;
+
+}
+
+.aboutbox p{
+
+margin-top:18px;
+
+max-width:900px;
+
+color:#999;
+
+font-size:16px;
+
+line-height:1.8;
+
+}
+
+.aboutfacts{
+
+display:grid;
+
+grid-template-columns:
+repeat(3,1fr);
+
+gap:14px;
+
+margin-top:35px;
+
+}
+
+.fact{
+
+padding:25px;
+
+border:
+1px solid var(--line);
+
+border-radius:18px;
+
+background:
+rgba(255,255,255,.025);
+
+}
+
+.fact strong{
+
+display:block;
+
+font-size:22px;
+
+}
+
+.fact span{
+
+display:block;
+
+margin-top:7px;
+
+font-size:13px;
+
+color:#777;
+
+}
+
+
+/* =========================
+CONTACT
+========================= */
+
+.contact{
+
+background:
+radial-gradient(
+circle at 15% 60%,
+rgba(229,9,20,.10),
+transparent 35%
+);
+
+}
+
+.contact-grid{
+
+display:grid;
+
+grid-template-columns:
+1fr 1fr;
+
+gap:80px;
+
+}
+
+.contact h2{
+
+font-size:
+clamp(45px,5.5vw,75px);
+
+line-height:.95;
+
+letter-spacing:-5px;
+
+}
+
+.contactdesc{
+
+color:#999;
+
+font-size:17px;
+
+line-height:1.7;
+
+margin:
+25px 0 35px;
+
+max-width:600px;
+
+}
+
+.contactbox{
+
+padding:30px;
+
+border:
+1px solid var(--line);
+
+border-radius:25px;
+
+background:
+var(--panel);
+
+}
+
+.contactbox a{
+
+display:block;
+
+font-size:19px;
+
+font-weight:750;
+
+margin:17px 0;
+
+}
+
+.form{
+
+display:grid;
+
+gap:12px;
+
+}
+
 .form input,
 .form textarea,
 .form select{
+
 width:100%;
+
 background:#0b0b0b;
-border:1px solid var(--line);
+
+border:
+1px solid var(--line);
+
 border-radius:13px;
+
 color:#fff;
+
 padding:15px;
-outline:none
+
+outline:none;
+
 }
+
 .form input:focus,
 .form textarea:focus,
 .form select:focus{
-border-color:var(--red)
+
+border-color:
+var(--red);
+
 }
+
 .form textarea{
+
 min-height:140px;
-resize:vertical
+
+resize:vertical;
+
 }
+
 .form small{
+
 color:#666;
-line-height:1.6
+
+line-height:1.6;
+
 }
 
-/* FOOTER */
+
+/* =========================
+FOOTER
+========================= */
+
 footer{
+
 padding:40px 5%;
-border-top:1px solid var(--line)
-}
-.footer{
-max-width:1400px;
-margin:auto;
-display:flex;
-justify-content:space-between;
-gap:30px;
-color:#707070;
-font-size:13px
-}
-.footer strong{
-color:#fff;
-font-size:18px
+
+border-top:
+1px solid var(--line);
+
 }
 
-/* AI CHAT */
+.footer{
+
+max-width:1400px;
+
+margin:auto;
+
+display:flex;
+
+justify-content:space-between;
+
+gap:30px;
+
+color:#707070;
+
+font-size:13px;
+
+}
+
+.footer strong{
+
+color:#fff;
+
+font-size:18px;
+
+}
+
+
+/* =========================
+AI CHAT
+========================= */
+
 .ai-button{
+
 position:fixed;
+
 right:25px;
+
 bottom:25px;
+
 z-index:2000;
+
 width:65px;
 height:65px;
+
 border:0;
+
 border-radius:50%;
-background:var(--red);
+
+background:
+var(--red);
+
 color:#fff;
+
 font-size:25px;
+
 cursor:pointer;
-box-shadow:0 15px 60px rgba(229,9,20,.45);
-animation:breathe 3s infinite
-}
-@keyframes breathe{
-50%{
-transform:scale(1.06);
-box-shadow:0 15px 80px rgba(229,9,20,.65)
-}
-}
-.chat{
-position:fixed;
-right:25px;
-bottom:105px;
-z-index:1999;
-width:400px;
-height:580px;
-background:#101010;
-border:1px solid var(--line);
-border-radius:27px;
-box-shadow:0 30px 100px rgba(0,0,0,.75);
-display:none;
-flex-direction:column;
-overflow:hidden
-}
-.chat.active{display:flex}
-.chathead{
-padding:20px;
-border-bottom:1px solid var(--line);
-display:flex;
-align-items:center;
-justify-content:space-between
-}
-.chathead-title{
-display:flex;
-align-items:center;
-gap:10px
-}
-.ai-orb{
-width:34px;
-height:34px;
-border-radius:50%;
-background:var(--red);
-display:grid;
-place-items:center;
-box-shadow:0 0 25px rgba(229,9,20,.4)
-}
-.close{
-border:0;
-background:none;
-color:#fff;
-font-size:23px;
-cursor:pointer
-}
-.chatbody{
-flex:1;
-padding:18px;
-overflow:auto
-}
-.message{
-padding:13px 15px;
-background:#1a1a1a;
-border-radius:16px;
-color:#bbb;
-font-size:14px;
-line-height:1.55;
-margin-bottom:10px
-}
-.message.user{
-background:var(--red);
-color:#fff;
-margin-left:35px
-}
-.quick{
-display:flex;
-flex-wrap:wrap;
-gap:7px;
-margin-top:10px
-}
-.quick button{
-border:1px solid rgba(255,255,255,.13);
-background:#151515;
-color:#ddd;
-padding:9px 11px;
-border-radius:20px;
-cursor:pointer;
-font-size:12px
-}
-.quick button:hover{
-border-color:var(--red);
-color:#fff
-}
-.chatinput{
-padding:12px;
-border-top:1px solid var(--line);
-display:flex;
-gap:8px
-}
-.chatinput input{
-flex:1;
-min-width:0;
-padding:12px;
-background:#080808;
-border:1px solid var(--line);
-border-radius:12px;
-color:#fff;
-outline:none
-}
-.send{
-width:46px;
-border:0;
-border-radius:12px;
-background:var(--red);
-color:#fff;
-cursor:pointer
+
+box-shadow:
+0 15px 60px rgba(229,9,20,.45);
+
+animation:
+breathe 3s infinite;
+
 }
 
-/* MOBILE */
-@media(max-width:950px){
-.navlinks,.navbtn{display:none}
-.menu{display:block}
-.hero-inner,.contact-grid,.ai-box{grid-template-columns:1fr}
-.network{height:400px}
-.flow{grid-template-columns:1fr 1fr}
-.services,.trust{grid-template-columns:1fr 1fr}
-.process{grid-template-columns:1fr 1fr}
-.ai-box{padding:40px}
+@keyframes breathe{
+
+50%{
+
+transform:scale(1.06);
+
+box-shadow:
+0 15px 80px rgba(229,9,20,.65);
+
 }
-@media(max-width:600px){
-section{padding:85px 5%}
-.hero{padding-top:110px}
-.hero h1{font-size:48px;letter-spacing:-3px}
-.hero p{font-size:16px}
-.core{width:150px;height:150px}
-.orbit{width:260px;height:260px}
-.orbit.two{width:340px;height:340px}
-.flow,.services,.trust,.process{grid-template-columns:1fr}
+
+}
+
 .chat{
+
+position:fixed;
+
+right:25px;
+
+bottom:105px;
+
+z-index:1999;
+
+width:400px;
+
+height:590px;
+
+background:#101010;
+
+border:
+1px solid var(--line);
+
+border-radius:27px;
+
+box-shadow:
+0 30px 100px rgba(0,0,0,.75);
+
+display:none;
+
+flex-direction:column;
+
+overflow:hidden;
+
+}
+
+.chat.active{
+
+display:flex;
+
+}
+
+.chathead{
+
+padding:20px;
+
+border-bottom:
+1px solid var(--line);
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+}
+
+.chathead-title{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+}
+
+.ai-orb{
+
+width:34px;
+height:34px;
+
+border-radius:50%;
+
+background:
+var(--red);
+
+display:grid;
+
+place-items:center;
+
+box-shadow:
+0 0 25px rgba(229,9,20,.4);
+
+}
+
+.close{
+
+border:0;
+
+background:none;
+
+color:#fff;
+
+font-size:23px;
+
+cursor:pointer;
+
+}
+
+.chatbody{
+
+flex:1;
+
+padding:18px;
+
+overflow:auto;
+
+}
+
+.message{
+
+padding:13px 15px;
+
+background:#1a1a1a;
+
+border-radius:16px;
+
+color:#bbb;
+
+font-size:14px;
+
+line-height:1.55;
+
+margin-bottom:10px;
+
+}
+
+.message.user{
+
+background:
+var(--red);
+
+color:#fff;
+
+margin-left:35px;
+
+}
+
+.quick{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:7px;
+
+margin-top:10px;
+
+}
+
+.quick button{
+
+border:
+1px solid rgba(255,255,255,.13);
+
+background:#151515;
+
+color:#ddd;
+
+padding:9px 11px;
+
+border-radius:20px;
+
+cursor:pointer;
+
+font-size:12px;
+
+}
+
+.quick button:hover{
+
+border-color:
+var(--red);
+
+}
+
+.chatinput{
+
+padding:12px;
+
+border-top:
+1px solid var(--line);
+
+display:flex;
+
+gap:8px;
+
+}
+
+.chatinput input{
+
+flex:1;
+
+min-width:0;
+
+padding:12px;
+
+background:#080808;
+
+border:
+1px solid var(--line);
+
+border-radius:12px;
+
+color:#fff;
+
+outline:none;
+
+}
+
+.send{
+
+width:46px;
+
+border:0;
+
+border-radius:12px;
+
+background:
+var(--red);
+
+color:#fff;
+
+cursor:pointer;
+
+}
+
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:950px){
+
+.navlinks,
+.navbtn{
+
+display:none;
+
+}
+
+.menu{
+
+display:block;
+
+}
+
+.hero-inner,
+.contact-grid,
+.ai-box{
+
+grid-template-columns:1fr;
+
+}
+
+.visual{
+
+height:400px;
+
+}
+
+.flow{
+
+grid-template-columns:
+1fr 1fr;
+
+}
+
+.services,
+.process,
+.aboutfacts{
+
+grid-template-columns:
+1fr 1fr;
+
+}
+
+}
+
+@media(max-width:600px){
+
+section{
+
+padding:
+85px 5%;
+
+}
+
+.hero{
+
+padding-top:110px;
+
+}
+
+.hero h1{
+
+font-size:48px;
+
+letter-spacing:-3px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+.core{
+
+width:150px;
+height:150px;
+
+}
+
+.orbit{
+
+width:260px;
+height:260px;
+
+}
+
+.orbit.two{
+
+width:340px;
+height:340px;
+
+}
+
+.flow,
+.services,
+.process,
+.aboutfacts{
+
+grid-template-columns:1fr;
+
+}
+
+.ai-box{
+
+padding:35px 25px;
+
+}
+
+.contact h2{
+
+letter-spacing:-3px;
+
+}
+
+.chat{
+
 right:15px;
+
 bottom:95px;
-width:calc(100% - 30px);
-height:560px
+
+width:
+calc(100% - 30px);
+
+height:560px;
+
 }
-.ai-button{right:15px;bottom:15px}
-.footer{flex-direction:column}
+
+.ai-button{
+
+right:15px;
+
+bottom:15px;
+
 }
+
+.footer{
+
+flex-direction:column;
+
+}
+
+}
+
 @media(prefers-reduced-motion:reduce){
-*,*:before,*:after{
+
+*{
+
 animation:none!important;
+
+transition:none!important;
+
 scroll-behavior:auto!important;
-transition:none!important
+
 }
+
 }
+
 </style>
+
 </head>
+
 
 <body>
 
-<!-- NAVIGATION -->
+
+<!-- =========================
+NAVIGATION
+========================= -->
+
 <nav>
+
 <div class="nav">
 
-<a href="#" class="logo">Trust<span>&</span>Co</a>
+<a href="#" class="logo">
+Trust<span>&</span>Co
+</a>
 
 <div class="navlinks">
-<a href="#services">Services</a>
-<a href="#payments">Payment Gateway</a>
-<a href="#process">How It Works</a>
-<a href="#ai">AI</a>
-<a href="#contact">Contact</a>
+
+<a href="#services">
+Services
+</a>
+
+<a href="#payments">
+Payment Gateway
+</a>
+
+<a href="#ai">
+AI
+</a>
+
+<a href="#about">
+About
+</a>
+
+<a href="#contact">
+Contact
+</a>
+
 </div>
 
-<a href="#contact" class="navbtn">Get Started ↗</a>
+<a href="#contact" class="navbtn">
+Get Started ↗
+</a>
 
-<div class="menu" onclick="toggleMobile()">☰</div>
+<div class="menu"
+onclick="toggleMobile()">
+☰
+</div>
 
 </div>
+
 </nav>
 
 
-<!-- HERO -->
+<!-- =========================
+HERO
+========================= -->
+
 <section class="hero">
 
 <div class="grid"></div>
+
 <div class="glow"></div>
 
+
 <div class="hero-inner">
+
 
 <div>
 
 <div class="eyebrow">
-Intelligent Payment & Web Infrastructure
+
+NEW BUSINESS · ESTABLISHED 2026
+
 </div>
 
+
 <h1>
-Powering businesses with
-<span>smarter technology.</span>
+
+A fresh approach to
+<span>business technology.</span>
+
 </h1>
 
-<p>
-Trust&Co Web Services helps businesses access payment gateway
-solutions, premium websites, e-commerce systems and AI-powered
-digital solutions through one technology-first experience.
+
+<p class="hero-text">
+
+Trust&Co Web Services is a newly established technology
+business focused on payment gateway solutions, professional
+web development, e-commerce, AI and digital business solutions.
+
 </p>
+
+
+<div class="new-business">
+
+<div class="new-business-dot"></div>
+
+Newly established business · 2026
+
+</div>
+
 
 <div class="buttons">
 
-<a href="#contact" class="btn">
+
+<a href="#contact"
+class="btn">
+
 Start an Enquiry ↗
+
 </a>
+
 
 <a
 href="https://wa.me/918097361210"
 target="_blank"
 class="btn white">
+
 WhatsApp Trust&Co →
+
 </a>
+
 
 </div>
 
@@ -748,16 +1884,23 @@ WhatsApp Trust&Co →
 
 
 <!-- TECHNOLOGY VISUAL -->
+
 <div class="visual">
 
 <div class="orbit"></div>
+
 <div class="orbit two"></div>
 
 <div class="core">
+
 <div class="coretext">
+
 T<span>&</span>C
+
 </div>
+
 </div>
+
 
 <div class="node n1"></div>
 <div class="node n2"></div>
@@ -765,6 +1908,7 @@ T<span>&</span>C
 <div class="node n4"></div>
 <div class="node n5"></div>
 <div class="node n6"></div>
+
 
 <div class="packet p1"></div>
 <div class="packet p2"></div>
@@ -774,143 +1918,269 @@ T<span>&</span>C
 </div>
 
 </div>
+
 </section>
 
 
-<!-- PAYMENT GATEWAY -->
-<section id="payments" class="payment">
+<!-- =========================
+PAYMENT GATEWAY
+========================= -->
+
+<section id="payments"
+class="payment">
 
 <div class="container">
+
 
 <div class="title">
 
 <div class="eyebrow">
-01 / Payment Infrastructure
+
+01 / PAYMENT INFRASTRUCTURE
+
 </div>
 
+
 <h2>
-Payments, engineered for business.
+
+Payments,
+built for modern businesses.
+
 </h2>
 
+
 <p>
-We help businesses identify suitable payment gateway solutions
-and support onboarding and integration, subject to the relevant
-provider's requirements and approval.
+
+Trust&Co helps businesses explore suitable payment gateway
+solutions and supports the onboarding and integration journey,
+subject to the requirements and approval of the relevant
+payment provider.
+
 </p>
 
 </div>
+
 
 <div class="flow">
 
-<div class="flowcard">
-<div class="number">01</div>
-<h3>Customer</h3>
-<p>Initiates a transaction through the business.</p>
-</div>
 
 <div class="flowcard">
-<div class="number">02</div>
-<h3>Checkout</h3>
-<p>A streamlined online payment experience.</p>
+
+<div class="number">
+01
 </div>
+
+<h3>
+Business
+</h3>
+
+<p>
+Understand the business and payment requirements.
+</p>
+
+</div>
+
 
 <div class="flowcard">
-<div class="number">03</div>
-<h3>Payment Gateway</h3>
-<p>Connection to a suitable payment provider.</p>
+
+<div class="number">
+02
 </div>
+
+<h3>
+Checkout
+</h3>
+
+<p>
+Create a smooth online payment experience.
+</p>
+
+</div>
+
 
 <div class="flowcard">
-<div class="number">04</div>
-<h3>Processing</h3>
-<p>Transaction processing through relevant infrastructure.</p>
+
+<div class="number">
+03
 </div>
+
+<h3>
+Gateway
+</h3>
+
+<p>
+Connect with a suitable payment gateway provider.
+</p>
+
+</div>
+
 
 <div class="flowcard">
-<div class="number">05</div>
-<h3>Confirmation</h3>
-<p>The merchant receives the transaction outcome.</p>
+
+<div class="number">
+04
+</div>
+
+<h3>
+Processing
+</h3>
+
+<p>
+Transactions are processed through the relevant provider.
+</p>
+
+</div>
+
+
+<div class="flowcard">
+
+<div class="number">
+05
+</div>
+
+<h3>
+Confirmation
+</h3>
+
+<p>
+The merchant receives the transaction outcome.
+</p>
+
+</div>
+
+
 </div>
 
 </div>
-</div>
+
 </section>
 
 
-<!-- PROCESS -->
-<section id="process" class="dark">
+<!-- =========================
+PROCESS
+========================= -->
+
+<section
+id="process"
+class="dark">
 
 <div class="container">
+
 
 <div class="title">
 
 <div class="eyebrow">
-02 / How It Works
+02 / HOW IT WORKS
 </div>
 
 <h2>
-From requirement to go-live.
+Simple. Structured. Business-focused.
 </h2>
 
 </div>
 
+
 <div class="process">
 
-<div class="processcard">
-<div class="processnumber">01</div>
-<h3>Understand</h3>
-<p>
-We understand the business, website and payment requirements.
-</p>
-</div>
 
 <div class="processcard">
-<div class="processnumber">02</div>
-<h3>Recommend</h3>
-<p>
-We identify suitable solutions based on the business requirement.
-</p>
+
+<div class="processnumber">
+01
 </div>
+
+<h3>
+Understand
+</h3>
+
+<p>
+We understand your business and technology requirements.
+</p>
+
+</div>
+
 
 <div class="processcard">
-<div class="processnumber">03</div>
-<h3>Connect</h3>
-<p>
-We assist with onboarding and integration.
-</p>
+
+<div class="processnumber">
+02
 </div>
+
+<h3>
+Recommend
+</h3>
+
+<p>
+We identify suitable solutions based on your requirements.
+</p>
+
+</div>
+
 
 <div class="processcard">
-<div class="processnumber">04</div>
-<h3>Go Live</h3>
+
+<div class="processnumber">
+03
+</div>
+
+<h3>
+Connect
+</h3>
+
 <p>
-The business proceeds once relevant provider onboarding
-and compliance requirements are completed.
+We assist with the relevant onboarding and integration process.
 </p>
+
+</div>
+
+
+<div class="processcard">
+
+<div class="processnumber">
+04
+</div>
+
+<h3>
+Go Live
+</h3>
+
+<p>
+The business proceeds once relevant provider requirements
+and approvals are completed.
+</p>
+
+</div>
+
+
 </div>
 
 </div>
-</div>
+
 </section>
 
 
-<!-- SERVICES -->
+<!-- =========================
+SERVICES
+========================= -->
+
 <section id="services">
 
 <div class="container">
 
+
 <div class="title">
 
 <div class="eyebrow">
-03 / Digital Services
+03 / SERVICES
 </div>
 
 <h2>
-More than payments.
+Built for businesses starting their next chapter.
 </h2>
 
 <p>
-Technology solutions designed around the needs of modern businesses.
+Our services cover payment technology, websites, digital
+commerce and intelligent customer experiences.
 </p>
 
 </div>
@@ -918,223 +2188,411 @@ Technology solutions designed around the needs of modern businesses.
 
 <div class="services">
 
-<div class="service">
-<div class="serviceicon">↗</div>
-<h3>Payment Gateway</h3>
-<p>
-Payment gateway solutions and onboarding assistance aligned
-with business requirements.
-</p>
-</div>
 
 <div class="service">
-<div class="serviceicon">&lt;/&gt;</div>
-<h3>Web Development</h3>
-<p>
-High-performance professional websites designed around business goals.
-</p>
+
+<div class="serviceicon">
+↗
 </div>
 
+<h3>
+Payment Gateway Solutions
+</h3>
+
+<p>
+Explore payment gateway solutions and receive assistance
+with relevant onboarding and integration requirements.
+</p>
+
+</div>
+
+
 <div class="service">
-<div class="serviceicon">◈</div>
-<h3>E-commerce</h3>
+
+<div class="serviceicon">
+&lt;/&gt;
+</div>
+
+<h3>
+Website Development
+</h3>
+
+<p>
+Professional websites designed to give modern businesses
+a strong digital presence.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="serviceicon">
+◈
+</div>
+
+<h3>
+E-commerce
+</h3>
+
 <p>
 Modern online stores and digital commerce experiences.
 </p>
+
 </div>
+
 
 <div class="service">
-<div class="serviceicon">⌘</div>
-<h3>Custom Web Solutions</h3>
-<p>
-Tailored technology solutions for specific operational requirements.
-</p>
+
+<div class="serviceicon">
+⌘
 </div>
+
+<h3>
+Custom Web Solutions
+</h3>
+
+<p>
+Technology solutions designed around specific business needs.
+</p>
+
+</div>
+
 
 <div class="service">
-<div class="serviceicon">✦</div>
-<h3>AI Integration</h3>
-<p>
-AI-powered enquiry handling, automation and customer interaction.
-</p>
+
+<div class="serviceicon">
+✦
 </div>
+
+<h3>
+AI Integration
+</h3>
+
+<p>
+AI-powered customer enquiry handling, automation and
+business workflows.
+</p>
+
+</div>
+
 
 <div class="service">
-<div class="serviceicon">◉</div>
-<h3>Digital Infrastructure</h3>
+
+<div class="serviceicon">
+◉
+</div>
+
+<h3>
+Digital Solutions
+</h3>
+
 <p>
-Technology solutions designed to improve digital business operations.
+Practical digital technology designed to improve business
+operations and customer experiences.
 </p>
+
+</div>
+
+
 </div>
 
 </div>
-</div>
+
 </section>
 
 
-<!-- AI -->
-<section id="ai" class="ai-section">
+<!-- =========================
+AI
+========================= -->
+
+<section id="ai"
+class="ai-section">
 
 <div class="container">
 
+
 <div class="ai-box">
+
 
 <div>
 
 <div class="eyebrow">
-04 / Trust&Co Intelligence
+
+04 / TRUST&CO AI
+
 </div>
 
+
 <h2>
-Your first conversation can be handled by AI.
+
+Your first conversation
+can start with AI.
+
 </h2>
 
+
 <p>
-Trust&Co AI is designed to understand visitor requirements,
-answer approved company questions, qualify enquiries and
-guide serious prospects toward direct contact.
+
+Trust&Co AI is designed to understand what a visitor needs,
+ask relevant questions and prepare a structured business
+enquiry for the Trust&Co team.
+
 </p>
+
 
 <div class="buttons">
 
-<button class="btn" onclick="openAI()">
+<button
+class="btn"
+onclick="openAI()">
+
 Talk to Trust&Co AI ✦
+
 </button>
 
 </div>
 
 </div>
 
+
 <div class="ai-points">
 
-<div class="ai-point">
-<b>01</b> Understand visitor intent
-</div>
 
 <div class="ai-point">
-<b>02</b> Ask relevant qualification questions
+
+<b>01</b>
+Understand visitor intent
+
 </div>
+
 
 <div class="ai-point">
-<b>03</b> Collect structured business requirements
+
+<b>02</b>
+Ask relevant questions
+
 </div>
+
 
 <div class="ai-point">
-<b>04</b> Prepare a professional enquiry summary
+
+<b>03</b>
+Identify the required service
+
 </div>
+
 
 <div class="ai-point">
-<b>05</b> Send the enquiry directly to WhatsApp
+
+<b>04</b>
+Collect business information
+
 </div>
+
 
 <div class="ai-point">
-<b>06</b> Human handoff whenever requested
+
+<b>05</b>
+Prepare a structured enquiry
+
 </div>
+
+
+<div class="ai-point">
+
+<b>06</b>
+Hand off directly to WhatsApp
+
+</div>
+
 
 </div>
 
 </div>
+
 </div>
+
 </section>
 
 
-<!-- TRUST -->
+<!-- =========================
+ABOUT / NEW BUSINESS
+========================= -->
+
 <section id="about">
 
 <div class="container">
 
+
 <div class="title">
 
 <div class="eyebrow">
-05 / Trust
+05 / ABOUT TRUST&CO
 </div>
 
 <h2>
-Built around trust.
+A new business.
+A technology-first mindset.
 </h2>
 
+</div>
+
+
+<div class="aboutbox">
+
+
+<h3>
+Trust&Co Web Services
+</h3>
+
+
 <p>
-We focus on practical technology and payment solutions while
-keeping the customer experience simple and professional.
+
+Trust&Co Web Services is a newly established business
+focused on providing payment gateway solutions, web
+development and digital technology services.
+
+The business is building its digital presence from the
+ground up with a focus on professional service, clear
+communication and technology-driven customer experiences.
+
 </p>
 
-</div>
 
-<div class="trust">
+<div class="aboutfacts">
 
-<div class="trustcard">
-<div class="trusticon">◉</div>
-<h3>Technology-first</h3>
-<p>
-Modern digital experiences with performance and maintainability in mind.
-</p>
-</div>
 
-<div class="trustcard">
-<div class="trusticon">✓</div>
-<h3>Professional onboarding</h3>
-<p>
-Business-focused assistance through the relevant solution journey.
-</p>
-</div>
+<div class="fact">
 
-<div class="trustcard">
-<div class="trusticon">✦</div>
-<h3>Transparent communication</h3>
-<p>
-Clear communication without unsupported claims or invented credentials.
-</p>
-</div>
+<strong>
+2026
+</strong>
+
+<span>
+Established
+</span>
 
 </div>
+
+
+<div class="fact">
+
+<strong>
+Micro
+</strong>
+
+<span>
+Enterprise classification for 2026–27
+</span>
+
 </div>
+
+
+<div class="fact">
+
+<strong>
+Services
+</strong>
+
+<span>
+Primary business activity
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 
-<!-- CONTACT -->
-<section id="contact">
+<!-- =========================
+CONTACT
+========================= -->
+
+<section id="contact"
+class="contact">
 
 <div class="container">
 
+
 <div class="contact-grid">
+
 
 <div>
 
+
 <div class="eyebrow">
-06 / Intelligent Enquiry
+
+06 / START A CONVERSATION
+
 </div>
 
+
 <h2>
-Tell us what you're building.
+
+Tell us
+what you're building.
+
 </h2>
 
+
 <p class="contactdesc">
-Answer a few questions and Trust&Co AI will prepare your
-enquiry. You can then send it directly to our WhatsApp
-or email.
+
+Trust&Co AI can help understand your requirement,
+organise the information and prepare an enquiry
+for direct WhatsApp or email contact.
+
 </p>
+
 
 <div class="contactbox">
 
+
 <div class="eyebrow">
-Direct Contact
+DIRECT CONTACT
 </div>
 
-<a href="https://wa.me/918097361210" target="_blank">
-💬 WhatsApp: 8097361210
+
+<a
+href="https://wa.me/918097361210"
+target="_blank">
+
+💬 WhatsApp
+<br>
+8097361210
+
 </a>
 
-<a href="mailto:trustcoservices28@gmail.com">
-📧 trustcoservices28@gmail.com
+
+<a
+href="mailto:trustcoservices28@gmail.com">
+
+📧 Email
+<br>
+trustcoservices28@gmail.com
+
 </a>
+
 
 <a href="tel:8097361210">
+
 📞 8097361210
+
 </a>
 
+
 <a href="tel:7718925425">
+
 📞 7718925425
+
 </a>
+
 
 </div>
 
@@ -1142,60 +2600,141 @@ Direct Contact
 
 
 <!-- AI LEAD FORM -->
-<form class="form" id="leadForm">
 
-<input id="leadName" type="text" placeholder="Your Name" required>
+<form
+class="form"
+id="leadForm">
 
-<input id="leadCompany" type="text" placeholder="Company Name">
 
-<input id="leadEmail" type="email" placeholder="Email Address" required>
+<input
+id="leadName"
+type="text"
+placeholder="Your Name"
+required
+>
 
-<input id="leadPhone" type="tel" placeholder="Phone / WhatsApp Number" required>
 
-<select id="leadBusiness" required>
+<input
+id="leadCompany"
+type="text"
+placeholder="Company / Business Name"
+>
 
-<option value="">What type of business do you have?</option>
-<option>Startup</option>
-<option>Small Business</option>
-<option>Established Business</option>
-<option>E-commerce Business</option>
-<option>Agency</option>
-<option>Individual / Professional</option>
-<option>Other</option>
+
+<input
+id="leadEmail"
+type="email"
+placeholder="Email Address"
+required
+>
+
+
+<input
+id="leadPhone"
+type="tel"
+placeholder="Phone / WhatsApp Number"
+required
+>
+
+
+<select
+id="leadBusiness"
+required>
+
+<option value="">
+Tell us about your business
+</option>
+
+<option>
+New Business / Startup
+</option>
+
+<option>
+Small Business
+</option>
+
+<option>
+Established Business
+</option>
+
+<option>
+E-commerce Business
+</option>
+
+<option>
+Agency
+</option>
+
+<option>
+Professional / Individual
+</option>
+
+<option>
+Other
+</option>
 
 </select>
 
 
-<select id="leadService" required>
+<select
+id="leadService"
+required>
 
-<option value="">What do you need?</option>
-<option>Payment Gateway</option>
-<option>Website Development</option>
-<option>E-commerce</option>
-<option>AI Integration</option>
-<option>Custom Web Solution</option>
-<option>Digital Infrastructure</option>
-<option>Multiple Services</option>
-<option>Not Sure — Help Me Decide</option>
+<option value="">
+What do you need?
+</option>
+
+<option>
+Payment Gateway
+</option>
+
+<option>
+Website Development
+</option>
+
+<option>
+E-commerce
+</option>
+
+<option>
+AI Integration
+</option>
+
+<option>
+Custom Web Solution
+</option>
+
+<option>
+Digital Solutions
+</option>
+
+<option>
+Multiple Services
+</option>
+
+<option>
+I'm Not Sure
+</option>
 
 </select>
 
 
 <textarea
 id="leadRequirements"
-placeholder="Briefly describe what you need..."
+placeholder="Tell us what you need..."
 required
 ></textarea>
 
 
-<select id="leadContact">
+<select
+id="leadContact">
 
 <option value="WhatsApp">
-I prefer WhatsApp
+Send to WhatsApp
 </option>
 
 <option value="Email">
-I prefer Email
+Send by Email
 </option>
 
 <option value="Both">
@@ -1205,157 +2744,277 @@ WhatsApp + Email
 </select>
 
 
-<button type="submit" class="btn">
+<button
+type="submit"
+class="btn">
+
 Prepare My Enquiry ✦
+
 </button>
 
+
 <small>
-Your information is used to prepare your business enquiry.
-WhatsApp will open with your enquiry already formatted.
+
+Your enquiry will be automatically structured
+and prepared for direct contact with Trust&Co.
+
 </small>
+
 
 </form>
 
+
 </div>
+
 </div>
+
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+FOOTER
+========================= -->
+
 <footer>
 
 <div class="footer">
 
+
 <div>
 
-<strong>Trust&Co Web Services</strong>
+<strong>
+Trust&Co Web Services
+</strong>
+
 
 <div style="margin-top:8px">
-Payment Gateway Services · Web Development · Digital Solutions
+
+Payment Gateway Solutions ·
+Web Development ·
+Digital Solutions
+
 </div>
 
 </div>
+
 
 <div>
-© 2026 Trust&Co Web Services. All rights reserved.
+
+© 2026 Trust&Co Web Services.
+All rights reserved.
+
 </div>
+
 
 </div>
 
 </footer>
 
 
-<!-- AI CHAT -->
-<div class="chat" id="chat">
+<!-- =========================
+AI CHAT
+========================= -->
+
+<div
+class="chat"
+id="chat">
+
 
 <div class="chathead">
 
+
 <div class="chathead-title">
 
-<div class="ai-orb">✦</div>
+
+<div class="ai-orb">
+✦
+</div>
+
 
 <div>
-<strong>Trust&Co AI</strong>
-<div style="font-size:11px;color:#777;margin-top:2px">
-Intelligent Business Assistant
-</div>
-</div>
+
+<strong>
+Trust&Co AI
+</strong>
+
+<div
+style="
+font-size:11px;
+color:#777;
+margin-top:2px
+">
+
+Business Enquiry Assistant
 
 </div>
 
-<button class="close" onclick="closeAI()">×</button>
+</div>
+
 
 </div>
 
 
-<div class="chatbody" id="chatBody">
+<button
+class="close"
+onclick="closeAI()">
+
+×
+
+</button>
+
+
+</div>
+
+
+<div
+class="chatbody"
+id="chatBody">
+
 
 <div class="message">
-Hello. I'm Trust&Co AI. I'll help you find the right
-Trust&Co service and prepare your enquiry.
+
+Hello. I'm Trust&Co AI.
+
+I'll help understand what your business needs
+and guide you toward the right Trust&Co service.
+
 </div>
 
+
 <div class="message">
+
 What are you looking for today?
+
 </div>
+
 
 <div class="quick">
 
-<button onclick="quick('Payment Gateway')">
+
+<button
+onclick="quick('I need a payment gateway')">
+
 Payment Gateway
+
 </button>
 
-<button onclick="quick('Website Development')">
+
+<button
+onclick="quick('I need a website')">
+
 Website
+
 </button>
 
-<button onclick="quick('E-commerce')">
+
+<button
+onclick="quick('I need an e-commerce website')">
+
 E-commerce
+
 </button>
 
-<button onclick="quick('AI Integration')">
+
+<button
+onclick="quick('I need AI integration')">
+
 AI
+
 </button>
 
-<button onclick="quick('Talk to a human')">
-Talk to Human
+
+<button
+onclick="quick('I want to speak to a human')">
+
+Human
+
 </button>
+
 
 </div>
+
 
 </div>
 
 
 <div class="chatinput">
 
+
 <input
 id="chatInput"
 placeholder="Tell me what you need..."
-onkeydown="if(event.key==='Enter')sendAI()"
->
+onkeydown="
+if(event.key==='Enter')
+sendAI()
+">
 
-<button class="send" onclick="sendAI()">
+
+<button
+class="send"
+onclick="sendAI()">
+
 ➤
+
 </button>
 
-</div>
 
 </div>
 
 
-<!-- AI BUTTON -->
+</div>
+
+
+<!-- AI FLOATING BUTTON -->
+
 <button
 class="ai-button"
 onclick="openAI()"
-aria-label="Open Trust&Co AI"
->
+aria-label="Open Trust&Co AI">
+
 ✦
+
 </button>
 
 
 <script>
 
-/* MOBILE NAVIGATION */
+
+/* =========================
+MOBILE MENU
+========================= */
 
 function toggleMobile(){
 
-const links=document.querySelector(".navlinks");
+const links=
+document.querySelector(".navlinks");
 
-if(links.style.display==="flex"){
+if(
+links.style.display==="flex"
+){
 
 links.style.display="";
 
 }else{
 
 links.style.display="flex";
+
 links.style.position="absolute";
+
 links.style.top="70px";
+
 links.style.left="5%";
+
 links.style.right="5%";
+
 links.style.padding="25px";
+
 links.style.flexDirection="column";
+
 links.style.background="#101010";
-links.style.border="1px solid rgba(255,255,255,.1)";
+
+links.style.border=
+"1px solid rgba(255,255,255,.1)";
+
 links.style.borderRadius="20px";
 
 }
@@ -1363,32 +3022,42 @@ links.style.borderRadius="20px";
 }
 
 
-/* AI OPEN/CLOSE */
+/* =========================
+AI
+========================= */
 
 function openAI(){
 
-document.getElementById("chat").classList.add("active");
+document
+.getElementById("chat")
+.classList
+.add("active");
 
 setTimeout(function(){
 
-document.getElementById("chatInput").focus();
+document
+.getElementById("chatInput")
+.focus();
 
 },100);
 
 }
 
+
 function closeAI(){
 
-document.getElementById("chat").classList.remove("active");
+document
+.getElementById("chat")
+.classList
+.remove("active");
 
 }
 
 
-/* AI QUICK ACTION */
-
 function quick(text){
 
-const input=document.getElementById("chatInput");
+const input=
+document.getElementById("chatInput");
 
 input.value=text;
 
@@ -1397,215 +3066,355 @@ sendAI();
 }
 
 
-/* AI RESPONSE ENGINE */
+/* =========================
+AI RESPONSE ENGINE
+========================= */
 
 function sendAI(){
 
-const input=document.getElementById("chatInput");
-const body=document.getElementById("chatBody");
+const input=
+document.getElementById("chatInput");
 
-const text=input.value.trim();
+const body=
+document.getElementById("chatBody");
 
-if(!text)return;
+const text=
+input.value.trim();
+
+if(!text)
+return;
 
 
-/* USER MESSAGE */
+const user=
+document.createElement("div");
 
-const user=document.createElement("div");
+user.className=
+"message user";
 
-user.className="message user";
 user.textContent=text;
 
 body.appendChild(user);
 
 input.value="";
 
-body.scrollTop=body.scrollHeight;
+body.scrollTop=
+body.scrollHeight;
 
 
-/* ANALYZE INTENT */
-
-const lower=text.toLowerCase();
+const lower=
+text.toLowerCase();
 
 let response="";
 
+
 if(
+
 lower.includes("payment") ||
 lower.includes("gateway") ||
 lower.includes("upi") ||
 lower.includes("checkout")
+
 ){
 
 response=
-"Great. Payment Gateway is our primary service. " +
-"I can help you understand the onboarding process and " +
-"collect your business requirements. " +
-"Would you like to start a payment gateway enquiry?";
+
+"Payment Gateway is Trust&Co's primary service. " +
+
+"We can understand your business model, " +
+
+"payment requirements and onboarding needs, " +
+
+"then assist you with the relevant payment " +
+
+"gateway solution subject to provider approval. " +
+
+"If you'd like, submit your requirements and " +
+
+"I can prepare the enquiry for WhatsApp.";
 
 }
 
+
 else if(
+
 lower.includes("website") ||
-lower.includes("web development") ||
-lower.includes("site")
+lower.includes("web")
+
 ){
 
 response=
-"We can help with professional website development " +
-"and custom web solutions. Tell me what type of website " +
-"you need and what your business does.";
 
-}
+"We provide professional website development " +
 
-else if(
-lower.includes("ecommerce") ||
-lower.includes("e-commerce") ||
-lower.includes("store")
-){
+"and custom web solutions. " +
 
-response=
-"We can help with modern e-commerce experiences. " +
-"Tell me what you plan to sell and whether you already " +
+"Tell me what your business does, what type " +
+
+"of website you need and whether you already " +
+
 "have a website.";
 
 }
 
+
 else if(
-lower.includes("ai") ||
-lower.includes("automation")
+
+lower.includes("ecommerce") ||
+lower.includes("e-commerce") ||
+lower.includes("store")
+
 ){
 
 response=
-"Trust&Co can help with AI-powered enquiry handling, " +
-"automation and customer interaction. Tell me what you'd " +
-"like the AI to handle.";
+
+"We can help create a modern e-commerce website. " +
+
+"Tell me what you plan to sell, your expected " +
+
+"requirements and whether you already have a website.";
 
 }
 
+
 else if(
+
+lower.includes("ai") ||
+lower.includes("automation")
+
+){
+
+response=
+
+"We can help with AI-powered customer enquiry " +
+
+"handling, automation and digital workflows. " +
+
+"Tell me what you'd like the AI to handle.";
+
+}
+
+
+else if(
+
 lower.includes("human") ||
 lower.includes("person") ||
 lower.includes("call")
+
 ){
 
 response=
-"I'll connect you with the Trust&Co team. " +
-"You can WhatsApp us directly at 8097361210 or call " +
-"8097361210 / 7718925425.";
+
+"Absolutely. You can contact the Trust&Co team directly. " +
+
+"WhatsApp: 8097361210. " +
+
+"Phone: 8097361210 / 7718925425. " +
+
+"Email: trustcoservices28@gmail.com";
 
 }
 
+
 else if(
+
 lower.includes("price") ||
 lower.includes("cost") ||
 lower.includes("charges")
+
 ){
 
 response=
+
 "I don't have verified pricing information available. " +
-"I don't want to invent a price. I can prepare your enquiry " +
-"for the Trust&Co team so they can discuss your requirements.";
+
+"I won't invent a price. " +
+
+"I can prepare your requirements so the Trust&Co team " +
+
+"can discuss the appropriate solution with you.";
 
 }
+
+
+else if(
+
+lower.includes("gst") ||
+lower.includes("registration")
+
+){
+
+response=
+
+"Trust&Co is a newly established business. " +
+
+"For current tax or registration details, please " +
+
+"contact the Trust&Co team directly so you receive " +
+
+"the latest verified information.";
+
+}
+
 
 else{
 
 response=
+
 "I can help you with Payment Gateway Services, " +
-"Website Development, E-commerce, AI Integration and " +
-"Custom Web Solutions. Tell me what your business needs " +
-"and I'll guide you from there.";
+
+"Website Development, E-commerce, AI Integration " +
+
+"and Custom Web Solutions. " +
+
+"Tell me what your business needs and I'll guide you.";
 
 }
 
 
-/* AI RESPONSE */
-
 setTimeout(function(){
 
-const ai=document.createElement("div");
+const ai=
+document.createElement("div");
 
 ai.className="message";
+
 ai.textContent=response;
 
 body.appendChild(ai);
 
-body.scrollTop=body.scrollHeight;
+body.scrollTop=
+body.scrollHeight;
 
 },450);
 
 }
 
 
-/* SMART ENQUIRY */
+/* =========================
+SMART LEAD ENQUIRY
+========================= */
 
 document
 .getElementById("leadForm")
-.addEventListener("submit",function(event){
+.addEventListener(
+"submit",
+function(event){
 
 event.preventDefault();
 
 
 const name=
-document.getElementById("leadName").value.trim();
+document
+.getElementById("leadName")
+.value
+.trim();
+
 
 const company=
-document.getElementById("leadCompany").value.trim();
+document
+.getElementById("leadCompany")
+.value
+.trim();
+
 
 const email=
-document.getElementById("leadEmail").value.trim();
+document
+.getElementById("leadEmail")
+.value
+.trim();
+
 
 const phone=
-document.getElementById("leadPhone").value.trim();
+document
+.getElementById("leadPhone")
+.value
+.trim();
+
 
 const business=
-document.getElementById("leadBusiness").value;
+document
+.getElementById("leadBusiness")
+.value;
+
 
 const service=
-document.getElementById("leadService").value;
+document
+.getElementById("leadService")
+.value;
+
 
 const requirements=
-document.getElementById("leadRequirements").value.trim();
+document
+.getElementById("leadRequirements")
+.value
+.trim();
+
 
 const contact=
-document.getElementById("leadContact").value;
+document
+.getElementById("leadContact")
+.value;
 
 
-/* STRUCTURED AI-STYLE SUMMARY */
+/* =========================
+AI-GENERATED ENQUIRY SUMMARY
+========================= */
 
 const message=
+
 `NEW TRUST&CO WEBSITE ENQUIRY
 
 Hello Trust&Co Team,
 
 I would like to discuss a business requirement.
 
-CLIENT DETAILS
---------------------
-Name: ${name}
-Company: ${company || "Not provided"}
-Email: ${email}
-Phone / WhatsApp: ${phone}
+━━━━━━━━━━━━━━━━━━
+
+CLIENT INFORMATION
+
+Name:
+${name}
+
+Company / Business:
+${company || "Not provided"}
+
+Email:
+${email}
+
+Phone / WhatsApp:
+${phone}
+
+━━━━━━━━━━━━━━━━━━
 
 BUSINESS PROFILE
---------------------
-Business Type: ${business}
+
+Business Type:
+${business}
+
+━━━━━━━━━━━━━━━━━━
 
 SERVICE REQUIRED
---------------------
+
 ${service}
 
+━━━━━━━━━━━━━━━━━━
+
 REQUIREMENTS
---------------------
+
 ${requirements}
 
+━━━━━━━━━━━━━━━━━━
+
 PREFERRED CONTACT
---------------------
+
 ${contact}
 
+━━━━━━━━━━━━━━━━━━
+
 SOURCE
---------------------
-Trust&Co Website AI Enquiry Assistant
+
+Trust&Co Website
+AI Business Enquiry Assistant
 
 Please review my requirements and contact me.
 
@@ -1613,30 +3422,38 @@ Thank you,
 ${name}`;
 
 
-/* WHATSAPP NUMBER */
+/* =========================
+PRIMARY WHATSAPP
+8097361210
+========================= */
 
-const whatsappNumber="918097361210";
+const whatsappNumber=
+"918097361210";
 
-
-/* WHATSAPP LINK */
 
 const whatsappURL=
+
 "https://wa.me/" +
 whatsappNumber +
 "?text=" +
 encodeURIComponent(message);
 
 
-/* EMAIL */
+/* =========================
+EMAIL
+========================= */
 
 const emailAddress=
 "trustcoservices28@gmail.com";
+
 
 const emailSubject=
 "New Trust&Co Business Enquiry - " +
 service;
 
+
 const emailURL=
+
 "mailto:" +
 emailAddress +
 "?subject=" +
@@ -1645,7 +3462,9 @@ encodeURIComponent(emailSubject) +
 encodeURIComponent(message);
 
 
-/* USER CHOICE */
+/* =========================
+SEND
+========================= */
 
 if(contact==="WhatsApp"){
 
@@ -1656,64 +3475,83 @@ whatsappURL,
 
 }
 
+
 else if(contact==="Email"){
 
-window.location.href=emailURL;
+window.location.href=
+emailURL;
 
 }
 
-else{
 
-/*
-WhatsApp first.
-Email follows shortly after.
-*/
+else{
 
 window.open(
 whatsappURL,
 "_blank"
 );
 
-setTimeout(function(){
+setTimeout(
+function(){
 
-window.location.href=emailURL;
+window.location.href=
+emailURL;
 
-},800);
+},
+900
+);
 
 }
 
 
-/* CONFIRMATION */
+/* SUCCESS */
 
-setTimeout(function(){
+setTimeout(
+function(){
 
 alert(
-"Your enquiry has been prepared successfully.\n\n" +
-"WhatsApp will open with your enquiry addressed to Trust&Co."
+
+"Your enquiry has been prepared.\n\n" +
+
+"WhatsApp will open with your complete " +
+
+"enquiry addressed to Trust&Co."
+
 );
 
-},300);
+},
+300
+);
 
-});
+
+}
+);
 
 
-/* CLOSE MOBILE NAV */
+/* =========================
+CLOSE MOBILE NAV
+========================= */
 
 document
 .querySelectorAll(".navlinks a")
 .forEach(function(link){
 
-link.addEventListener("click",function(){
+link.addEventListener(
+"click",
+function(){
 
 if(window.innerWidth<=950){
 
-document.querySelector(".navlinks").style.display="";
+document
+.querySelector(".navlinks")
+.style.display="";
 
 }
 
 });
 
 });
+
 
 </script>
 
