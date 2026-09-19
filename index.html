@@ -2,51 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <title>Trust&Co Web Services | Business & Digital Services</title>
 
     <meta
         name="description"
-        content="Trust&Co Web Services — Business support, payment gateway assistance, website development, e-commerce and digital solutions."
+        content="Trust&Co Web Services provides business support, payment gateway assistance, website development, e-commerce and digital services."
     >
 
-    <meta
-        name="robots"
-        content="index, follow"
-    >
-
-    <meta
-        name="theme-color"
-        content="#ffffff"
-    >
-
-    <title>
-        Trust&Co Web Services | Business & Digital Services
-    </title>
-
+    <meta name="robots" content="index, follow">
 
     <style>
-
         /* =====================================================
            RESET
         ===================================================== */
 
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-
 
         html {
             scroll-behavior: smooth;
         }
-
 
         body {
             font-family:
@@ -55,7 +35,6 @@
                 BlinkMacSystemFont,
                 "Segoe UI",
                 Roboto,
-                Helvetica,
                 Arial,
                 sans-serif;
 
@@ -64,17 +43,10 @@
             line-height: 1.6;
         }
 
-
-        img {
-            max-width: 100%;
-        }
-
-
         a {
             color: inherit;
             text-decoration: none;
         }
-
 
         button,
         input,
@@ -83,37 +55,26 @@
             font: inherit;
         }
 
-
         button {
             cursor: pointer;
         }
 
-
         :root {
             --red: #d90812;
             --red-dark: #b70710;
-
             --black: #15171b;
             --text: #383d45;
             --muted: #6c747e;
-
             --white: #ffffff;
-
-            --background: #f7f8fa;
+            --bg: #f7f8fa;
             --soft: #eef0f3;
-
             --border: #e0e3e7;
-
-            --shadow:
-                0 18px 50px rgba(0, 0, 0, 0.06);
         }
-
 
         .container {
             width: min(1340px, 90%);
-            margin: 0 auto;
+            margin: auto;
         }
-
 
         section {
             padding: 100px 0;
@@ -121,7 +82,7 @@
 
 
         /* =====================================================
-           NAVIGATION
+           NAVBAR
         ===================================================== */
 
         .navbar {
@@ -133,24 +94,20 @@
             z-index: 1000;
 
             background: rgba(255, 255, 255, 0.96);
-
             backdrop-filter: blur(18px);
 
-            border-bottom:
-                1px solid var(--border);
+            border-bottom: 1px solid var(--border);
         }
-
 
         .nav-inner {
             width: min(1340px, 90%);
             height: 76px;
-            margin: 0 auto;
+            margin: auto;
 
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
-
 
         .logo {
             font-size: 27px;
@@ -158,48 +115,41 @@
             letter-spacing: -1.8px;
         }
 
-
         .logo span {
             color: var(--red);
         }
 
-
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 26px;
+            gap: 27px;
 
-            color: #656d76;
+            color: #646c75;
 
             font-size: 14px;
             font-weight: 700;
         }
 
-
         .nav-links a {
             transition: 0.2s ease;
         }
-
 
         .nav-links a:hover {
             color: var(--red);
         }
 
-
         .nav-cta {
-            padding: 11px 19px;
+            padding: 11px 20px;
 
-            border-radius: 999px;
-
-            color: #ffffff !important;
             background: var(--red);
-        }
+            color: #fff !important;
 
+            border-radius: 50px;
+        }
 
         .nav-cta:hover {
             background: var(--red-dark);
         }
-
 
         .menu-button {
             display: none;
@@ -228,9 +178,8 @@
             position: relative;
             overflow: hidden;
 
-            background: #ffffff;
+            background: #fff;
         }
-
 
         .hero::before {
             content: "";
@@ -241,18 +190,17 @@
             height: 650px;
 
             right: -300px;
-            top: 90px;
+            top: 100px;
 
             border-radius: 50%;
 
             background:
                 radial-gradient(
                     circle,
-                    rgba(217, 8, 18, 0.10),
+                    rgba(217, 8, 18, 0.09),
                     transparent 68%
                 );
         }
-
 
         .hero::after {
             content: "";
@@ -262,7 +210,7 @@
 
             pointer-events: none;
 
-            opacity: 0.28;
+            opacity: 0.25;
 
             background-image:
                 linear-gradient(
@@ -285,10 +233,9 @@
                 );
         }
 
-
         .hero-grid {
             width: min(1340px, 90%);
-            margin: 0 auto;
+            margin: auto;
 
             display: grid;
 
@@ -304,7 +251,6 @@
             z-index: 2;
         }
 
-
         .label {
             margin-bottom: 18px;
 
@@ -314,9 +260,9 @@
             font-weight: 900;
 
             letter-spacing: 3px;
+
             text-transform: uppercase;
         }
-
 
         .hero h1 {
             max-width: 850px;
@@ -329,11 +275,9 @@
             letter-spacing: -5px;
         }
 
-
         .hero h1 span {
             color: var(--red);
         }
-
 
         .hero-description {
             max-width: 700px;
@@ -343,9 +287,9 @@
             color: var(--muted);
 
             font-size: 18px;
+
             line-height: 1.75;
         }
-
 
         .hero-actions {
             margin-top: 34px;
@@ -355,7 +299,6 @@
 
             gap: 12px;
         }
-
 
         .btn {
             min-height: 48px;
@@ -367,17 +310,16 @@
             padding: 13px 23px;
 
             border: 1px solid var(--red);
-            border-radius: 999px;
+            border-radius: 50px;
 
             background: var(--red);
-            color: #ffffff;
+            color: #fff;
 
             font-size: 14px;
             font-weight: 800;
 
             transition: 0.25s ease;
         }
-
 
         .btn:hover {
             background: var(--red-dark);
@@ -388,20 +330,19 @@
                 0 12px 30px rgba(217, 8, 18, 0.15);
         }
 
-
         .btn-outline {
-            background: #ffffff;
+            background: #fff;
             color: var(--black);
+
             border-color: var(--border);
         }
 
-
         .btn-outline:hover {
-            background: #ffffff;
+            background: #fff;
             color: var(--red);
+
             border-color: var(--red);
         }
-
 
         .business-facts {
             margin-top: 27px;
@@ -412,14 +353,11 @@
             gap: 8px;
         }
 
-
         .fact {
             padding: 7px 12px;
 
-            border:
-                1px solid var(--border);
-
-            border-radius: 999px;
+            border: 1px solid var(--border);
+            border-radius: 50px;
 
             background: #fafbfc;
 
@@ -427,7 +365,6 @@
 
             font-size: 12px;
         }
-
 
         .fact strong {
             color: var(--black);
@@ -448,19 +385,16 @@
             justify-content: center;
         }
 
-
         .orbit {
             position: absolute;
 
             width: 320px;
             height: 320px;
 
-            border:
-                1px solid #dfe2e6;
+            border: 1px solid #dfe2e6;
 
             border-radius: 50%;
         }
-
 
         .orbit-large {
             width: 440px;
@@ -468,7 +402,6 @@
 
             border-color: #eceef1;
         }
-
 
         .core {
             width: 175px;
@@ -481,12 +414,11 @@
             align-items: center;
             justify-content: center;
 
-            border:
-                1px solid #cdd2d8;
+            border: 1px solid #cdd2d8;
 
             border-radius: 50%;
 
-            background: #ffffff;
+            background: #fff;
 
             box-shadow:
                 0 20px 70px rgba(0, 0, 0, 0.07);
@@ -495,11 +427,9 @@
             font-weight: 900;
         }
 
-
         .core span {
             color: var(--red);
         }
-
 
         .core::before,
         .core::after {
@@ -507,24 +437,20 @@
 
             position: absolute;
 
-            border:
-                1px solid rgba(217, 8, 18, 0.25);
+            border: 1px solid rgba(217, 8, 18, 0.25);
 
             border-radius: 50%;
         }
 
-
         .core::before {
             inset: 25px;
         }
-
 
         .core::after {
             inset: 54px;
 
             border-color: #e3e5e8;
         }
-
 
         .dot {
             width: 11px;
@@ -540,24 +466,20 @@
                 0 0 20px rgba(217, 8, 18, 0.25);
         }
 
-
         .dot-1 {
             top: 5%;
             left: 50%;
         }
-
 
         .dot-2 {
             right: 5%;
             top: 50%;
         }
 
-
         .dot-3 {
             bottom: 5%;
             left: 50%;
         }
-
 
         .dot-4 {
             left: 5%;
@@ -574,7 +496,6 @@
             margin-bottom: 50px;
         }
 
-
         .section-heading h2 {
             font-size:
                 clamp(40px, 5vw, 65px);
@@ -583,7 +504,6 @@
 
             letter-spacing: -4px;
         }
-
 
         .section-heading p {
             margin-top: 20px;
@@ -599,9 +519,8 @@
         ===================================================== */
 
         .services {
-            background: var(--background);
+            background: var(--bg);
         }
-
 
         .cards {
             display: grid;
@@ -612,25 +531,19 @@
             gap: 16px;
         }
 
-
         .card {
             min-height: 245px;
 
             padding: 32px;
 
-            background: #ffffff;
+            background: #fff;
 
-            border:
-                1px solid var(--border);
+            border: 1px solid var(--border);
 
             border-radius: 22px;
 
-            box-shadow:
-                0 5px 22px rgba(0, 0, 0, 0.025);
-
             transition: 0.25s ease;
         }
-
 
         .card:hover {
             transform: translateY(-5px);
@@ -639,9 +552,8 @@
                 rgba(217, 8, 18, 0.30);
 
             box-shadow:
-                var(--shadow);
+                0 18px 50px rgba(0, 0, 0, 0.06);
         }
-
 
         .card-icon {
             color: var(--red);
@@ -650,14 +562,12 @@
             font-weight: 900;
         }
 
-
         .card h3 {
             margin-top: 50px;
 
             font-size: 21px;
             line-height: 1.2;
         }
-
 
         .card p {
             margin-top: 11px;
@@ -669,13 +579,12 @@
 
 
         /* =====================================================
-           PAYMENT
+           PAYMENT GATEWAY
         ===================================================== */
 
         .payment {
             background: var(--soft);
         }
-
 
         .payment-flow {
             display: grid;
@@ -686,20 +595,17 @@
             gap: 12px;
         }
 
-
         .payment-step {
             min-height: 220px;
 
             padding: 27px;
 
-            background: #ffffff;
+            background: #fff;
 
-            border:
-                1px solid #dfe2e6;
+            border: 1px solid #dfe2e6;
 
             border-radius: 20px;
         }
-
 
         .step-number {
             color: var(--red);
@@ -710,13 +616,11 @@
             letter-spacing: 2px;
         }
 
-
         .payment-step h3 {
             margin-top: 55px;
 
             font-size: 20px;
         }
-
 
         .payment-step p {
             margin-top: 8px;
@@ -725,7 +629,6 @@
 
             font-size: 14px;
         }
-
 
         .disclaimer {
             margin-top: 30px;
@@ -737,13 +640,12 @@
 
             border-radius: 15px;
 
-            background: #ffffff;
+            background: #fff;
 
             color: #69717b;
 
             font-size: 13px;
         }
-
 
         .disclaimer strong {
             color: var(--black);
@@ -751,130 +653,12 @@
 
 
         /* =====================================================
-           CASHFREE PARTNER
-        ===================================================== */
-
-        .partner-section {
-            padding: 90px 0;
-
-            background: #ffffff;
-
-            border-top:
-                1px solid var(--border);
-
-            border-bottom:
-                1px solid var(--border);
-        }
-
-
-        .partner-content {
-            max-width: 850px;
-
-            margin: 0 auto;
-
-            text-align: center;
-        }
-
-
-        .partner-content h2 {
-            font-size:
-                clamp(36px, 4vw, 55px);
-
-            line-height: 1;
-
-            letter-spacing: -3px;
-        }
-
-
-        .partner-content p {
-            max-width: 680px;
-
-            margin: 18px auto 30px;
-
-            color: var(--muted);
-
-            font-size: 15px;
-        }
-
-
-        .partner-badge {
-            display: inline-flex;
-
-            align-items: center;
-            justify-content: center;
-
-            padding: 18px 28px;
-
-            background: #ffffff;
-
-            border:
-                1px solid var(--border);
-
-            border-radius: 20px;
-
-            transition: 0.25s ease;
-        }
-
-
-        .partner-badge:hover {
-            transform: translateY(-3px);
-
-            border-color: #d2d6db;
-
-            box-shadow:
-                0 15px 35px rgba(0, 0, 0, 0.08);
-        }
-
-
-        .partner-badge img {
-            width: 255px;
-            height: 70px;
-
-            display: block;
-
-            object-fit: contain;
-        }
-
-
-        .partner-note {
-            margin-top: 17px;
-
-            color: #8a9199;
-
-            font-size: 11px;
-        }
-
-
-        .partner-disclaimer {
-            max-width: 760px;
-
-            margin: 28px auto 0;
-
-            padding: 16px 18px;
-
-            border:
-                1px solid var(--border);
-
-            border-radius: 12px;
-
-            background: #f8f9fa;
-
-            color: #737b84;
-
-            font-size: 12px;
-
-            text-align: left;
-        }
-
-
-        /* =====================================================
-           BUSINESS
+           BUSINESS INFORMATION
         ===================================================== */
 
         .business {
-            background: #ffffff;
+            background: #fff;
         }
-
 
         .business-grid {
             display: grid;
@@ -885,25 +669,21 @@
             gap: 20px;
         }
 
-
         .business-card {
             padding: 34px;
 
             background: #f8f9fa;
 
-            border:
-                1px solid var(--border);
+            border: 1px solid var(--border);
 
             border-radius: 22px;
         }
-
 
         .business-card h3 {
             margin-bottom: 22px;
 
             font-size: 25px;
         }
-
 
         .business-detail {
             padding: 15px 0;
@@ -912,11 +692,9 @@
                 1px solid #e3e5e8;
         }
 
-
         .business-detail:last-child {
             border-bottom: 0;
         }
-
 
         .detail-label {
             color: #858c95;
@@ -929,7 +707,6 @@
             text-transform: uppercase;
         }
 
-
         .detail-value {
             margin-top: 4px;
 
@@ -940,7 +717,6 @@
 
             overflow-wrap: anywhere;
         }
-
 
         .business-note {
             margin-top: 20px;
@@ -956,7 +732,7 @@
         ===================================================== */
 
         .process {
-            background: var(--background);
+            background: var(--bg);
         }
 
 
@@ -968,7 +744,6 @@
             background: var(--soft);
         }
 
-
         .contact-grid {
             display: grid;
 
@@ -977,7 +752,6 @@
 
             gap: 70px;
         }
-
 
         .contact h2 {
             font-size:
@@ -988,27 +762,24 @@
             letter-spacing: -4px;
         }
 
-
         .contact-description {
             margin-top: 25px;
 
             color: var(--muted);
         }
 
-
         .contact-box {
             margin-top: 30px;
 
             padding: 27px;
 
-            background: #ffffff;
+            background: #fff;
 
             border:
                 1px solid #dfe2e6;
 
             border-radius: 22px;
         }
-
 
         .contact-item {
             display: block;
@@ -1018,11 +789,9 @@
             font-weight: 700;
         }
 
-
         .contact-item:hover {
             color: var(--red);
         }
-
 
         .address {
             padding-top: 18px;
@@ -1035,7 +804,6 @@
 
             font-size: 13px;
         }
-
 
         .address strong {
             color: var(--black);
@@ -1051,7 +819,6 @@
             gap: 12px;
         }
 
-
         .enquiry-form input,
         .enquiry-form textarea,
         .enquiry-form select {
@@ -1066,17 +833,15 @@
 
             outline: none;
 
-            background: #ffffff;
+            background: #fff;
 
             color: var(--black);
         }
-
 
         .enquiry-form input::placeholder,
         .enquiry-form textarea::placeholder {
             color: #969da5;
         }
-
 
         .enquiry-form input:focus,
         .enquiry-form textarea:focus,
@@ -1087,13 +852,11 @@
                 0 0 0 3px rgba(217, 8, 18, 0.06);
         }
 
-
         .enquiry-form textarea {
             min-height: 145px;
 
             resize: vertical;
         }
-
 
         .form-note {
             color: #858c95;
@@ -1107,9 +870,8 @@
         ===================================================== */
 
         .legal {
-            background: #ffffff;
+            background: #fff;
         }
-
 
         .legal-grid {
             display: grid;
@@ -1119,7 +881,6 @@
 
             gap: 20px;
         }
-
 
         .legal-card {
             padding: 34px;
@@ -1132,13 +893,11 @@
             border-radius: 22px;
         }
 
-
         .legal-card h3 {
             margin-bottom: 5px;
 
             font-size: 25px;
         }
-
 
         .legal-updated {
             margin-bottom: 22px;
@@ -1148,7 +907,6 @@
             font-size: 12px;
         }
 
-
         .legal-card h4 {
             margin-top: 22px;
             margin-bottom: 6px;
@@ -1157,7 +915,6 @@
 
             font-size: 15px;
         }
-
 
         .legal-card p {
             color: #707781;
@@ -1175,18 +932,18 @@
         footer {
             padding: 35px 0;
 
-            background: #ffffff;
+            background: #fff;
 
             border-top:
                 1px solid var(--border);
         }
 
-
         .footer {
             width: min(1340px, 90%);
-            margin: 0 auto;
+            margin: auto;
 
             display: flex;
+
             align-items: flex-start;
             justify-content: space-between;
 
@@ -1197,18 +954,15 @@
             font-size: 12px;
         }
 
-
         .footer-brand strong {
             color: var(--black);
 
             font-size: 17px;
         }
 
-
         .footer-brand div {
             margin-top: 5px;
         }
-
 
         .footer-links {
             display: flex;
@@ -1217,14 +971,13 @@
             gap: 20px;
         }
 
-
         .footer-links a:hover {
             color: var(--red);
         }
 
 
         /* =====================================================
-           ENQUIRY ASSISTANT
+           SIMPLE ENQUIRY ASSISTANT
         ===================================================== */
 
         .assistant-button {
@@ -1242,14 +995,13 @@
             border-radius: 50%;
 
             background: var(--red);
-            color: #ffffff;
+            color: #fff;
 
             font-size: 23px;
 
             box-shadow:
                 0 12px 40px rgba(217, 8, 18, 0.25);
         }
-
 
         .assistant-panel {
             display: none;
@@ -1268,7 +1020,7 @@
 
             overflow: hidden;
 
-            background: #ffffff;
+            background: #fff;
 
             border:
                 1px solid #dfe2e6;
@@ -1279,16 +1031,15 @@
                 0 25px 70px rgba(0, 0, 0, 0.18);
         }
 
-
         .assistant-panel.active {
             display: flex;
         }
-
 
         .assistant-header {
             padding: 18px;
 
             display: flex;
+
             align-items: center;
             justify-content: space-between;
 
@@ -1296,18 +1047,15 @@
                 1px solid #e5e7ea;
         }
 
-
         .assistant-header strong {
             color: var(--black);
         }
-
 
         .assistant-subtitle {
             color: #8b929a;
 
             font-size: 11px;
         }
-
 
         .assistant-close {
             border: 0;
@@ -1319,7 +1067,6 @@
             font-size: 23px;
         }
 
-
         .assistant-body {
             flex: 1;
 
@@ -1329,7 +1076,6 @@
 
             background: #f7f8fa;
         }
-
 
         .assistant-message {
             margin-bottom: 10px;
@@ -1341,13 +1087,12 @@
 
             border-radius: 14px;
 
-            background: #ffffff;
+            background: #fff;
 
             color: #59616b;
 
             font-size: 13px;
         }
-
 
         .assistant-message.user {
             margin-left: 30px;
@@ -1356,9 +1101,8 @@
 
             border-color: var(--red);
 
-            color: #ffffff;
+            color: #fff;
         }
-
 
         .quick-buttons {
             display: flex;
@@ -1368,7 +1112,6 @@
             gap: 7px;
         }
 
-
         .quick-buttons button {
             padding: 8px 10px;
 
@@ -1377,20 +1120,18 @@
 
             border-radius: 20px;
 
-            background: #ffffff;
+            background: #fff;
 
             color: #555d67;
 
             font-size: 12px;
         }
 
-
         .quick-buttons button:hover {
             color: var(--red);
 
             border-color: var(--red);
         }
-
 
         .assistant-input {
             display: flex;
@@ -1402,9 +1143,8 @@
             border-top:
                 1px solid #e5e7ea;
 
-            background: #ffffff;
+            background: #fff;
         }
-
 
         .assistant-input input {
             flex: 1;
@@ -1423,7 +1163,6 @@
             outline: none;
         }
 
-
         .assistant-send {
             width: 45px;
 
@@ -1433,12 +1172,12 @@
 
             background: var(--red);
 
-            color: #ffffff;
+            color: #fff;
         }
 
 
         /* =====================================================
-           MOBILE
+           TABLET
         ===================================================== */
 
         @media (max-width: 1050px) {
@@ -1447,11 +1186,9 @@
                 display: block;
             }
 
-
             .nav-links {
                 display: none;
             }
-
 
             .nav-links.mobile-open {
                 display: flex;
@@ -1466,11 +1203,12 @@
                 padding: 20px;
 
                 flex-direction: column;
+
                 align-items: stretch;
 
                 gap: 15px;
 
-                background: #ffffff;
+                background: #fff;
 
                 border:
                     1px solid var(--border);
@@ -1481,13 +1219,11 @@
                     0 20px 50px rgba(0, 0, 0, 0.08);
             }
 
-
             .nav-links.mobile-open .nav-cta {
                 display: block;
 
                 text-align: center;
             }
-
 
             .hero-grid,
             .contact-grid,
@@ -1496,17 +1232,14 @@
                 grid-template-columns: 1fr;
             }
 
-
             .hero-visual {
                 height: 390px;
             }
-
 
             .cards {
                 grid-template-columns:
                     repeat(2, 1fr);
             }
-
 
             .payment-flow {
                 grid-template-columns:
@@ -1515,17 +1248,19 @@
         }
 
 
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
         @media (max-width: 650px) {
 
             section {
                 padding: 80px 0;
             }
 
-
             .hero {
                 padding-top: 125px;
             }
-
 
             .hero h1 {
                 font-size: 48px;
@@ -1533,63 +1268,43 @@
                 letter-spacing: -3px;
             }
 
-
             .hero-description {
                 font-size: 16px;
             }
 
-
             .hero-actions {
                 flex-direction: column;
+
                 align-items: stretch;
             }
-
 
             .hero-actions .btn {
                 width: 100%;
             }
-
 
             .cards,
             .payment-flow {
                 grid-template-columns: 1fr;
             }
 
-
             .hero-visual {
                 height: 330px;
             }
-
 
             .orbit {
                 width: 260px;
                 height: 260px;
             }
 
-
             .orbit-large {
                 width: 350px;
                 height: 350px;
             }
 
-
             .core {
                 width: 150px;
                 height: 150px;
             }
-
-
-            .partner-badge {
-                max-width: 100%;
-            }
-
-
-            .partner-badge img {
-                width: 255px;
-                max-width: 100%;
-                height: auto;
-            }
-
 
             .assistant-panel {
                 left: 15px;
@@ -1600,12 +1315,10 @@
                 bottom: 90px;
             }
 
-
             .assistant-button {
                 right: 15px;
                 bottom: 15px;
             }
-
 
             .footer {
                 flex-direction: column;
@@ -1630,7 +1343,7 @@
             <a
                 href="#home"
                 class="logo"
-                aria-label="Trust&Co Web Services Home"
+                aria-label="Trust&Co Web Services"
             >
                 Trust<span>&</span>Co
             </a>
@@ -1648,10 +1361,6 @@
 
                 <a href="#payments">
                     Payments
-                </a>
-
-                <a href="#partner">
-                    Partner
                 </a>
 
                 <a href="#business">
@@ -1680,7 +1389,7 @@
                 type="button"
                 class="menu-button"
                 id="menuButton"
-                aria-label="Open navigation menu"
+                aria-label="Open navigation"
                 aria-expanded="false"
             >
                 ☰
@@ -1775,8 +1484,6 @@
                 </div>
 
 
-                <!-- HERO GRAPHIC -->
-
                 <div class="hero-visual">
 
                     <div class="orbit"></div>
@@ -1823,8 +1530,8 @@
 
                     <p>
                         Services are provided according to the
-                        client's requirements and the agreed
-                        scope of work.
+                        client's requirements and agreed scope
+                        of work.
                     </p>
 
                 </div>
@@ -1865,8 +1572,8 @@
 
                         <p>
                             Professional business websites and
-                            custom web solutions based on the
-                            client's requirements.
+                            custom web solutions based on
+                            specific requirements.
                         </p>
 
                     </div>
@@ -1903,8 +1610,8 @@
 
                         <p>
                             AI-assisted workflows and automation
-                            solutions where appropriate to the
-                            project requirement.
+                            solutions where appropriate for
+                            the project.
                         </p>
 
                     </div>
@@ -1922,8 +1629,8 @@
 
                         <p>
                             Custom digital solutions developed
-                            according to specific business and
-                            technical requirements.
+                            according to business and technical
+                            requirements.
                         </p>
 
                     </div>
@@ -1941,8 +1648,8 @@
 
                         <p>
                             Business support and digital services
-                            within the scope mutually agreed with
-                            the client.
+                            within the scope mutually agreed
+                            with the client.
                         </p>
 
                     </div>
@@ -2092,106 +1799,12 @@
                         Important:
                     </strong>
 
-                    Trust&Co is not a bank, payment network or
-                    payment gateway itself. Trust&Co does not
-                    control third-party approval, merchant
+                    Trust&Co is not a bank, payment network
+                    or payment gateway itself. Trust&Co does
+                    not control third-party approval, merchant
                     verification, transaction processing,
                     settlement, reserves, restrictions,
-                    suspension or termination. Those matters
-                    are determined by the relevant payment
-                    service provider.
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             CASHFREE PARTNER
-        ================================================== -->
-
-        <section
-            class="partner-section"
-            id="partner"
-        >
-
-            <div class="container">
-
-
-                <div class="partner-content">
-
-                    <div class="label">
-                        Payment Infrastructure Partner
-                    </div>
-
-
-                    <h2>
-                        Cashfree Certified Partner
-                    </h2>
-
-
-                    <p>
-
-                        Trust&Co Web Services works with the
-                        Cashfree Partners programme for payment
-                        gateway and payment infrastructure
-                        requirements.
-
-                    </p>
-
-
-                    <!--
-                        Keep cfCertifiedPartnerLogo.png
-                        in the same folder as index.html.
-                    -->
-
-                    <a
-                        href="https://merchant.cashfree.com/merchants/signup?referrer=partner&refCode=CFPTO753411"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="partner-badge"
-                        aria-label="Cashfree Certified Partner"
-                    >
-
-                        <img
-                            src="cfCertifiedPartnerLogo.png"
-                            width="255"
-                            height="70"
-                            alt="Cashfree Partners Certified Partner"
-                            loading="lazy"
-                        >
-
-                    </a>
-
-
-                    <div class="partner-note">
-
-                        Click the partner badge to proceed
-                        to the Cashfree merchant signup page.
-
-                    </div>
-
-
-                    <div class="partner-disclaimer">
-
-                        <strong>
-                            Partner disclosure:
-                        </strong>
-
-                        Cashfree is a third-party payment
-                        service provider. Payment gateway
-                        approval, merchant verification,
-                        account activation, transaction
-                        processing and settlement are subject
-                        to Cashfree's applicable policies,
-                        agreements and verification procedures.
-
-                        Trust&Co does not independently control
-                        those decisions.
-
-                    </div>
+                    suspension or termination.
 
                 </div>
 
@@ -2224,9 +1837,10 @@
 
                     <p>
 
-                        The following enterprise details are
-                        based on the Udyam Registration Certificate
-                        provided for Trust&Co Web Services.
+                        The enterprise information below is
+                        based on the Udyam Registration
+                        Certificate provided for Trust&Co
+                        Web Services.
 
                     </p>
 
@@ -2236,7 +1850,7 @@
                 <div class="business-grid">
 
 
-                    <!-- ENTERPRISE -->
+                    <!-- ENTERPRISE DETAILS -->
 
                     <div class="business-card">
 
@@ -2381,7 +1995,7 @@
                     </div>
 
 
-                    <!-- BUSINESS MANAGEMENT -->
+                    <!-- BUSINESS CONTACT -->
 
                     <div class="business-card">
 
@@ -2488,13 +2102,14 @@
 
                         <p class="business-note">
 
-                            GST information will be added after
-                            the GST registration details are
+                            GST details will be added once the
+                            GST registration information is
                             available and verified.
 
                         </p>
 
                     </div>
+
 
                 </div>
 
@@ -2673,8 +2288,9 @@
                         <p class="contact-description">
 
                             Contact Trust&Co directly through
-                            WhatsApp or email, or use the enquiry
-                            form to prepare a structured enquiry.
+                            WhatsApp or email, or use the
+                            enquiry form to prepare a
+                            structured enquiry.
 
                         </p>
 
@@ -2736,7 +2352,6 @@
                         class="enquiry-form"
                         id="enquiryForm"
                     >
-
 
                         <input
                             id="name"
@@ -2830,8 +2445,8 @@
 
                         <div class="form-note">
 
-                            This form prepares your enquiry and
-                            opens WhatsApp. Never enter passwords,
+                            This form opens WhatsApp with the
+                            enquiry details. Never enter passwords,
                             OTPs, UPI PINs, CVV numbers, card
                             numbers or other sensitive financial
                             credentials.
@@ -2881,7 +2496,7 @@
                 <div class="legal-grid">
 
 
-                    <!-- PRIVACY -->
+                    <!-- PRIVACY POLICY -->
 
                     <div class="legal-card">
 
@@ -2994,13 +2609,12 @@
 
                         <p>
 
-                            Reasonable measures may be used
-                            to protect information under
-                            Trust&Co's control. However,
-                            no internet transmission or
-                            electronic storage system can
-                            be guaranteed to be completely
-                            secure.
+                            Reasonable measures may be used to
+                            protect information under Trust&Co's
+                            control. However, no internet
+                            transmission or electronic storage
+                            system can be guaranteed to be
+                            completely secure.
 
                         </p>
 
@@ -3024,8 +2638,8 @@
 
                         <p>
 
-                            Information may be retained for
-                            a reasonable period where necessary
+                            Information may be retained for a
+                            reasonable period where necessary
                             for business communication, service
                             delivery, record keeping, dispute
                             resolution or compliance with
@@ -3043,8 +2657,7 @@
                             This Privacy Policy may be updated
                             when necessary. The latest version
                             published on this website will
-                            reflect current website privacy
-                            practices.
+                            reflect current website practices.
 
                         </p>
 
@@ -3150,22 +2763,22 @@
 
 
                         <h4>
-                            5. Cashfree and Other Third Parties
+                            5. Third-Party Services
                         </h4>
 
                         <p>
 
-                            Cashfree, banks, payment gateways,
-                            hosting companies, communication
-                            platforms and other third-party
-                            services operate under their own
-                            agreements, policies and procedures.
+                            Payment gateways, banks, hosting
+                            companies, communication platforms
+                            and other third-party services
+                            operate under their own agreements,
+                            policies and procedures.
 
                             Trust&Co is not responsible for
                             decisions, outages, delays,
-                            restrictions, settlements or
-                            other actions exclusively controlled
-                            by third parties.
+                            restrictions, settlements or other
+                            actions exclusively controlled by
+                            third parties.
 
                         </p>
 
@@ -3181,8 +2794,7 @@
                             products, services, transactions
                             and intended use of third-party
                             services comply with applicable
-                            law and the policies of the
-                            relevant provider.
+                            law and relevant provider policies.
 
                         </p>
 
@@ -3257,9 +2869,9 @@
                             To the extent permitted by applicable
                             law, Trust&Co shall not be responsible
                             for indirect, incidental, consequential
-                            or third-party losses arising from
-                            use of this website or services
-                            controlled by third parties.
+                            or third-party losses arising from use
+                            of this website or services controlled
+                            by third parties.
 
                         </p>
 
@@ -3309,6 +2921,7 @@
                             <br><br>
 
                             Phone:
+
                             <strong>
                                 8097361210
                             </strong>
@@ -3316,7 +2929,6 @@
                         </p>
 
                     </div>
-
 
                 </div>
 
@@ -3331,9 +2943,9 @@
                     framework and should be reviewed by a
                     qualified Indian lawyer before being relied
                     upon as final contractual documents.
-                    Separate client agreements, payment gateway
-                    agreements and service contracts may contain
-                    additional or different terms.
+                    Separate client agreements and third-party
+                    service agreements may contain additional
+                    terms.
 
                 </div>
 
@@ -3378,8 +2990,12 @@
                     Services
                 </a>
 
-                <a href="#partner">
-                    Partner
+                <a href="#payments">
+                    Payments
+                </a>
+
+                <a href="#business">
+                    Business
                 </a>
 
                 <a href="#contact">
@@ -3387,11 +3003,7 @@
                 </a>
 
                 <a href="#legal">
-                    Privacy Policy
-                </a>
-
-                <a href="#legal">
-                    Terms
+                    Legal
                 </a>
 
             </div>
@@ -3515,7 +3127,6 @@
                 autocomplete="off"
             >
 
-
             <button
                 type="button"
                 class="assistant-send"
@@ -3543,7 +3154,7 @@
     <script>
 
         /* =====================================================
-           MOBILE NAVIGATION
+           MOBILE MENU
         ===================================================== */
 
         const menuButton =
@@ -3553,43 +3164,55 @@
             document.getElementById("navLinks");
 
 
-        menuButton.addEventListener("click", function () {
+        menuButton.addEventListener(
+            "click",
+            function () {
 
-            const isOpen =
-                navLinks.classList.toggle("mobile-open");
+                const isOpen =
+                    navLinks.classList.toggle(
+                        "mobile-open"
+                    );
 
-            menuButton.setAttribute(
-                "aria-expanded",
-                String(isOpen)
-            );
+                menuButton.setAttribute(
+                    "aria-expanded",
+                    String(isOpen)
+                );
 
-        });
+            }
+        );
 
 
         document
             .querySelectorAll("#navLinks a")
             .forEach(function (link) {
 
-                link.addEventListener("click", function () {
+                link.addEventListener(
+                    "click",
+                    function () {
 
-                    navLinks.classList.remove("mobile-open");
+                        navLinks.classList.remove(
+                            "mobile-open"
+                        );
 
-                    menuButton.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
+                        menuButton.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
 
-                });
+                    }
+                );
 
             });
 
 
         /* =====================================================
-           ENQUIRY FORM
+           WHATSAPP ENQUIRY FORM
         ===================================================== */
 
         const enquiryForm =
-            document.getElementById("enquiryForm");
+            document.getElementById(
+                "enquiryForm"
+            );
 
 
         enquiryForm.addEventListener(
@@ -3776,39 +3399,38 @@ Trust&Co Web Services Website`;
         }
 
 
-        function assistantReply(text) {
+        function getAssistantReply(text) {
 
-            const q =
+            const query =
                 text.toLowerCase();
 
 
             if (
-                q.includes("payment") ||
-                q.includes("gateway") ||
-                q.includes("cashfree")
+                query.includes("payment") ||
+                query.includes("gateway")
             ) {
 
                 return (
                     "Trust&Co provides payment gateway " +
-                    "assistance and works with the " +
-                    "Cashfree Partners programme. Final " +
-                    "merchant approval, verification, " +
-                    "processing and settlement are " +
-                    "controlled by the relevant payment " +
-                    "provider."
+                    "assistance and can discuss your " +
+                    "business requirement and applicable " +
+                    "onboarding process. Final approval, " +
+                    "verification, processing and settlement " +
+                    "are controlled by the relevant payment " +
+                    "service provider."
                 );
 
             }
 
 
             if (
-                q.includes("website") ||
-                q.includes("web")
+                query.includes("website") ||
+                query.includes("web")
             ) {
 
                 return (
                     "Trust&Co provides website development " +
-                    "and custom web solutions. You can " +
+                    "and custom web solutions. Please " +
                     "describe the type of website and " +
                     "functionality you require."
                 );
@@ -3817,52 +3439,52 @@ Trust&Co Web Services Website`;
 
 
             if (
-                q.includes("ecommerce") ||
-                q.includes("e-commerce") ||
-                q.includes("store")
+                query.includes("ecommerce") ||
+                query.includes("e-commerce") ||
+                query.includes("store")
             ) {
 
                 return (
                     "Trust&Co can discuss e-commerce " +
-                    "requirements including website " +
-                    "functionality, products, checkout " +
-                    "and other project requirements."
+                    "requirements including your products, " +
+                    "website functionality and required " +
+                    "features."
                 );
 
             }
 
 
             if (
-                q.includes("ai") ||
-                q.includes("automation")
+                query.includes("ai") ||
+                query.includes("automation")
             ) {
 
                 return (
                     "Trust&Co can discuss AI-assisted " +
-                    "workflows and automation based on " +
-                    "your actual business requirement."
+                    "workflows and automation according " +
+                    "to your actual business requirement."
                 );
 
             }
 
 
             if (
-                q.includes("owner") ||
-                q.includes("proprietor")
+                query.includes("owner") ||
+                query.includes("proprietor")
             ) {
 
                 return (
-                    "The proprietor of Trust&Co Web " +
-                    "Services is Omkar Dilip Kurlekar."
+                    "The proprietor of Trust&Co Web Services " +
+                    "is Omkar Dilip Kurlekar."
                 );
 
             }
 
 
             if (
-                q.includes("address") ||
-                q.includes("location") ||
-                q.includes("office")
+                query.includes("address") ||
+                query.includes("location") ||
+                query.includes("office")
             ) {
 
                 return (
@@ -3876,28 +3498,27 @@ Trust&Co Web Services Website`;
 
 
             if (
-                q.includes("gst")
+                query.includes("gst")
             ) {
 
                 return (
-                    "GSTIN is not currently displayed " +
-                    "on this website. GST details can be " +
-                    "added once the registration details " +
-                    "are available and verified."
+                    "GSTIN is not currently displayed. " +
+                    "GST details can be added once the " +
+                    "registration information is available " +
+                    "and verified."
                 );
 
             }
 
 
             if (
-                q.includes("contact") ||
-                q.includes("call") ||
-                q.includes("human")
+                query.includes("contact") ||
+                query.includes("call")
             ) {
 
                 return (
-                    "You can contact Trust&Co on " +
-                    "8097361210 or email " +
+                    "You can contact Trust&Co at " +
+                    "8097361210 or " +
                     "Omkarkurlekar1210@gmail.com."
                 );
 
@@ -3905,9 +3526,9 @@ Trust&Co Web Services Website`;
 
 
             if (
-                q.includes("price") ||
-                q.includes("cost") ||
-                q.includes("fee")
+                query.includes("price") ||
+                query.includes("cost") ||
+                query.includes("fee")
             ) {
 
                 return (
@@ -3924,9 +3545,8 @@ Trust&Co Web Services Website`;
                 "Assistance, Website Development, " +
                 "E-commerce Solutions, AI & Automation, " +
                 "Custom Web Solutions and Business " +
-                "Support Services. Tell me what you need."
+                "Support Services."
             );
-
         }
 
 
@@ -3950,15 +3570,15 @@ Trust&Co Web Services Website`;
             assistantInput.value = "";
 
 
-            const response =
-                assistantReply(text);
+            const reply =
+                getAssistantReply(text);
 
 
             setTimeout(
                 function () {
 
                     addAssistantMessage(
-                        response,
+                        reply,
                         false
                     );
 
@@ -3992,7 +3612,7 @@ Trust&Co Web Services Website`;
 
 
         /* =====================================================
-           QUICK ASSISTANT BUTTONS
+           QUICK BUTTONS
         ===================================================== */
 
         document
@@ -4005,13 +3625,8 @@ Trust&Co Web Services Website`;
                     "click",
                     function () {
 
-                        const question =
-                            button.dataset.question;
-
-
                         assistantInput.value =
-                            question;
-
+                            button.dataset.question;
 
                         sendAssistantMessage();
 
