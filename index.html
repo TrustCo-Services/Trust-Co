@@ -1,31 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Trust&Co Web Services | Business & Payment Gateway Services</title>
+    <!-- =========================================================
+         BASIC SEO
+    ========================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Trust&Co Web Services | Professional Website Design
+    </title>
 
     <meta name="description"
-        content="Trust&Co Web Services provides web services, business support and payment gateway assistance.">
+          content="Trust&Co Web Services provides professional website design, SEO-ready websites, WhatsApp integration, lead forms, business email setup, social media integration and payment gateway assistance.">
 
-    <meta name="robots" content="index, follow">
+    <meta name="keywords"
+          content="website design Mumbai, business website, website development, Trust and Co Web Services, payment gateway assistance, SEO website, WhatsApp website">
+
+    <meta name="author"
+          content="Trust&Co Web Services">
+
+    <meta name="robots"
+          content="index, follow">
+
+    <meta name="theme-color"
+          content="#0b1220">
+
+
+    <!-- =========================================================
+         OPEN GRAPH
+    ========================================================== -->
+
+    <meta property="og:type"
+          content="website">
+
+    <meta property="og:title"
+          content="Trust&Co Web Services">
+
+    <meta property="og:description"
+          content="Professional websites and digital business services for modern businesses.">
+
+    <meta property="og:url"
+          content="https://trustco-services.github.io/Trust-Co/">
+
+    <meta property="og:site_name"
+          content="Trust&Co Web Services">
+
+
+    <!-- =========================================================
+         FAVICON
+    ========================================================== -->
+
+    <link
+        rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230b1220'/%3E%3Ctext x='50' y='63' text-anchor='middle' font-size='30' font-family='Arial' font-weight='bold' fill='white'%3ET%26amp%3BC%3C/text%3E%3C/svg%3E"
+    >
+
+
+    <!-- =========================================================
+         STRUCTURED DATA
+    ========================================================== -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Trust&Co Web Services",
+        "description": "Professional website design, web services, business support and payment gateway assistance.",
+        "telephone": "+91-8097361210",
+        "email": "trustcoservices28@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "B 205, Shantidoot Building, Charkop Sector-2 Block 2, RSC 2",
+            "addressLocality": "Mumbai",
+            "addressRegion": "Maharashtra",
+            "postalCode": "400067",
+            "addressCountry": "IN"
+        }
+    }
+    </script>
+
+
+    <!-- =========================================================
+         CSS
+    ========================================================== -->
 
     <style>
+
         :root {
-            --navy: #0b1220;
-            --navy-2: #111a2b;
+
+            --navy: #09111f;
+            --navy2: #111b2d;
+
             --blue: #2563eb;
             --blue-dark: #1d4ed8;
+
             --gold: #b8944d;
+
             --white: #ffffff;
-            --off-white: #f8fafc;
-            --text: #18202d;
+            --off-white: #f7f9fc;
+
+            --text: #172033;
             --muted: #667085;
+
             --border: #e5e7eb;
-            --light-blue: #eff6ff;
+
+            --green: #059669;
+
+            --shadow:
+                0 20px 60px rgba(15, 23, 42, .08);
+
+            --radius: 14px;
+
             --max: 1180px;
         }
+
 
         * {
             margin: 0;
@@ -33,11 +126,14 @@
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
 
+
         body {
+
             font-family:
                 Inter,
                 -apple-system,
@@ -45,2155 +141,4964 @@
                 "Segoe UI",
                 Arial,
                 sans-serif;
+
             color: var(--text);
-            background: var(--white);
+
+            background:
+                var(--white);
+
             line-height: 1.65;
+
+            overflow-x: hidden;
         }
+
 
         a {
             color: inherit;
             text-decoration: none;
         }
 
+
+        button,
+        input,
+        textarea {
+            font: inherit;
+        }
+
+
         img {
             max-width: 100%;
         }
 
+
         .container {
-            width: min(90%, var(--max));
-            margin: 0 auto;
-        }
 
-        /* =========================
-           TOP BAR
-        ========================= */
+            width: min(91%, var(--max));
 
-        .topbar {
-            background: var(--navy);
-            color: #dbe4f0;
-            font-size: 12px;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-        }
-
-        .topbar-inner {
-            min-height: 38px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .topbar span {
-            opacity: 0.9;
-        }
-
-        /* =========================
-           NAVIGATION
-        ========================= */
-
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(255,255,255,0.96);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border);
-        }
-
-        nav {
-            height: 76px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 30px;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .brand-mark {
-            width: 40px;
-            height: 40px;
-            border-radius: 9px;
-            display: grid;
-            place-items: center;
-            background: var(--navy);
-            color: white;
-            font-size: 17px;
-            font-weight: 800;
-            letter-spacing: -1px;
-        }
-
-        .brand-name {
-            font-size: 19px;
-            font-weight: 750;
-            letter-spacing: -0.4px;
-            color: var(--navy);
-        }
-
-        .brand-name span {
-            color: var(--blue);
-        }
-
-        .brand-sub {
-            display: block;
-            margin-top: -3px;
-            font-size: 9px;
-            color: #8a93a1;
-            letter-spacing: 1.2px;
-            text-transform: uppercase;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 27px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: #4b5563;
-            font-size: 13px;
-            font-weight: 600;
-            transition: 0.2s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--blue);
-        }
-
-        .nav-button {
-            padding: 10px 17px;
-            background: var(--navy);
-            color: white !important;
-            border-radius: 6px;
-        }
-
-        .nav-button:hover {
-            background: #172238;
-        }
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
-            position: relative;
-            overflow: hidden;
-            background:
-                radial-gradient(
-                    circle at 80% 20%,
-                    rgba(37,99,235,0.13),
-                    transparent 32%
-                ),
-                linear-gradient(135deg, #f8fafc 0%, #ffffff 60%);
-            padding: 105px 0 115px;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            align-items: center;
-            gap: 70px;
-        }
-
-        .eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--blue);
-            font-size: 11px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1.8px;
-            margin-bottom: 20px;
-        }
-
-        .eyebrow::before {
-            content: "";
-            width: 28px;
-            height: 1px;
-            background: var(--blue);
-        }
-
-        .hero h1 {
-            max-width: 720px;
-            color: var(--navy);
-            font-size: clamp(43px, 5.5vw, 72px);
-            line-height: 1.02;
-            letter-spacing: -4px;
-            margin-bottom: 25px;
-        }
-
-        .hero h1 span {
-            color: var(--blue);
-        }
-
-        .hero-description {
-            max-width: 650px;
-            color: var(--muted);
-            font-size: 17px;
-            line-height: 1.8;
-            margin-bottom: 32px;
-        }
-
-        .hero-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 47px;
-            padding: 0 21px;
-            border-radius: 6px;
-            font-size: 13px;
-            font-weight: 700;
-            transition: 0.2s ease;
-        }
-
-        .button-primary {
-            background: var(--navy);
-            color: white;
-        }
-
-        .button-primary:hover {
-            background: #172238;
-            transform: translateY(-1px);
-        }
-
-        .button-secondary {
-            background: white;
-            color: var(--navy);
-            border: 1px solid #d7dde5;
-        }
-
-        .button-secondary:hover {
-            border-color: var(--blue);
-            color: var(--blue);
-        }
-
-        .hero-card {
-            position: relative;
-            padding: 32px;
-            border-radius: 15px;
-            background: var(--navy);
-            color: white;
-            box-shadow: 0 25px 70px rgba(11,18,32,0.16);
-        }
-
-        .hero-card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 110px;
-            height: 110px;
-            border-top: 2px solid rgba(184,148,77,0.65);
-            border-right: 2px solid rgba(184,148,77,0.65);
-            border-radius: 0 15px 0 0;
-        }
-
-        .hero-card-label {
-            color: #aab7c9;
-            font-size: 10px;
-            letter-spacing: 1.6px;
-            text-transform: uppercase;
-            margin-bottom: 12px;
-        }
-
-        .hero-card h2 {
-            font-size: 29px;
-            line-height: 1.2;
-            margin-bottom: 18px;
-            letter-spacing: -1px;
-        }
-
-        .hero-card p {
-            color: #b9c5d5;
-            font-size: 14px;
-            line-height: 1.75;
-        }
-
-        .hero-card-line {
-            width: 48px;
-            height: 2px;
-            background: var(--gold);
-            margin: 25px 0;
-        }
-
-        .hero-card-detail {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            font-size: 12px;
-        }
-
-        .hero-card-detail:last-child {
-            border-bottom: 0;
-        }
-
-        .hero-card-detail span:first-child {
-            color: #8998ac;
-        }
-
-        .hero-card-detail span:last-child {
-            color: #e8edf4;
-            text-align: right;
-        }
-
-        /* =========================
-           GENERAL SECTIONS
-        ========================= */
-
-        section {
-            padding: 90px 0;
-        }
-
-        .section-heading {
-            max-width: 720px;
-            margin-bottom: 45px;
-        }
-
-        .section-heading.center {
-            text-align: center;
             margin-left: auto;
             margin-right: auto;
         }
 
-        .section-label {
-            color: var(--blue);
-            font-size: 10px;
-            font-weight: 800;
-            letter-spacing: 1.8px;
-            text-transform: uppercase;
-            margin-bottom: 10px;
+
+        /* =========================================================
+           TOP BAR
+        ========================================================== */
+
+        .topbar {
+
+            background:
+                var(--navy);
+
+            color:
+                #dce5f1;
+
+            font-size:
+                11px;
         }
+
+
+        .topbar-inner {
+
+            min-height:
+                36px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                20px;
+        }
+
+
+        /* =========================================================
+           HEADER
+        ========================================================== */
+
+        header {
+
+            position:
+                sticky;
+
+            top:
+                0;
+
+            z-index:
+                999;
+
+            background:
+                rgba(255,255,255,.96);
+
+            backdrop-filter:
+                blur(15px);
+
+            border-bottom:
+                1px solid var(--border);
+        }
+
+
+        nav {
+
+            height:
+                76px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                30px;
+        }
+
+
+        .brand {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                12px;
+        }
+
+
+        .brand-logo {
+
+            width:
+                42px;
+
+            height:
+                42px;
+
+            border-radius:
+                10px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            background:
+                var(--navy);
+
+            color:
+                white;
+
+            font-size:
+                13px;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                -.5px;
+
+            box-shadow:
+                0 8px 20px rgba(9,17,31,.15);
+        }
+
+
+        .brand-name {
+
+            color:
+                var(--navy);
+
+            font-size:
+                19px;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                -.5px;
+        }
+
+
+        .brand-name span {
+            color:
+                var(--blue);
+        }
+
+
+        .brand-sub {
+
+            display:
+                block;
+
+            color:
+                #8993a3;
+
+            font-size:
+                9px;
+
+            letter-spacing:
+                1.5px;
+
+            text-transform:
+                uppercase;
+
+            margin-top:
+                -3px;
+        }
+
+
+        .nav-links {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                24px;
+
+            list-style:
+                none;
+        }
+
+
+        .nav-links a {
+
+            color:
+                #4b5563;
+
+            font-size:
+                12px;
+
+            font-weight:
+                700;
+
+            transition:
+                .2s;
+        }
+
+
+        .nav-links a:hover {
+
+            color:
+                var(--blue);
+        }
+
+
+        .nav-cta {
+
+            padding:
+                10px 16px;
+
+            border-radius:
+                7px;
+
+            background:
+                var(--navy);
+
+            color:
+                white !important;
+        }
+
+
+        /* =========================================================
+           MOBILE MENU
+        ========================================================== */
+
+        .menu-button {
+
+            display:
+                none;
+
+            width:
+                42px;
+
+            height:
+                42px;
+
+            border:
+                1px solid var(--border);
+
+            background:
+                white;
+
+            border-radius:
+                8px;
+
+            cursor:
+                pointer;
+
+            font-size:
+                20px;
+
+            color:
+                var(--navy);
+        }
+
+
+        .mobile-menu {
+
+            display:
+                none;
+
+            padding:
+                10px 0 20px;
+
+            border-top:
+                1px solid var(--border);
+        }
+
+
+        .mobile-menu a {
+
+            display:
+                block;
+
+            padding:
+                12px 0;
+
+            color:
+                #475467;
+
+            font-size:
+                14px;
+
+            font-weight:
+                700;
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================== */
+
+        .hero {
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+            padding:
+                105px 0 115px;
+
+            background:
+
+                radial-gradient(
+                    circle at 80% 15%,
+                    rgba(37,99,235,.14),
+                    transparent 31%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #f6f8fb,
+                    #ffffff 70%
+                );
+
+            border-bottom:
+                1px solid var(--border);
+        }
+
+
+        .hero-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1.08fr .92fr;
+
+            gap:
+                70px;
+
+            align-items:
+                center;
+        }
+
+
+        .eyebrow {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            gap:
+                8px;
+
+            color:
+                var(--blue);
+
+            font-size:
+                10px;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                1.8px;
+
+            text-transform:
+                uppercase;
+
+            margin-bottom:
+                20px;
+        }
+
+
+        .eyebrow::before {
+
+            content:
+                "";
+
+            width:
+                28px;
+
+            height:
+                1px;
+
+            background:
+                var(--blue);
+        }
+
+
+        .hero h1 {
+
+            color:
+                var(--navy);
+
+            font-size:
+                clamp(44px, 5.6vw, 73px);
+
+            line-height:
+                1.02;
+
+            letter-spacing:
+                -4px;
+
+            margin-bottom:
+                25px;
+        }
+
+
+        .hero h1 span {
+            color:
+                var(--blue);
+        }
+
+
+        .hero-text {
+
+            max-width:
+                660px;
+
+            color:
+                var(--muted);
+
+            font-size:
+                17px;
+
+            line-height:
+                1.8;
+
+            margin-bottom:
+                31px;
+        }
+
+
+        .hero-buttons {
+
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                12px;
+        }
+
+
+        .button {
+
+            min-height:
+                47px;
+
+            padding:
+                0 21px;
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                7px;
+
+            font-size:
+                13px;
+
+            font-weight:
+                750;
+
+            transition:
+                .2s;
+
+            border:
+                none;
+
+            cursor:
+                pointer;
+        }
+
+
+        .button-primary {
+
+            background:
+                var(--navy);
+
+            color:
+                white;
+        }
+
+
+        .button-primary:hover {
+
+            background:
+                #172238;
+
+            transform:
+                translateY(-1px);
+        }
+
+
+        .button-secondary {
+
+            background:
+                white;
+
+            color:
+                var(--navy);
+
+            border:
+                1px solid #d7dde5;
+        }
+
+
+        .button-secondary:hover {
+
+            border-color:
+                var(--blue);
+
+            color:
+                var(--blue);
+        }
+
+
+        .hero-card {
+
+            padding:
+                35px;
+
+            border-radius:
+                17px;
+
+            background:
+                var(--navy);
+
+            color:
+                white;
+
+            box-shadow:
+                0 30px 75px rgba(9,17,31,.18);
+        }
+
+
+        .hero-card-label {
+
+            color:
+                #94a3b8;
+
+            font-size:
+                10px;
+
+            letter-spacing:
+                1.7px;
+
+            text-transform:
+                uppercase;
+
+            margin-bottom:
+                12px;
+        }
+
+
+        .hero-card h2 {
+
+            font-size:
+                31px;
+
+            line-height:
+                1.2;
+
+            letter-spacing:
+                -1px;
+
+            margin-bottom:
+                16px;
+        }
+
+
+        .hero-card p {
+
+            color:
+                #bac6d6;
+
+            font-size:
+                13px;
+
+            line-height:
+                1.75;
+        }
+
+
+        .gold-line {
+
+            width:
+                50px;
+
+            height:
+                2px;
+
+            background:
+                var(--gold);
+
+            margin:
+                25px 0;
+        }
+
+
+        .hero-stat {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            gap:
+                15px;
+
+            padding:
+                11px 0;
+
+            border-bottom:
+                1px solid rgba(255,255,255,.09);
+
+            font-size:
+                12px;
+        }
+
+
+        .hero-stat:last-child {
+            border-bottom:
+                0;
+        }
+
+
+        .hero-stat span:first-child {
+            color:
+                #8392a8;
+        }
+
+
+        .hero-stat span:last-child {
+
+            color:
+                #edf2f7;
+
+            text-align:
+                right;
+        }
+
+
+        /* =========================================================
+           GENERAL SECTION
+        ========================================================== */
+
+        section {
+            padding:
+                90px 0;
+        }
+
+
+        .section-heading {
+
+            max-width:
+                730px;
+
+            margin-bottom:
+                45px;
+        }
+
+
+        .section-heading.center {
+
+            text-align:
+                center;
+
+            margin-left:
+                auto;
+
+            margin-right:
+                auto;
+        }
+
+
+        .section-label {
+
+            color:
+                var(--blue);
+
+            font-size:
+                10px;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                1.8px;
+
+            text-transform:
+                uppercase;
+
+            margin-bottom:
+                10px;
+        }
+
 
         .section-heading h2 {
-            color: var(--navy);
-            font-size: clamp(32px, 4vw, 46px);
-            line-height: 1.1;
-            letter-spacing: -2px;
-            margin-bottom: 14px;
+
+            color:
+                var(--navy);
+
+            font-size:
+                clamp(32px,4vw,47px);
+
+            line-height:
+                1.1;
+
+            letter-spacing:
+                -2px;
+
+            margin-bottom:
+                14px;
         }
+
 
         .section-heading p {
-            color: var(--muted);
-            font-size: 15px;
+
+            color:
+                var(--muted);
+
+            font-size:
+                15px;
         }
 
-        /* =========================
+
+        /* =========================================================
+           WEBSITE PACKAGE
+        ========================================================== */
+
+        .package-section {
+
+            background:
+                var(--off-white);
+
+            border-top:
+                1px solid var(--border);
+
+            border-bottom:
+                1px solid var(--border);
+        }
+
+
+        .package {
+
+            max-width:
+                1080px;
+
+            margin:
+                auto;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                .78fr 1.22fr;
+
+            overflow:
+                hidden;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                17px;
+
+            background:
+                white;
+
+            box-shadow:
+                var(--shadow);
+        }
+
+
+        .package-left {
+
+            padding:
+                48px;
+
+            background:
+                var(--navy);
+
+            color:
+                white;
+        }
+
+
+        .package-small {
+
+            color:
+                #91a0b4;
+
+            font-size:
+                10px;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                1.6px;
+
+            text-transform:
+                uppercase;
+        }
+
+
+        .package-left h3 {
+
+            font-size:
+                30px;
+
+            line-height:
+                1.2;
+
+            margin:
+                14px 0;
+        }
+
+
+        .price {
+
+            color:
+                white;
+
+            font-size:
+                56px;
+
+            line-height:
+                1;
+
+            font-weight:
+                850;
+
+            letter-spacing:
+                -4px;
+
+            margin:
+                20px 0;
+        }
+
+
+        .price small {
+
+            font-size:
+                22px;
+
+            letter-spacing:
+                0;
+        }
+
+
+        .package-left p {
+
+            color:
+                #afbdcf;
+
+            font-size:
+                13px;
+
+            line-height:
+                1.75;
+        }
+
+
+        .delivery-box {
+
+            margin-top:
+                23px;
+
+            padding:
+                13px;
+
+            border:
+                1px solid rgba(255,255,255,.1);
+
+            border-radius:
+                8px;
+
+            color:
+                #dce5ef;
+
+            font-size:
+                12px;
+        }
+
+
+        .package-left .button {
+
+            margin-top:
+                22px;
+
+            background:
+                white;
+
+            color:
+                var(--navy);
+        }
+
+
+        .package-right {
+
+            padding:
+                43px;
+        }
+
+
+        .package-right h3 {
+
+            color:
+                var(--navy);
+
+            font-size:
+                25px;
+
+            margin-bottom:
+                25px;
+        }
+
+
+        .features {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                14px 25px;
+        }
+
+
+        .feature {
+
+            display:
+                flex;
+
+            align-items:
+                flex-start;
+
+            gap:
+                10px;
+
+            color:
+                #4b5563;
+
+            font-size:
+                13px;
+        }
+
+
+        .check {
+
+            flex-shrink:
+                0;
+
+            width:
+                21px;
+
+            height:
+                21px;
+
+            border-radius:
+                50%;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            background:
+                #ecfdf5;
+
+            color:
+                var(--green);
+
+            font-size:
+                12px;
+
+            font-weight:
+                900;
+        }
+
+
+        .package-note {
+
+            margin-top:
+                27px;
+
+            padding-top:
+                20px;
+
+            border-top:
+                1px solid var(--border);
+
+            color:
+                #8a93a1;
+
+            font-size:
+                11px;
+
+            line-height:
+                1.7;
+        }
+
+
+        /* =========================================================
            SERVICES
-        ========================= */
-
-        .services-section {
-            background: white;
-        }
+        ========================================================== */
 
         .services {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap:
+                18px;
         }
+
 
         .service-card {
-            padding: 30px;
-            border: 1px solid var(--border);
-            border-radius: 11px;
-            background: white;
-            transition: 0.25s ease;
+
+            padding:
+                30px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                12px;
+
+            background:
+                white;
+
+            transition:
+                .25s;
         }
+
 
         .service-card:hover {
-            transform: translateY(-4px);
-            border-color: #cbd5e1;
-            box-shadow: 0 16px 35px rgba(15,23,42,0.07);
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 18px 40px rgba(15,23,42,.07);
         }
+
 
         .service-number {
-            color: #b4bcc8;
-            font-size: 12px;
-            font-weight: 700;
-            margin-bottom: 27px;
+
+            color:
+                #b3bcc8;
+
+            font-size:
+                11px;
+
+            font-weight:
+                800;
+
+            margin-bottom:
+                25px;
         }
+
 
         .service-card h3 {
-            color: var(--navy);
-            font-size: 20px;
-            margin-bottom: 11px;
+
+            color:
+                var(--navy);
+
+            font-size:
+                20px;
+
+            margin-bottom:
+                10px;
         }
+
 
         .service-card p {
-            color: var(--muted);
-            font-size: 13px;
-            line-height: 1.75;
+
+            color:
+                var(--muted);
+
+            font-size:
+                13px;
         }
 
-        /* =========================
-           PARTNER
-        ========================= */
 
-        .partner-section {
-            background: var(--off-white);
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
+        /* =========================================================
+           PROCESS
+        ========================================================== */
+
+        .process-section {
+
+            background:
+                var(--off-white);
+
+            border-top:
+                1px solid var(--border);
+
+            border-bottom:
+                1px solid var(--border);
         }
 
-        .partner-box {
-            display: grid;
-            grid-template-columns: 1fr auto;
-            align-items: center;
-            gap: 50px;
-            padding: 48px;
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            box-shadow: 0 15px 40px rgba(15,23,42,0.04);
+
+        .process {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(4,1fr);
+
+            gap:
+                18px;
         }
 
-        .partner-box h2 {
-            color: var(--navy);
-            font-size: 32px;
-            letter-spacing: -1.5px;
-            margin-bottom: 13px;
+
+        .process-card {
+
+            padding:
+                27px;
+
+            background:
+                white;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                11px;
         }
 
-        .partner-box p {
-            max-width: 650px;
-            color: var(--muted);
-            font-size: 14px;
+
+        .process-number {
+
+            width:
+                32px;
+
+            height:
+                32px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--navy);
+
+            color:
+                white;
+
+            font-size:
+                11px;
+
+            font-weight:
+                800;
+
+            margin-bottom:
+                20px;
         }
 
-        .partner-badge {
-            min-width: 290px;
-            text-align: center;
+
+        .process-card h3 {
+
+            color:
+                var(--navy);
+
+            font-size:
+                17px;
+
+            margin-bottom:
+                8px;
         }
 
-        .cashfree-link {
-            display: inline-flex;
-            padding: 10px;
-            border-radius: 10px;
-            border: 1px solid #edf0f4;
-            background: white;
-            transition: 0.2s ease;
+
+        .process-card p {
+
+            color:
+                var(--muted);
+
+            font-size:
+                12px;
         }
 
-        .cashfree-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(15,23,42,0.08);
-        }
 
-        .cashfree-link img {
-            width: 255px;
-            height: 70px;
-            object-fit: contain;
-            display: block;
-        }
-
-        .partner-note {
-            margin-top: 11px;
-            color: #8a93a1;
-            font-size: 11px;
-        }
-
-        /* =========================
+        /* =========================================================
            BUSINESS
-        ========================= */
+        ========================================================== */
 
         .business-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                20px;
         }
+
 
         .business-card {
-            padding: 34px;
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            background: white;
+
+            padding:
+                34px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                12px;
+
+            background:
+                white;
         }
+
 
         .business-card h3 {
-            color: var(--navy);
-            font-size: 20px;
-            margin-bottom: 25px;
+
+            color:
+                var(--navy);
+
+            font-size:
+                20px;
+
+            margin-bottom:
+                24px;
         }
+
 
         .business-row {
-            display: grid;
-            grid-template-columns: 175px 1fr;
-            gap: 20px;
-            padding: 13px 0;
-            border-bottom: 1px solid #edf0f3;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                175px 1fr;
+
+            gap:
+                20px;
+
+            padding:
+                13px 0;
+
+            border-bottom:
+                1px solid #edf0f3;
         }
+
 
         .business-row:last-child {
-            border-bottom: 0;
+            border-bottom:
+                0;
         }
+
 
         .business-row strong {
-            color: #475467;
-            font-size: 12px;
+
+            color:
+                #475467;
+
+            font-size:
+                12px;
         }
+
 
         .business-row span {
-            color: #667085;
-            font-size: 13px;
+
+            color:
+                #667085;
+
+            font-size:
+                13px;
         }
 
-        /* =========================
+
+        /* =========================================================
+           CASHFREE
+        ========================================================== */
+
+        .partner-section {
+
+            background:
+                var(--off-white);
+
+            border-top:
+                1px solid var(--border);
+
+            border-bottom:
+                1px solid var(--border);
+        }
+
+
+        .partner {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr auto;
+
+            align-items:
+                center;
+
+            gap:
+                50px;
+
+            padding:
+                48px;
+
+            background:
+                white;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                15px;
+
+            box-shadow:
+                var(--shadow);
+        }
+
+
+        .partner h2 {
+
+            color:
+                var(--navy);
+
+            font-size:
+                32px;
+
+            letter-spacing:
+                -1.5px;
+
+            margin-bottom:
+                12px;
+        }
+
+
+        .partner p {
+
+            max-width:
+                680px;
+
+            color:
+                var(--muted);
+
+            font-size:
+                14px;
+        }
+
+
+        .cashfree-wrap {
+
+            text-align:
+                center;
+        }
+
+
+        .cashfree-link {
+
+            display:
+                inline-flex;
+
+            padding:
+                10px;
+
+            border:
+                1px solid #edf0f4;
+
+            border-radius:
+                10px;
+
+            background:
+                white;
+
+            transition:
+                .2s;
+        }
+
+
+        .cashfree-link:hover {
+
+            transform:
+                translateY(-2px);
+
+            box-shadow:
+                0 10px 25px rgba(15,23,42,.08);
+        }
+
+
+        .cashfree-link img {
+
+            width:
+                255px;
+
+            height:
+                70px;
+
+            object-fit:
+                contain;
+
+            display:
+                block;
+        }
+
+
+        .partner-note {
+
+            margin-top:
+                10px;
+
+            color:
+                #8a93a1;
+
+            font-size:
+                11px;
+        }
+
+
+        /* =========================================================
            CONTACT
-        ========================= */
+        ========================================================== */
 
         .contact-section {
-            background: var(--navy);
-            color: white;
+
+            background:
+                var(--navy);
+
+            color:
+                white;
         }
+
 
         .contact-grid {
-            display: grid;
-            grid-template-columns: 0.9fr 1.1fr;
-            gap: 70px;
-            align-items: start;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                .9fr 1.1fr;
+
+            gap:
+                70px;
         }
+
 
         .contact-section .section-label {
-            color: #8fb4ff;
+
+            color:
+                #8fb4ff;
         }
+
 
         .contact-section h2 {
-            color: white;
+            color:
+                white;
         }
+
 
         .contact-section .section-heading p {
-            color: #aebbd0;
+
+            color:
+                #aebbd0;
         }
 
-        .contact-info {
-            margin-top: 30px;
-        }
 
         .contact-item {
-            margin-bottom: 20px;
+
+            margin-bottom:
+                21px;
         }
 
+
         .contact-item small {
-            display: block;
-            color: #7f8da3;
-            font-size: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1.3px;
-            margin-bottom: 4px;
+
+            display:
+                block;
+
+            color:
+                #7f8da3;
+
+            font-size:
+                10px;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                1.3px;
+
+            margin-bottom:
+                4px;
         }
+
 
         .contact-item a,
         .contact-item div {
-            color: #e4eaf2;
-            font-size: 14px;
+
+            color:
+                #e4eaf2;
+
+            font-size:
+                14px;
         }
+
 
         .contact-item a:hover {
-            color: white;
-            text-decoration: underline;
+
+            color:
+                white;
+
+            text-decoration:
+                underline;
         }
+
 
         .contact-panel {
-            padding: 34px;
-            background: #111a2b;
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 13px;
+
+            padding:
+                35px;
+
+            background:
+                var(--navy2);
+
+            border:
+                1px solid rgba(255,255,255,.1);
+
+            border-radius:
+                14px;
         }
+
 
         .contact-panel h3 {
-            color: white;
-            margin-bottom: 12px;
-            font-size: 22px;
+
+            color:
+                white;
+
+            font-size:
+                23px;
+
+            margin-bottom:
+                10px;
         }
+
 
         .contact-panel p {
-            color: #9caac0;
-            font-size: 13px;
-            margin-bottom: 24px;
+
+            color:
+                #9caac0;
+
+            font-size:
+                13px;
+
+            line-height:
+                1.8;
+
+            margin-bottom:
+                23px;
         }
 
-        .contact-panel .button {
-            background: white;
-            color: var(--navy);
+
+        .contact-form {
+
+            display:
+                grid;
+
+            gap:
+                12px;
         }
 
-        .contact-panel .button:hover {
-            background: #edf2f7;
+
+        .contact-form input,
+        .contact-form textarea {
+
+            width:
+                100%;
+
+            border:
+                1px solid rgba(255,255,255,.12);
+
+            background:
+                rgba(255,255,255,.05);
+
+            color:
+                white;
+
+            border-radius:
+                7px;
+
+            padding:
+                13px 14px;
+
+            outline:
+                none;
+
+            font-size:
+                13px;
         }
 
-        /* =========================
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+
+            color:
+                #8090a5;
+        }
+
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+
+            border-color:
+                #6ea0ff;
+        }
+
+
+        .contact-form textarea {
+
+            min-height:
+                120px;
+
+            resize:
+                vertical;
+        }
+
+
+        .form-buttons {
+
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                10px;
+
+            margin-top:
+                4px;
+        }
+
+
+        .form-button {
+
+            border:
+                none;
+
+            cursor:
+                pointer;
+
+            background:
+                white;
+
+            color:
+                var(--navy);
+        }
+
+
+        .whatsapp-button {
+
+            background:
+                #16a34a;
+
+            color:
+                white;
+        }
+
+
+        /* =========================================================
+           SOCIAL SHARE
+        ========================================================== */
+
+        .share-section {
+
+            padding:
+                55px 0;
+
+            background:
+                white;
+        }
+
+
+        .share {
+
+            display:
+                flex;
+
+            justify-content:
+                center;
+
+            align-items:
+                center;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                10px;
+        }
+
+
+        .share-title {
+
+            width:
+                100%;
+
+            text-align:
+                center;
+
+            color:
+                var(--muted);
+
+            font-size:
+                12px;
+
+            margin-bottom:
+                5px;
+        }
+
+
+        .share a {
+
+            padding:
+                9px 14px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                7px;
+
+            color:
+                #475467;
+
+            font-size:
+                12px;
+
+            font-weight:
+                700;
+
+            transition:
+                .2s;
+        }
+
+
+        .share a:hover {
+
+            border-color:
+                var(--blue);
+
+            color:
+                var(--blue);
+        }
+
+
+        /* =========================================================
            LEGAL
-        ========================= */
+        ========================================================== */
 
         .legal-section {
-            background: #ffffff;
+
+            background:
+                #ffffff;
         }
+
 
         .legal-intro {
-            padding: 24px;
-            background: var(--off-white);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            color: var(--muted);
-            font-size: 13px;
-            margin-bottom: 40px;
+
+            max-width:
+                950px;
+
+            margin:
+                0 auto 40px;
+
+            padding:
+                24px;
+
+            background:
+                var(--off-white);
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                10px;
+
+            color:
+                var(--muted);
+
+            font-size:
+                13px;
+
+            line-height:
+                1.8;
         }
+
 
         .legal-document {
-            max-width: 950px;
-            margin: 0 auto;
+
+            max-width:
+                950px;
+
+            margin:
+                auto;
         }
+
 
         .legal-box {
-            padding: 0 0 35px;
-            margin-bottom: 35px;
-            border-bottom: 1px solid var(--border);
+
+            padding-bottom:
+                35px;
+
+            margin-bottom:
+                35px;
+
+            border-bottom:
+                1px solid var(--border);
         }
+
 
         .legal-box:last-child {
-            border-bottom: 0;
+
+            border-bottom:
+                0;
         }
+
 
         .legal-box h3 {
-            color: var(--navy);
-            font-size: 20px;
-            margin-bottom: 13px;
+
+            color:
+                var(--navy);
+
+            font-size:
+                21px;
+
+            margin-bottom:
+                14px;
         }
+
 
         .legal-box h4 {
-            color: #273246;
-            font-size: 15px;
-            margin: 23px 0 8px;
+
+            color:
+                #273246;
+
+            font-size:
+                15px;
+
+            margin:
+                22px 0 8px;
         }
+
 
         .legal-box p {
-            color: #667085;
-            font-size: 13px;
-            line-height: 1.8;
-            margin-bottom: 12px;
+
+            color:
+                #667085;
+
+            font-size:
+                13px;
+
+            line-height:
+                1.8;
+
+            margin-bottom:
+                12px;
         }
+
 
         .legal-box ul {
-            padding-left: 20px;
-            color: #667085;
-            font-size: 13px;
-            line-height: 1.8;
+
+            padding-left:
+                20px;
+
+            color:
+                #667085;
+
+            font-size:
+                13px;
+
+            line-height:
+                1.8;
         }
 
-        .legal-box li {
-            margin-bottom: 5px;
-        }
 
-        /* =========================
+        /* =========================================================
            FOOTER
-        ========================= */
+        ========================================================== */
 
         footer {
-            background: #070d17;
-            color: #9ba8ba;
-            padding: 32px 0;
+
+            background:
+                #060c16;
+
+            color:
+                #9ba8ba;
+
+            padding:
+                35px 0;
         }
+
 
         .footer-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 30px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            gap:
+                25px;
+
+            padding-bottom:
+                24px;
+
+            border-bottom:
+                1px solid rgba(255,255,255,.08);
         }
+
 
         .footer-brand {
-            color: white;
-            font-weight: 700;
-            font-size: 16px;
+
+            color:
+                white;
+
+            font-size:
+                16px;
+
+            font-weight:
+                800;
         }
+
 
         .footer-brand span {
-            color: #6ea0ff;
+            color:
+                #6ea0ff;
         }
+
 
         .footer-links {
-            display: flex;
-            gap: 22px;
-            flex-wrap: wrap;
+
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                20px;
         }
+
 
         .footer-links a {
-            font-size: 12px;
+
+            font-size:
+                12px;
         }
+
 
         .footer-links a:hover {
-            color: white;
+
+            color:
+                white;
         }
+
 
         .footer-bottom {
-            padding-top: 22px;
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            font-size: 11px;
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            gap:
+                20px;
+
+            padding-top:
+                22px;
+
+            font-size:
+                11px;
         }
 
-        /* =========================
-           MOBILE
-        ========================= */
 
-        @media (max-width: 900px) {
+        /* =========================================================
+           FLOATING WHATSAPP
+        ========================================================== */
+
+        .floating-whatsapp {
+
+            position:
+                fixed;
+
+            right:
+                20px;
+
+            bottom:
+                20px;
+
+            z-index:
+                900;
+
+            width:
+                55px;
+
+            height:
+                55px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            border-radius:
+                50%;
+
+            background:
+                #16a34a;
+
+            color:
+                white;
+
+            font-size:
+                25px;
+
+            box-shadow:
+                0 12px 30px rgba(0,0,0,.2);
+
+            transition:
+                .2s;
+        }
+
+
+        .floating-whatsapp:hover {
+
+            transform:
+                translateY(-3px) scale(1.03);
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================== */
+
+        @media(max-width:950px) {
 
             .nav-links {
-                display: none;
+                display:
+                    none;
+            }
+
+            .menu-button {
+                display:
+                    block;
             }
 
             .hero-grid,
             .contact-grid {
-                grid-template-columns: 1fr;
+
+                grid-template-columns:
+                    1fr;
             }
 
             .hero {
-                padding: 75px 0;
+
+                padding:
+                    75px 0;
             }
 
-            .hero-card {
-                max-width: 650px;
+            .package {
+
+                grid-template-columns:
+                    1fr;
             }
 
             .services {
-                grid-template-columns: 1fr;
+
+                grid-template-columns:
+                    1fr 1fr;
             }
 
-            .partner-box {
-                grid-template-columns: 1fr;
-                text-align: center;
+            .process {
+
+                grid-template-columns:
+                    1fr 1fr;
             }
 
-            .partner-box p {
-                margin-left: auto;
-                margin-right: auto;
+            .partner {
+
+                grid-template-columns:
+                    1fr;
+
+                text-align:
+                    center;
+            }
+
+            .partner p {
+
+                margin-left:
+                    auto;
+
+                margin-right:
+                    auto;
             }
 
             .business-grid {
-                grid-template-columns: 1fr;
-            }
 
-            .contact-grid {
-                gap: 30px;
+                grid-template-columns:
+                    1fr;
             }
         }
 
-        @media (max-width: 600px) {
+
+        @media(max-width:650px) {
 
             .topbar-inner {
-                justify-content: center;
-                text-align: center;
+
+                justify-content:
+                    center;
+
+                text-align:
+                    center;
             }
 
             .topbar-inner span:last-child {
-                display: none;
+
+                display:
+                    none;
             }
 
             nav {
-                height: 68px;
+
+                height:
+                    68px;
             }
 
             .brand-sub {
-                display: none;
+
+                display:
+                    none;
             }
 
             .hero h1 {
-                letter-spacing: -2.5px;
+
+                letter-spacing:
+                    -2.5px;
             }
 
-            .hero-actions {
-                flex-direction: column;
-                align-items: stretch;
+            .hero-buttons {
+
+                flex-direction:
+                    column;
             }
 
             .button {
-                width: 100%;
+
+                width:
+                    100%;
             }
 
             section {
-                padding: 65px 0;
+
+                padding:
+                    65px 0;
             }
 
-            .partner-box {
-                padding: 30px 20px;
+            .features {
+
+                grid-template-columns:
+                    1fr;
             }
 
-            .partner-badge {
-                min-width: 0;
+            .services {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            .process {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            .package-left,
+            .package-right {
+
+                padding:
+                    30px 24px;
             }
 
             .business-card {
-                padding: 24px;
+
+                padding:
+                    24px;
             }
 
             .business-row {
-                grid-template-columns: 1fr;
-                gap: 3px;
+
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    3px;
+            }
+
+            .partner {
+
+                padding:
+                    30px 20px;
             }
 
             .contact-panel {
-                padding: 25px;
+
+                padding:
+                    25px;
             }
 
             .footer-top,
             .footer-bottom {
-                flex-direction: column;
-                align-items: flex-start;
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+            }
+
+            .floating-whatsapp {
+
+                right:
+                    15px;
+
+                bottom:
+                    15px;
             }
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-    <!-- =========================
-         TOP BAR
-    ========================== -->
 
-    <div class="topbar">
-        <div class="container topbar-inner">
-            <span>TRUST&CO WEB SERVICES</span>
-            <span>Micro Enterprise · Services</span>
-        </div>
+<!-- =========================================================
+     TOP BAR
+========================================================== -->
+
+<div class="topbar">
+
+    <div class="container topbar-inner">
+
+        <span>
+            TRUST&CO WEB SERVICES
+        </span>
+
+        <span>
+            Micro Enterprise · Services
+        </span>
+
     </div>
 
+</div>
 
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
 
-    <header>
-        <div class="container">
+<!-- =========================================================
+     HEADER
+========================================================== -->
 
-            <nav>
+<header>
 
-                <a href="#top" class="brand">
+    <div class="container">
 
-                    <div class="brand-mark">
-                        T&C
+        <nav>
+
+            <a href="#home" class="brand">
+
+                <div class="brand-logo">
+                    T&C
+                </div>
+
+                <div>
+
+                    <div class="brand-name">
+                        Trust<span>&</span>Co
                     </div>
 
-                    <div>
-                        <div class="brand-name">
-                            Trust<span>&</span>Co
-                        </div>
+                    <span class="brand-sub">
+                        Web Services
+                    </span>
 
-                        <span class="brand-sub">
-                            Web Services
-                        </span>
-                    </div>
+                </div>
 
+            </a>
+
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#home">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#package">
+                        Website Package
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#services">
+                        Services
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#business">
+                        Business
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact">
+                        Contact
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact" class="nav-cta">
+                        Get Started
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                aria-label="Open menu"
+            >
+                ☰
+            </button>
+
+        </nav>
+
+
+        <div class="mobile-menu" id="mobileMenu">
+
+            <a href="#home">Home</a>
+
+            <a href="#package">Website Package</a>
+
+            <a href="#services">Services</a>
+
+            <a href="#business">Business</a>
+
+            <a href="#partner">Payment Partner</a>
+
+            <a href="#contact">Contact</a>
+
+            <a href="#legal">Legal</a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<!-- =========================================================
+     PAGE / SECTION 1 — HOME
+========================================================== -->
+
+<section id="home" class="hero">
+
+    <div class="container hero-grid">
+
+
+        <div>
+
+            <div class="eyebrow">
+                Professional Digital Services
+            </div>
+
+
+            <h1>
+
+                Build your business
+                <span>online.</span>
+
+            </h1>
+
+
+            <p class="hero-text">
+
+                Professional website design, digital business
+                support, SEO-ready setup, integrations and
+                payment gateway assistance for modern businesses.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#package"
+                    class="button button-primary"
+                >
+                    View ₹4,999 Package
                 </a>
 
 
-                <ul class="nav-links">
+                <a
+                    href="#contact"
+                    class="button button-secondary"
+                >
+                    Contact Trust&Co
+                </a>
 
-                    <li>
-                        <a href="#services">Services</a>
-                    </li>
-
-                    <li>
-                        <a href="#partner">Payment Partner</a>
-                    </li>
-
-                    <li>
-                        <a href="#business">Business</a>
-                    </li>
-
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-
-                    <li>
-                        <a href="#legal">Legal</a>
-                    </li>
-
-                    <li>
-                        <a href="#contact" class="nav-button">
-                            Enquire
-                        </a>
-                    </li>
-
-                </ul>
-
-            </nav>
+            </div>
 
         </div>
-    </header>
 
 
-    <main id="top">
+        <div class="hero-card">
 
-        <!-- =========================
-             HERO
-        ========================== -->
+            <div class="hero-card-label">
+                Featured Website Package
+            </div>
 
-        <section class="hero">
 
-            <div class="container hero-grid">
+            <h2>
+                Professional Business Website
+            </h2>
 
-                <div>
 
-                    <div class="eyebrow">
-                        Business & Digital Services
+            <p>
+
+                A complete website package designed to give
+                businesses a professional online presence with
+                essential digital integrations.
+
+            </p>
+
+
+            <div class="gold-line"></div>
+
+
+            <div class="hero-stat">
+
+                <span>
+                    Website
+                </span>
+
+                <span>
+                    Up to 5 Pages
+                </span>
+
+            </div>
+
+
+            <div class="hero-stat">
+
+                <span>
+                    Package
+                </span>
+
+                <span>
+                    ₹4,999
+                </span>
+
+            </div>
+
+
+            <div class="hero-stat">
+
+                <span>
+                    Delivery
+                </span>
+
+                <span>
+                    1–3 Working Days
+                </span>
+
+            </div>
+
+
+            <div class="hero-stat">
+
+                <span>
+                    Design
+                </span>
+
+                <span>
+                    Mobile + Desktop
+                </span>
+
+            </div>
+
+
+            <div class="hero-stat">
+
+                <span>
+                    Integrations
+                </span>
+
+                <span>
+                    WhatsApp + Forms + Social
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PAGE / SECTION 2 — WEBSITE PACKAGE
+========================================================== -->
+
+<section
+    id="package"
+    class="package-section"
+>
+
+    <div class="container">
+
+
+        <div class="section-heading center">
+
+            <div class="section-label">
+                Website Design Package
+            </div>
+
+            <h2>
+                Everything your business needs online.
+            </h2>
+
+            <p>
+
+                A professional website package with the core
+                features and integrations businesses commonly
+                need to establish an online presence.
+
+            </p>
+
+        </div>
+
+
+        <div class="package">
+
+
+            <div class="package-left">
+
+                <div class="package-small">
+                    Complete Business Website
+                </div>
+
+
+                <h3>
+                    Professional Website Package
+                </h3>
+
+
+                <div class="price">
+
+                    <small>₹</small>4,999
+
+                </div>
+
+
+                <p>
+
+                    Designed for businesses, professionals,
+                    entrepreneurs and service providers.
+
+                </p>
+
+
+                <div class="delivery-box">
+
+                    Delivery:
+                    <strong>
+                        1–3 Working Days
+                    </strong>
+
+                </div>
+
+
+                <a
+                    href="#contact"
+                    class="button"
+                >
+                    Start Your Website
+                </a>
+
+            </div>
+
+
+            <div class="package-right">
+
+                <h3>
+                    Package Includes
+                </h3>
+
+
+                <div class="features">
+
+
+                    <div class="feature">
+                        <span class="check">✓</span>
+                        <span>5 Page Website</span>
                     </div>
 
-                    <h1>
-                        Business support built around
-                        <span>trust.</span>
-                    </h1>
 
-                    <p class="hero-description">
-                        Trust&Co Web Services provides web services,
-                        business support and payment gateway assistance
-                        for businesses and merchants.
-                    </p>
+                    <div class="feature">
+                        <span class="check">✓</span>
+                        <span>Professional Website Design</span>
+                    </div>
 
-                    <div class="hero-actions">
 
-                        <a href="#contact" class="button button-primary">
-                            Contact Trust&Co
-                        </a>
+                    <div class="feature">
+                        <span class="check">✓</span>
+                        <span>Mobile Friendly</span>
+                    </div>
 
-                        <a href="#services" class="button button-secondary">
-                            Explore Services
-                        </a>
 
+                    <div class="feature">
+                        <span class="check">✓</span>
+                        <span>PC / Desktop Friendly</span>
+                    </div>
+
+
+                    <div class="feature">
+                        <span class="check">✓</span>
+                        <span>Free Hosting*</span>
+                    </div>
+
+
+                    <div class="feature">
+                        <span class="check">✓</span>
+                        <span>Free SSL*</span>
+                    </div>
+
+
+                    <div class="feature">
+                        <span class="check">✓</span>
+                        <span>SEO-Ready Website</span>
+                    </div>
+
+
+                    <div class="feature">
+                        <span class="check">✓</span>
+                        <span>WhatsApp Integration</span>
+                    </div>
+
+
+                    <div class="feature">
+                        <span class="check">✓</span>
+                        <span>Lead Form Integration</span>
+                    </div>
+
+
+                    <div class="feature">
+                        <span class="check">✓</span>
+                        <span>Email Enquiry Integration</span>
+                    </div>
+
+
+                    <div class="feature">
+                        <span class="check">✓</span>
+                        <span>Google Business Profile Assistance</span>
+                    </div>
+
+
+                    <div class="feature">
+                        <span class="check">✓</span>
+                        <span>Google Maps Integration</span>
+                    </div>
+
+
+                    <div class="feature">
+                        <span class="check">✓</span>
+                        <span>Social Media Integration</span>
+                    </div>
+
+
+                    <div class="feature">
+                        <span class="check">✓</span>
+                        <span>Social Sharing Buttons</span>
+                    </div>
+
+
+                    <div class="feature">
+                        <span class="check">✓</span>
+                        <span>Basic Logo Design</span>
+                    </div>
+
+
+                    <div class="feature">
+                        <span class="check">✓</span>
+                        <span>Google Listing Assistance</span>
+                    </div>
+
+
+                    <div class="feature">
+                        <span class="check">✓</span>
+                        <span>Business Contact Buttons</span>
+                    </div>
+
+
+                    <div class="feature">
+                        <span class="check">✓</span>
+                        <span>Click-to-Call</span>
+                    </div>
+
+
+                    <div class="feature">
+                        <span class="check">✓</span>
+                        <span>Click-to-Email</span>
+                    </div>
+
+
+                    <div class="feature">
+                        <span class="check">✓</span>
+                        <span>Fast Lightweight Website</span>
+                    </div>
+
+
+                    <div class="feature">
+                        <span class="check">✓</span>
+                        <span>SEO Meta Information</span>
+                    </div>
+
+
+                    <div class="feature">
+                        <span class="check">✓</span>
+                        <span>Social Sharing Metadata</span>
+                    </div>
+
+
+                    <div class="feature">
+                        <span class="check">✓</span>
+                        <span>HTTPS / SSL Ready</span>
+                    </div>
+
+
+                    <div class="feature">
+                        <span class="check">✓</span>
+                        <span>No Website Design Renewal Fee*</span>
                     </div>
 
                 </div>
 
 
-                <div class="hero-card">
+                <div class="package-note">
 
-                    <div class="hero-card-label">
-                        Business Profile
-                    </div>
-
-                    <h2>
-                        Trust&Co Web Services
-                    </h2>
-
-                    <p>
-                        A registered micro enterprise providing
-                        services in the business support and web
-                        services category.
-                    </p>
-
-                    <div class="hero-card-line"></div>
-
-                    <div class="hero-card-detail">
-                        <span>Enterprise</span>
-                        <span>Micro</span>
-                    </div>
-
-                    <div class="hero-card-detail">
-                        <span>Activity</span>
-                        <span>Services</span>
-                    </div>
-
-                    <div class="hero-card-detail">
-                        <span>Udyam</span>
-                        <span>UDYAM-MH-18-0580594</span>
-                    </div>
+                    *Third-party services such as domains, hosting
+                    providers, business email providers, Google
+                    verification and other external services may
+                    have their own eligibility, account or pricing
+                    requirements.
 
                 </div>
 
             </div>
 
-        </section>
+        </div>
+
+    </div>
+
+</section>
 
 
-        <!-- =========================
-             SERVICES
-        ========================== -->
+<!-- =========================================================
+     SERVICES
+========================================================== -->
 
-        <section id="services" class="services-section">
+<section id="services">
 
-            <div class="container">
+    <div class="container">
 
-                <div class="section-heading">
 
-                    <div class="section-label">
-                        What We Do
-                    </div>
+        <div class="section-heading">
 
-                    <h2>
-                        Practical business services.
-                    </h2>
+            <div class="section-label">
+                Our Services
+            </div>
 
-                    <p>
-                        Focused support for digital, business and
-                        payment-gateway-related requirements.
-                    </p>
+            <h2>
+                Digital services for modern businesses.
+            </h2>
+
+            <p>
+
+                Everything from website design to business
+                integrations and payment gateway assistance.
+
+            </p>
+
+        </div>
+
+
+        <div class="services">
+
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    01
+                </div>
+
+                <h3>
+                    Website Design
+                </h3>
+
+                <p>
+
+                    Professional business websites designed
+                    for modern mobile and desktop users.
+
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    02
+                </div>
+
+                <h3>
+                    SEO Setup
+                </h3>
+
+                <p>
+
+                    Search-engine-friendly page structure,
+                    metadata and basic SEO setup.
+
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    03
+                </div>
+
+                <h3>
+                    WhatsApp Integration
+                </h3>
+
+                <p>
+
+                    Direct WhatsApp contact and enquiry
+                    functionality for customers.
+
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    04
+                </div>
+
+                <h3>
+                    Lead Forms
+                </h3>
+
+                <p>
+
+                    Customer enquiry forms with direct
+                    email and WhatsApp enquiry options.
+
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    05
+                </div>
+
+                <h3>
+                    Google Presence
+                </h3>
+
+                <p>
+
+                    Google Business Profile, Google Maps and
+                    Google listing assistance.
+
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    06
+                </div>
+
+                <h3>
+                    Social Integration
+                </h3>
+
+                <p>
+
+                    Social sharing and social-media integration
+                    for business websites.
+
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    07
+                </div>
+
+                <h3>
+                    Business Email
+                </h3>
+
+                <p>
+
+                    Assistance with professional business
+                    email setup and configuration.
+
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    08
+                </div>
+
+                <h3>
+                    Logo Design
+                </h3>
+
+                <p>
+
+                    Basic professional logo design for
+                    business branding.
+
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    09
+                </div>
+
+                <h3>
+                    Payment Gateway Assistance
+                </h3>
+
+                <p>
+
+                    Assistance with payment gateway requirements
+                    and merchant onboarding through partner
+                    channels.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROCESS
+========================================================== -->
+
+<section class="process-section">
+
+    <div class="container">
+
+
+        <div class="section-heading center">
+
+            <div class="section-label">
+                Simple Process
+            </div>
+
+            <h2>
+                From idea to website.
+            </h2>
+
+            <p>
+                A straightforward website development process.
+            </p>
+
+        </div>
+
+
+        <div class="process">
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    01
+                </div>
+
+                <h3>
+                    Enquire
+                </h3>
+
+                <p>
+                    Tell us about your business and website
+                    requirements.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    02
+                </div>
+
+                <h3>
+                    Provide Details
+                </h3>
+
+                <p>
+                    Provide your business information, content,
+                    images and contact details.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    03
+                </div>
+
+                <h3>
+                    Design
+                </h3>
+
+                <p>
+                    Your website is structured and designed
+                    around your business.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    04
+                </div>
+
+                <h3>
+                    Launch
+                </h3>
+
+                <p>
+                    The finished website can be deployed to
+                    the selected hosting environment.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     BUSINESS
+========================================================== -->
+
+<section id="business">
+
+    <div class="container">
+
+
+        <div class="section-heading center">
+
+            <div class="section-label">
+                Business Details
+            </div>
+
+            <h2>
+                Trust&Co Web Services.
+            </h2>
+
+            <p>
+                Official business information.
+            </p>
+
+        </div>
+
+
+        <div class="business-grid">
+
+
+            <div class="business-card">
+
+                <h3>
+                    Registration
+                </h3>
+
+
+                <div class="business-row">
+
+                    <strong>
+                        Business Name
+                    </strong>
+
+                    <span>
+                        TRUST&CO WEB SERVICES
+                    </span>
 
                 </div>
 
 
-                <div class="services">
+                <div class="business-row">
 
-                    <article class="service-card">
+                    <strong>
+                        Proprietor
+                    </strong>
 
-                        <div class="service-number">
-                            01
-                        </div>
+                    <span>
+                        Omkar Dilip Kurlekar
+                    </span>
 
-                        <h3>
-                            Web Services
-                        </h3>
-
-                        <p>
-                            Website-related services and digital
-                            support for business requirements.
-                        </p>
-
-                    </article>
+                </div>
 
 
-                    <article class="service-card">
+                <div class="business-row">
 
-                        <div class="service-number">
-                            02
-                        </div>
+                    <strong>
+                        Udyam Number
+                    </strong>
 
-                        <h3>
-                            Business Support
-                        </h3>
+                    <span>
+                        UDYAM-MH-18-0580594
+                    </span>
 
-                        <p>
-                            Assistance with business-related digital
-                            and administrative requirements.
-                        </p>
-
-                    </article>
+                </div>
 
 
-                    <article class="service-card">
+                <div class="business-row">
 
-                        <div class="service-number">
-                            03
-                        </div>
+                    <strong>
+                        Classification
+                    </strong>
 
-                        <h3>
-                            Payment Gateway Assistance
-                        </h3>
+                    <span>
+                        Micro Enterprise
+                    </span>
 
-                        <p>
-                            Assistance with payment gateway
-                            requirements and merchant onboarding
-                            through available partner channels.
-                        </p>
+                </div>
 
-                    </article>
+
+                <div class="business-row">
+
+                    <strong>
+                        Major Activity
+                    </strong>
+
+                    <span>
+                        Services
+                    </span>
+
+                </div>
+
+
+                <div class="business-row">
+
+                    <strong>
+                        Unit
+                    </strong>
+
+                    <span>
+                        Head Office
+                    </span>
+
+                </div>
+
+
+                <div class="business-row">
+
+                    <strong>
+                        Registration Date
+                    </strong>
+
+                    <span>
+                        28 August 2026
+                    </span>
 
                 </div>
 
             </div>
 
-        </section>
 
+            <div class="business-card">
 
-        <!-- =========================
-             CASHFREE PARTNER
-        ========================== -->
+                <h3>
+                    Registered Office
+                </h3>
 
-        <section id="partner" class="partner-section">
 
-            <div class="container">
+                <div class="business-row">
 
-                <div class="partner-box">
+                    <strong>
+                        Address
+                    </strong>
 
-                    <div>
-
-                        <div class="section-label">
-                            Payment Gateway Partner
-                        </div>
-
-                        <h2>
-                            Cashfree Certified Partner
-                        </h2>
-
-                        <p>
-                            Trust&Co Web Services can assist businesses
-                            with payment gateway requirements and
-                            merchant onboarding through its Cashfree
-                            partner referral.
-                        </p>
-
-                    </div>
-
-
-                    <div class="partner-badge">
-
-                        <a
-                            href="https://merchant.cashfree.com/merchants/signup?referrer=partner&refCode=CFPTO753411"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="cashfree-link"
-                            aria-label="Cashfree Certified Partner Merchant Signup"
-                        >
-
-                            <img
-                                src="https://cashfreelogo.cashfree.com/partner-ui/cfCertifiedPartnerLogo.png"
-                                width="255"
-                                height="70"
-                                alt="Cashfree Certified Partner"
-                            >
-
-                        </a>
-
-                        <div class="partner-note">
-                            Click the badge to proceed to merchant signup.
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             BUSINESS INFORMATION
-        ========================== -->
-
-        <section id="business">
-
-            <div class="container">
-
-                <div class="section-heading center">
-
-                    <div class="section-label">
-                        Business Details
-                    </div>
-
-                    <h2>
-                        Official business information.
-                    </h2>
-
-                    <p>
-                        The following information corresponds to the
-                        business registration details provided for
-                        Trust&Co Web Services.
-                    </p>
-
-                </div>
-
-
-                <div class="business-grid">
-
-                    <div class="business-card">
-
-                        <h3>
-                            Registration
-                        </h3>
-
-
-                        <div class="business-row">
-                            <strong>Business Name</strong>
-                            <span>
-                                TRUST&CO WEB SERVICES
-                            </span>
-                        </div>
-
-
-                        <div class="business-row">
-                            <strong>Proprietor</strong>
-                            <span>
-                                Omkar Dilip Kurlekar
-                            </span>
-                        </div>
-
-
-                        <div class="business-row">
-                            <strong>Udyam Number</strong>
-                            <span>
-                                UDYAM-MH-18-0580594
-                            </span>
-                        </div>
-
-
-                        <div class="business-row">
-                            <strong>Classification</strong>
-                            <span>
-                                Micro Enterprise
-                            </span>
-                        </div>
-
-
-                        <div class="business-row">
-                            <strong>Major Activity</strong>
-                            <span>
-                                Services
-                            </span>
-                        </div>
-
-
-                        <div class="business-row">
-                            <strong>Unit</strong>
-                            <span>
-                                Head Office
-                            </span>
-                        </div>
-
-
-                        <div class="business-row">
-                            <strong>Registration Date</strong>
-                            <span>
-                                28 August 2026
-                            </span>
-                        </div>
-
-                    </div>
-
-
-                    <div class="business-card">
-
-                        <h3>
-                            Registered Address
-                        </h3>
-
-
-                        <div class="business-row">
-                            <strong>Address</strong>
-                            <span>
-                                B 205, Shantidoot Building,<br>
-                                Charkop Sector-2 Block 2,<br>
-                                RSC 2,<br>
-                                Mumbai, Maharashtra - 400067
-                            </span>
-                        </div>
-
-
-                        <div class="business-row">
-                            <strong>District</strong>
-                            <span>
-                                Mumbai Suburban
-                            </span>
-                        </div>
-
-
-                        <div class="business-row">
-                            <strong>State</strong>
-                            <span>
-                                Maharashtra
-                            </span>
-                        </div>
-
-
-                        <div class="business-row">
-                            <strong>PIN Code</strong>
-                            <span>
-                                400067
-                            </span>
-                        </div>
-
-
-                        <div class="business-row">
-                            <strong>Business Email</strong>
-                            <span>
-                                trustcoservices28@gmail.com
-                            </span>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             CONTACT
-        ========================== -->
-
-        <section id="contact" class="contact-section">
-
-            <div class="container contact-grid">
-
-                <div>
-
-                    <div class="section-heading">
-
-                        <div class="section-label">
-                            Get In Touch
-                        </div>
-
-                        <h2>
-                            Let's discuss your requirement.
-                        </h2>
-
-                        <p>
-                            For business enquiries and service-related
-                            questions, contact Trust&Co Web Services
-                            directly.
-                        </p>
-
-                    </div>
-
-
-                    <div class="contact-info">
-
-                        <div class="contact-item">
-
-                            <small>
-                                Proprietor
-                            </small>
-
-                            <div>
-                                Omkar Dilip Kurlekar
-                            </div>
-
-                        </div>
-
-
-                        <div class="contact-item">
-
-                            <small>
-                                Email
-                            </small>
-
-                            <a href="mailto:trustcoservices28@gmail.com">
-                                trustcoservices28@gmail.com
-                            </a>
-
-                        </div>
-
-
-                        <div class="contact-item">
-
-                            <small>
-                                Additional Email
-                            </small>
-
-                            <a href="mailto:Omkarkurlekar1210@gmail.com">
-                                Omkarkurlekar1210@gmail.com
-                            </a>
-
-                        </div>
-
-
-                        <div class="contact-item">
-
-                            <small>
-                                Telephone
-                            </small>
-
-                            <a href="tel:8097361210">
-                                8097361210
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="contact-panel">
-
-                    <h3>
-                        Registered Office
-                    </h3>
-
-                    <p>
-                        Trust&Co Web Services<br><br>
+                    <span>
 
                         B 205, Shantidoot Building,<br>
                         Charkop Sector-2 Block 2,<br>
                         RSC 2,<br>
-                        Mumbai, Maharashtra - 400067
-                    </p>
+                        Mumbai,<br>
+                        Maharashtra - 400067
 
-                    <a
-                        href="mailto:trustcoservices28@gmail.com"
-                        class="button"
-                    >
-                        Send an Email
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             LEGAL
-        ========================== -->
-
-        <section id="legal" class="legal-section">
-
-            <div class="container">
-
-                <div class="section-heading center">
-
-                    <div class="section-label">
-                        Legal
-                    </div>
-
-                    <h2>
-                        Terms & Privacy
-                    </h2>
-
-                    <p>
-                        The following terms define the general
-                        relationship between Trust&Co Web Services,
-                        website visitors and service users.
-                    </p>
+                    </span>
 
                 </div>
 
 
-                <div class="legal-intro">
+                <div class="business-row">
 
-                    <strong>Important:</strong>
-                    These website terms are intended to clearly
-                    define the scope of Trust&Co Web Services'
-                    services and responsibilities. They do not
-                    override mandatory rights or obligations under
-                    applicable law and do not replace a separately
-                    negotiated commercial or partner agreement.
+                    <strong>
+                        District
+                    </strong>
+
+                    <span>
+                        Mumbai Suburban
+                    </span>
 
                 </div>
 
 
-                <div class="legal-document">
-
-
-                    <!-- TERMS -->
-
-                    <div class="legal-box">
-
-                        <h3>
-                            Terms & Conditions
-                        </h3>
-
-                        <p>
-                            <strong>Effective Date:</strong>
-                            28 August 2026
-                        </p>
-
-                        <p>
-                            These Terms & Conditions ("Terms") govern
-                            access to and use of the Trust&Co Web
-                            Services website and services, assistance,
-                            introductions, referrals or business
-                            support provided by Trust&Co Web Services
-                            ("Trust&Co", "we", "us" or "our").
-                        </p>
-
-                        <p>
-                            By accessing this website, contacting us,
-                            requesting our services, submitting
-                            information to us or using a service
-                            provided by us, you acknowledge that you
-                            have read and understood these Terms.
-                        </p>
-
-
-                        <h4>
-                            1. Nature of Services
-                        </h4>
-
-                        <p>
-                            Trust&Co Web Services provides business
-                            support, web-related services and assistance
-                            relating to payment gateway requirements
-                            and merchant onboarding.
-                        </p>
-
-                        <p>
-                            Where Trust&Co introduces, refers or assists
-                            a merchant with a third-party payment service
-                            provider, Trust&Co acts only in its stated
-                            support, referral or assistance capacity.
-                        </p>
-
-                        <p>
-                            Unless expressly agreed in a separate
-                            written agreement, Trust&Co is not the
-                            merchant's payment processor, acquiring bank,
-                            settlement bank, payment gateway, wallet
-                            provider or financial institution.
-                        </p>
-
-
-                        <h4>
-                            2. Third-Party Payment Providers
-                        </h4>
-
-                        <p>
-                            Payment gateway approval, KYC, verification,
-                            risk assessment, fraud controls, transaction
-                            processing, settlement, reserves, refunds,
-                            chargebacks, restrictions and account
-                            decisions are controlled by the relevant
-                            third-party provider according to its
-                            agreements, policies and applicable law.
-                        </p>
-
-                        <p>
-                            Trust&Co does not guarantee merchant approval,
-                            activation, transaction processing,
-                            transaction limits, settlement, reserve
-                            release, account continuation, refund
-                            decisions, chargeback decisions or continued
-                            access to any third-party payment service.
-                        </p>
-
-
-                        <h4>
-                            3. Merchant Responsibility
-                        </h4>
-
-                        <p>
-                            Every merchant and user is solely responsible
-                            for the accuracy, legality and completeness
-                            of information, documents, business details,
-                            products, services and transactions submitted
-                            by them.
-                        </p>
-
-                        <p>
-                            Users must comply with applicable laws,
-                            regulations, licences, tax requirements,
-                            payment-provider rules, banking requirements
-                            and contractual obligations applicable to
-                            their business.
-                        </p>
-
-
-                        <h4>
-                            4. Prohibited Activities
-                        </h4>
-
-                        <p>
-                            Users must not use Trust&Co's services,
-                            referrals, introductions or website for
-                            fraud, money laundering, terrorist financing,
-                            unlawful gambling, prohibited goods or
-                            services, deception, unauthorised transactions,
-                            identity misuse, chargeback abuse, payment
-                            manipulation or any other unlawful activity.
-                        </p>
-
-                        <p>
-                            Trust&Co reserves the right to refuse,
-                            suspend or discontinue assistance where we
-                            reasonably believe that a proposed merchant,
-                            transaction, business activity or request
-                            may violate applicable law, regulatory
-                            requirements, third-party policies, banking
-                            requirements or these Terms.
-                        </p>
-
-
-                        <h4>
-                            5. No Custody of Merchant Funds
-                        </h4>
-
-                        <p>
-                            Unless expressly stated in a separate written
-                            agreement signed by Trust&Co, Trust&Co does
-                            not accept deposits, hold customer funds,
-                            maintain merchant balances, provide payment
-                            settlement services or act as a custodian
-                            of merchant funds.
-                        </p>
-
-                        <p>
-                            Where a third-party payment provider processes,
-                            settles, holds, reserves, refunds, reverses or
-                            restricts funds, such activity is governed by
-                            the applicable relationship and third-party
-                            provider's terms.
-                        </p>
-
-
-                        <h4>
-                            6. No Guarantee of Commercial Results
-                        </h4>
-
-                        <p>
-                            Trust&Co provides assistance on a
-                            reasonable-efforts basis and does not
-                            guarantee any particular commercial,
-                            financial, technical, approval or payment
-                            outcome.
-                        </p>
-
-
-                        <h4>
-                            7. Accuracy of User Information
-                        </h4>
-
-                        <p>
-                            Users must provide true, accurate, current
-                            and complete information.
-                        </p>
-
-                        <p>
-                            Trust&Co shall not be responsible for
-                            consequences arising from false, misleading,
-                            incomplete, outdated or unauthorised
-                            information supplied by a user.
-                        </p>
-
-
-                        <h4>
-                            8. Third-Party Services
-                        </h4>
-
-                        <p>
-                            This website may contain links, referrals or
-                            integrations to third-party websites and
-                            services. Trust&Co does not control the
-                            policies, security, availability, transactions
-                            or decisions of independent third parties.
-                        </p>
-
-
-                        <h4>
-                            9. Limitation of Liability
-                        </h4>
-
-                        <p>
-                            To the maximum extent permitted by applicable
-                            law, Trust&Co shall not be liable for indirect,
-                            incidental, special, consequential or punitive
-                            losses, or loss of profits, business
-                            opportunities, revenue, goodwill, anticipated
-                            savings or data arising from third-party
-                            payment providers, banks, financial
-                            institutions, technology providers or other
-                            external services.
-                        </p>
-
-                        <p>
-                            Trust&Co shall not be responsible for losses
-                            resulting from third-party account suspension,
-                            payment holds, settlement delays, chargebacks,
-                            refunds, reversals, fraud controls, KYC
-                            decisions, compliance decisions, transaction
-                            restrictions, banking actions, regulatory
-                            actions or service interruptions where such
-                            matters are outside Trust&Co's reasonable
-                            control.
-                        </p>
-
-                        <p>
-                            Nothing in these Terms excludes or limits
-                            liability to the extent such exclusion or
-                            limitation is prohibited by applicable law.
-                        </p>
-
-
-                        <h4>
-                            10. Indemnification
-                        </h4>
-
-                        <p>
-                            To the extent permitted by applicable law,
-                            a user agrees to indemnify and hold harmless
-                            Trust&Co Web Services, its proprietor and
-                            authorised representatives from claims,
-                            losses, liabilities, costs and reasonable
-                            expenses arising from the user's unlawful
-                            activity, breach of these Terms, misuse of
-                            services, inaccurate information, infringement
-                            of third-party rights or violation of
-                            applicable law.
-                        </p>
-
-
-                        <h4>
-                            11. Suspension or Termination
-                        </h4>
-
-                        <p>
-                            Trust&Co may suspend, restrict or terminate
-                            access to its services or discontinue
-                            assistance where reasonably necessary for
-                            legal, compliance, security, commercial or
-                            risk-management reasons.
-                        </p>
-
-
-                        <h4>
-                            12. Force Majeure
-                        </h4>
-
-                        <p>
-                            Trust&Co shall not be responsible for delay
-                            or failure caused by circumstances beyond
-                            reasonable control, including natural
-                            disasters, war, government action, regulatory
-                            action, cyber incidents, telecommunications
-                            failures, banking failures, payment-provider
-                            failures, hosting failures, power failures
-                            or other events beyond reasonable control.
-                        </p>
-
-
-                        <h4>
-                            13. Changes to Terms
-                        </h4>
-
-                        <p>
-                            Trust&Co may update these Terms from time to
-                            time to reflect changes in services, business
-                            operations, technology or applicable legal
-                            requirements.
-                        </p>
-
-
-                        <h4>
-                            14. Governing Law and Jurisdiction
-                        </h4>
-
-                        <p>
-                            These Terms shall be governed by the laws
-                            applicable in India. Subject to applicable
-                            law, courts having appropriate jurisdiction
-                            in Mumbai, Maharashtra shall have jurisdiction
-                            over disputes arising from these Terms.
-                        </p>
-
-
-                        <h4>
-                            15. Severability
-                        </h4>
-
-                        <p>
-                            If any provision of these Terms is determined
-                            to be invalid, unlawful or unenforceable,
-                            the remaining provisions shall continue to
-                            operate to the extent permitted by applicable
-                            law.
-                        </p>
-
-                    </div>
-
-
-                    <!-- PRIVACY POLICY -->
-
-                    <div class="legal-box">
-
-                        <h3>
-                            Privacy Policy
-                        </h3>
-
-                        <p>
-                            <strong>Effective Date:</strong>
-                            28 August 2026
-                        </p>
-
-                        <p>
-                            Trust&Co Web Services respects the privacy
-                            of individuals and businesses who communicate
-                            with us. This Privacy Policy explains how
-                            information may be collected, used, stored
-                            and disclosed when you use this website or
-                            contact us.
-                        </p>
-
-
-                        <h4>
-                            1. Information We May Collect
-                        </h4>
-
-                        <p>
-                            Depending on the enquiry or service,
-                            information may include your name, business
-                            name, email address, telephone number,
-                            business information, documents or other
-                            information voluntarily provided by you.
-                        </p>
-
-                        <p>
-                            We may also receive limited technical
-                            information associated with website access,
-                            such as IP address, browser information,
-                            device information, timestamps and basic
-                            website usage information where made
-                            available through hosting, security or
-                            analytics services.
-                        </p>
-
-
-                        <h4>
-                            2. Purpose of Collection
-                        </h4>
-
-                        <p>
-                            Information may be used for:
-                        </p>
-
-                        <ul>
-                            <li>Responding to enquiries.</li>
-                            <li>Providing requested services.</li>
-                            <li>Communicating about business requirements.</li>
-                            <li>Assisting with merchant or payment gateway referrals.</li>
-                            <li>Maintaining business records.</li>
-                            <li>Preventing fraud or misuse.</li>
-                            <li>Maintaining website and information security.</li>
-                            <li>Complying with applicable legal obligations.</li>
-                            <li>Protecting our legal rights and legitimate business interests.</li>
-                        </ul>
-
-
-                        <h4>
-                            3. Sensitive Credentials
-                        </h4>
-
-                        <p>
-                            Users should never send passwords, OTPs,
-                            PINs, CVV numbers, banking login credentials
-                            or payment authentication credentials to
-                            Trust&Co through ordinary email, telephone,
-                            WhatsApp or other communication channels.
-                        </p>
-
-
-                        <h4>
-                            4. Third-Party Services
-                        </h4>
-
-                        <p>
-                            Where you choose to use a third-party
-                            service, including a payment gateway, bank,
-                            hosting provider, communication service or
-                            other platform, your information may be
-                            processed directly by that third party under
-                            its own terms and privacy policy.
-                        </p>
-
-
-                        <h4>
-                            5. Disclosure of Information
-                        </h4>
-
-                        <p>
-                            We do not knowingly sell personal information
-                            as a commercial product.
-                        </p>
-
-                        <p>
-                            Information may be disclosed where reasonably
-                            necessary to provide a requested service,
-                            process a referral, comply with law, respond
-                            to lawful government or regulatory requirements,
-                            prevent fraud or protect the rights, property
-                            or security of Trust&Co, users or other persons.
-                        </p>
-
-
-                        <h4>
-                            6. Data Security
-                        </h4>
-
-                        <p>
-                            Trust&Co takes reasonable measures appropriate
-                            to the nature of information handled to
-                            protect information against unauthorised
-                            access, misuse, alteration, disclosure or
-                            destruction.
-                        </p>
-
-                        <p>
-                            However, no internet transmission, electronic
-                            storage system or third-party service can be
-                            guaranteed to be completely secure.
-                        </p>
-
-
-                        <h4>
-                            7. Data Retention
-                        </h4>
-
-                        <p>
-                            Information may be retained for as long as
-                            reasonably necessary for the purpose for which
-                            it was collected, legitimate business
-                            requirements, contractual obligations,
-                            accounting and record-keeping, dispute
-                            resolution, fraud prevention, legal
-                            obligations or other lawful purposes.
-                        </p>
-
-
-                        <h4>
-                            8. User Requests
-                        </h4>
-
-                        <p>
-                            Subject to applicable law, individuals may
-                            contact Trust&Co regarding questions or
-                            requests concerning personal information
-                            provided to us.
-                        </p>
-
-
-                        <h4>
-                            9. Cookies
-                        </h4>
-
-                        <p>
-                            This website may use cookies or similar
-                            technologies where required for basic
-                            functionality, security, performance or
-                            analytics. Third-party services may also
-                            use their own cookies or similar technologies
-                            under their respective policies.
-                        </p>
-
-
-                        <h4>
-                            10. External Links
-                        </h4>
-
-                        <p>
-                            This website may contain links to external
-                            websites. Trust&Co is not responsible for
-                            the privacy practices, security, content or
-                            policies of external websites.
-                        </p>
-
-
-                        <h4>
-                            11. Changes to Privacy Policy
-                        </h4>
-
-                        <p>
-                            This Privacy Policy may be updated from time
-                            to time to reflect changes in our services,
-                            technology, business practices or applicable
-                            legal requirements.
-                        </p>
-
-
-                        <h4>
-                            12. Privacy Contact
-                        </h4>
-
-                        <p>
-                            <strong>
-                                Trust&Co Web Services
-                            </strong><br>
-                            Proprietor: Omkar Dilip Kurlekar
-                        </p>
-
-                        <p>
-                            Email:
-                            <a href="mailto:trustcoservices28@gmail.com">
-                                trustcoservices28@gmail.com
-                            </a>
-                        </p>
-
-                        <p>
-                            Additional Email:
-                            <a href="mailto:Omkarkurlekar1210@gmail.com">
-                                Omkarkurlekar1210@gmail.com
-                            </a>
-                        </p>
-
-                    </div>
-
-
-                    <!-- PAYMENT DISCLAIMER -->
-
-                    <div class="legal-box">
-
-                        <h3>
-                            Payment Gateway Disclaimer
-                        </h3>
-
-                        <p>
-                            Trust&Co Web Services may act as a referral
-                            or assistance partner in connection with
-                            third-party payment gateway services.
-                        </p>
-
-                        <p>
-                            Trust&Co does not control a merchant's
-                            payment gateway account, transaction
-                            processing, settlement, reserves,
-                            chargebacks, refunds, KYC decisions,
-                            compliance decisions, fraud monitoring
-                            or account restrictions imposed by a
-                            third-party provider.
-                        </p>
-
-                        <p>
-                            Any merchant using a payment gateway is
-                            responsible for complying with the payment
-                            provider's merchant agreement, prohibited
-                            business requirements, KYC requirements,
-                            transaction rules and applicable laws.
-                        </p>
-
-                        <p>
-                            Trust&Co does not authorise or knowingly
-                            facilitate unlawful transactions or the
-                            processing of funds connected with unlawful
-                            activity.
-                        </p>
-
-                    </div>
-
-
-                    <!-- GST -->
-
-                    <div class="legal-box">
-
-                        <h3>
-                            GST Information
-                        </h3>
-
-                        <p>
-                            GST registration details are not displayed
-                            on this website at present. GST details
-                            will be added when the applicable registration
-                            information is available.
-                        </p>
-
-                    </div>
-
-
-                    <!-- CONTACT -->
-
-                    <div class="legal-box">
-
-                        <h3>
-                            Business Contact
-                        </h3>
-
-                        <p>
-                            <strong>
-                                Trust&Co Web Services
-                            </strong><br>
-                            Proprietor: Omkar Dilip Kurlekar
-                        </p>
-
-                        <p>
-                            B 205, Shantidoot Building,<br>
-                            Charkop Sector-2 Block 2,<br>
-                            RSC 2,<br>
-                            Mumbai, Maharashtra - 400067
-                        </p>
-
-                        <p>
-                            Email:
-                            <a href="mailto:trustcoservices28@gmail.com">
-                                trustcoservices28@gmail.com
-                            </a>
-                        </p>
-
-                        <p>
-                            Additional Email:
-                            <a href="mailto:Omkarkurlekar1210@gmail.com">
-                                Omkarkurlekar1210@gmail.com
-                            </a>
-                        </p>
-
-                        <p>
-                            Phone:
-                            <a href="tel:8097361210">
-                                8097361210
-                            </a>
-                        </p>
-
-                    </div>
+                <div class="business-row">
+
+                    <strong>
+                        State
+                    </strong>
+
+                    <span>
+                        Maharashtra
+                    </span>
 
                 </div>
 
-            </div>
 
-        </section>
+                <div class="business-row">
 
-    </main>
+                    <strong>
+                        PIN
+                    </strong>
 
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
-    <footer>
-
-        <div class="container">
-
-            <div class="footer-top">
-
-                <div class="footer-brand">
-                    Trust<span>&</span>Co Web Services
-                </div>
-
-
-                <div class="footer-links">
-
-                    <a href="#services">
-                        Services
-                    </a>
-
-                    <a href="#partner">
-                        Payment Partner
-                    </a>
-
-                    <a href="#business">
-                        Business
-                    </a>
-
-                    <a href="#contact">
-                        Contact
-                    </a>
-
-                    <a href="#legal">
-                        Legal
-                    </a>
+                    <span>
+                        400067
+                    </span>
 
                 </div>
 
-            </div>
+
+                <div class="business-row">
+
+                    <strong>
+                        Phone
+                    </strong>
+
+                    <span>
+                        8097361210
+                    </span>
+
+                </div>
 
 
-            <div class="footer-bottom">
+                <div class="business-row">
 
-                <span>
-                    © 2026 Trust&Co Web Services. All rights reserved.
-                </span>
+                    <strong>
+                        Email
+                    </strong>
 
-                <span>
-                    UDYAM-MH-18-0580594
-                </span>
+                    <span>
+                        trustcoservices28@gmail.com
+                    </span>
+
+                </div>
 
             </div>
 
         </div>
 
-    </footer>
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     GOOGLE MAPS / LOCATION
+========================================================== -->
+
+<section class="partner-section">
+
+    <div class="container">
+
+
+        <div class="section-heading center">
+
+            <div class="section-label">
+                Location
+            </div>
+
+            <h2>
+                Find our registered office.
+            </h2>
+
+            <p>
+                Mumbai, Maharashtra.
+            </p>
+
+        </div>
+
+
+        <div
+            style="
+                overflow:hidden;
+                border-radius:15px;
+                border:1px solid #e5e7eb;
+                box-shadow:0 15px 45px rgba(15,23,42,.06);
+            "
+        >
+
+            <iframe
+
+                title="Trust&Co Web Services Location"
+
+                src="https://www.google.com/maps?q=B%20205%2C%20Shantidoot%20Building%2C%20Charkop%20Sector-2%20Block%202%2C%20RSC%202%2C%20Mumbai%2C%20Maharashtra%20400067&output=embed"
+
+                width="100%"
+
+                height="380"
+
+                style="
+                    border:0;
+                    display:block;
+                "
+
+                loading="lazy"
+
+                allowfullscreen
+
+                referrerpolicy="no-referrer-when-downgrade"
+
+            ></iframe>
+
+        </div>
+
+
+        <div style="text-align:center;margin-top:18px;">
+
+            <a
+                href="https://www.google.com/maps/search/?api=1&query=B%20205%2C%20Shantidoot%20Building%2C%20Charkop%20Sector-2%20Block%202%2C%20RSC%202%2C%20Mumbai%2C%20Maharashtra%20400067"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button button-secondary"
+            >
+                Open in Google Maps
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CASHFREE PARTNER
+========================================================== -->
+
+<section
+    id="partner"
+    class="partner-section"
+>
+
+    <div class="container">
+
+
+        <div class="partner">
+
+
+            <div>
+
+                <div class="section-label">
+                    Payment Gateway Partner
+                </div>
+
+
+                <h2>
+                    Cashfree Certified Partner
+                </h2>
+
+
+                <p>
+
+                    Trust&Co Web Services can assist businesses
+                    with payment gateway requirements and merchant
+                    onboarding through its Cashfree partner referral.
+
+                </p>
+
+            </div>
+
+
+            <div class="cashfree-wrap">
+
+                <a
+                    href="https://merchant.cashfree.com/merchants/signup?referrer=partner&refCode=CFPTO753411"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cashfree-link"
+                    aria-label="Cashfree Certified Partner Merchant Signup"
+                >
+
+                    <img
+                        src="https://cashfreelogo.cashfree.com/partner-ui/cfCertifiedPartnerLogo.png"
+                        width="255"
+                        height="70"
+                        alt="Cashfree Certified Partner"
+                    >
+
+                </a>
+
+
+                <div class="partner-note">
+
+                    Click the badge to proceed to merchant signup.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT + LEAD FORM
+========================================================== -->
+
+<section
+    id="contact"
+    class="contact-section"
+>
+
+    <div class="container contact-grid">
+
+
+        <div>
+
+            <div class="section-heading">
+
+                <div class="section-label">
+                    Contact Trust&Co
+                </div>
+
+
+                <h2>
+                    Let's build your business online.
+                </h2>
+
+
+                <p>
+
+                    Send your requirement through the enquiry
+                    form or contact Trust&Co directly.
+
+                </p>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <small>
+                    Proprietor
+                </small>
+
+                <div>
+                    Omkar Dilip Kurlekar
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <small>
+                    Business Email
+                </small>
+
+                <a
+                    href="mailto:trustcoservices28@gmail.com"
+                >
+                    trustcoservices28@gmail.com
+                </a>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <small>
+                    Additional Email
+                </small>
+
+                <a
+                    href="mailto:Omkarkurlekar1210@gmail.com"
+                >
+                    Omkarkurlekar1210@gmail.com
+                </a>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <small>
+                    Phone
+                </small>
+
+                <a
+                    href="tel:8097361210"
+                >
+                    8097361210
+                </a>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <small>
+                    Registered Office
+                </small>
+
+                <div>
+
+                    B 205, Shantidoot Building,<br>
+                    Charkop Sector-2 Block 2,<br>
+                    RSC 2,<br>
+                    Mumbai, Maharashtra - 400067
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="contact-panel">
+
+            <h3>
+                Website Enquiry
+            </h3>
+
+
+            <p>
+
+                Fill in your details. You can send the enquiry
+                directly by email or WhatsApp.
+
+            </p>
+
+
+            <form
+                class="contact-form"
+                id="contactForm"
+            >
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your Name"
+                    required
+                >
+
+
+                <input
+                    type="text"
+                    id="businessName"
+                    placeholder="Business Name"
+                >
+
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email Address"
+                    required
+                >
+
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Phone Number"
+                >
+
+
+                <textarea
+                    id="message"
+                    placeholder="Tell us about your website or business requirement..."
+                    required
+                ></textarea>
+
+
+                <div class="form-buttons">
+
+                    <button
+                        type="submit"
+                        class="button form-button"
+                    >
+                        Send by Email
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="button whatsapp-button"
+                        id="whatsappEnquiry"
+                    >
+                        Send on WhatsApp
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SOCIAL SHARING
+========================================================== -->
+
+<section class="share-section">
+
+    <div class="container">
+
+        <div class="share">
+
+            <div class="share-title">
+                Share Trust&Co Web Services
+            </div>
+
+
+            <a
+                href="#"
+                id="shareWhatsApp"
+            >
+                WhatsApp
+            </a>
+
+
+            <a
+                href="#"
+                id="shareFacebook"
+            >
+                Facebook
+            </a>
+
+
+            <a
+                href="#"
+                id="shareX"
+            >
+                X
+            </a>
+
+
+            <a
+                href="#"
+                id="copyLink"
+            >
+                Copy Website Link
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LEGAL
+========================================================== -->
+
+<section
+    id="legal"
+    class="legal-section"
+>
+
+    <div class="container">
+
+
+        <div class="section-heading center">
+
+            <div class="section-label">
+                Legal
+            </div>
+
+            <h2>
+                Terms & Privacy
+            </h2>
+
+            <p>
+                Important information governing use of this
+                website and Trust&Co services.
+            </p>
+
+        </div>
+
+
+        <div class="legal-intro">
+
+            <strong>Important:</strong>
+
+            These terms are intended to clearly define the
+            services and responsibilities of Trust&Co Web Services.
+            They do not exclude rights or liabilities that cannot
+            legally be excluded under applicable law.
+
+        </div>
+
+
+        <div class="legal-document">
+
+
+            <!-- TERMS -->
+
+            <div class="legal-box">
+
+                <h3>
+                    Terms & Conditions
+                </h3>
+
+
+                <p>
+                    <strong>Effective Date:</strong>
+                    28 August 2026
+                </p>
+
+
+                <h4>
+                    1. General
+                </h4>
+
+                <p>
+
+                    These Terms & Conditions govern access to and
+                    use of the Trust&Co Web Services website and
+                    services.
+
+                </p>
+
+
+                <h4>
+                    2. Website Services
+                </h4>
+
+                <p>
+
+                    Trust&Co may provide website design,
+                    development, hosting assistance, SEO setup,
+                    business email assistance, WhatsApp integration,
+                    lead forms, Google-related setup assistance,
+                    social-media integration, logo design and
+                    related digital services.
+
+                </p>
+
+
+                <h4>
+                    3. Five-Page Package
+                </h4>
+
+                <p>
+
+                    The standard website package is designed for
+                    up to five website pages. Additional pages,
+                    advanced applications, e-commerce systems,
+                    databases, custom software and other work
+                    outside the stated package may require a
+                    separate quotation.
+
+                </p>
+
+
+                <h4>
+                    4. Client Content
+                </h4>
+
+                <p>
+
+                    The client is responsible for providing accurate
+                    business information, images, text, documents,
+                    logos, contact information and other material
+                    required for the website.
+
+                </p>
+
+
+                <h4>
+                    5. Lawful Use
+                </h4>
+
+                <p>
+
+                    The website and services must not be used for
+                    fraud, money laundering, terrorist financing,
+                    unlawful gambling, prohibited goods or services,
+                    identity misuse, deception, chargeback abuse,
+                    payment manipulation or any other unlawful
+                    activity.
+
+                </p>
+
+
+                <h4>
+                    6. Third-Party Services
+                </h4>
+
+                <p>
+
+                    Domain registrars, hosting providers, email
+                    providers, Google services, payment gateways,
+                    social-media platforms and other third parties
+                    operate independently and may have their own
+                    terms, pricing, verification requirements,
+                    restrictions and service availability.
+
+                </p>
+
+
+                <h4>
+                    7. Hosting and SSL
+                </h4>
+
+                <p>
+
+                    Where hosting or SSL is included in a package,
+                    its availability is subject to the applicable
+                    hosting or certificate provider. Trust&Co does
+                    not guarantee uninterrupted third-party hosting,
+                    permanent availability or immunity from
+                    third-party outages.
+
+                </p>
+
+
+                <h4>
+                    8. SEO
+                </h4>
+
+                <p>
+
+                    SEO-ready means that reasonable technical
+                    on-page SEO elements may be implemented.
+                    Trust&Co does not guarantee a particular
+                    position, ranking, traffic volume or search
+                    engine result.
+
+                </p>
+
+
+                <h4>
+                    9. Google Services
+                </h4>
+
+                <p>
+
+                    Google Business Profile and Google listing
+                    services are subject to Google's verification,
+                    eligibility, policies and approval procedures.
+                    Trust&Co cannot guarantee approval or ranking
+                    by Google.
+
+                </p>
+
+
+                <h4>
+                    10. Social Media
+                </h4>
+
+                <p>
+
+                    Social-media integration depends on the
+                    availability and policies of the relevant
+                    platform and the client's account information.
+
+                </p>
+
+
+                <h4>
+                    11. Payment Gateway Assistance
+                </h4>
+
+                <p>
+
+                    Trust&Co may provide payment gateway referral
+                    or assistance services. Trust&Co is not the
+                    payment processor, acquiring bank, settlement
+                    bank or financial institution unless separately
+                    and expressly agreed in writing.
+
+                </p>
+
+
+                <p>
+
+                    Merchant approval, KYC, risk assessment, fraud
+                    controls, transaction processing, settlement,
+                    reserves, refunds, chargebacks, account
+                    restrictions and compliance decisions are
+                    controlled by the relevant payment service
+                    provider.
+
+                </p>
+
+
+                <h4>
+                    12. No Guarantee
+                </h4>
+
+                <p>
+
+                    Trust&Co does not guarantee merchant approval,
+                    website search ranking, transaction volume,
+                    revenue, payment processing, hosting uptime,
+                    Google ranking or any particular commercial
+                    outcome.
+
+                </p>
+
+
+                <h4>
+                    13. No Custody of Merchant Funds
+                </h4>
+
+                <p>
+
+                    Unless expressly agreed in a separate written
+                    agreement, Trust&Co does not accept deposits,
+                    hold merchant funds, maintain merchant balances
+                    or act as custodian of payment funds.
+
+                </p>
+
+
+                <h4>
+                    14. Limitation of Liability
+                </h4>
+
+                <p>
+
+                    To the maximum extent permitted by applicable
+                    law, Trust&Co shall not be liable for indirect,
+                    incidental, special or consequential losses
+                    arising from third-party hosting providers,
+                    payment providers, banks, Google, social-media
+                    platforms, email providers or other external
+                    services.
+
+                </p>
+
+
+                <p>
+
+                    Trust&Co shall not be responsible for third-party
+                    account suspension, payment holds, settlement
+                    delays, chargebacks, refunds, reversals, KYC
+                    decisions, compliance decisions, banking actions
+                    or regulatory actions outside Trust&Co's
+                    reasonable control.
+
+                </p>
+
+
+                <p>
+
+                    Nothing in these Terms excludes or limits
+                    liability to the extent that such exclusion or
+                    limitation is prohibited by applicable law.
+
+                </p>
+
+
+                <h4>
+                    15. Indemnification
+                </h4>
+
+                <p>
+
+                    To the extent permitted by applicable law, a
+                    user agrees to indemnify and hold harmless
+                    Trust&Co Web Services, its proprietor and
+                    authorised representatives from claims, losses,
+                    liabilities, costs and reasonable expenses
+                    arising from the user's unlawful activity,
+                    breach of these Terms, inaccurate information,
+                    misuse of services or violation of applicable
+                    law.
+
+                </p>
+
+
+                <h4>
+                    16. Suspension
+                </h4>
+
+                <p>
+
+                    Trust&Co may refuse, suspend or discontinue
+                    assistance where reasonably necessary for
+                    legal, security, compliance, commercial or
+                    risk-management reasons.
+
+                </p>
+
+
+                <h4>
+                    17. Force Majeure
+                </h4>
+
+                <p>
+
+                    Trust&Co shall not be responsible for delays or
+                    failures caused by events outside reasonable
+                    control, including natural disasters, government
+                    action, regulatory action, cyber incidents,
+                    telecommunications failures, banking failures,
+                    hosting failures and third-party service
+                    failures.
+
+                </p>
+
+
+                <h4>
+                    18. Governing Law
+                </h4>
+
+                <p>
+
+                    These Terms shall be governed by the laws
+                    applicable in India. Subject to applicable law,
+                    courts having appropriate jurisdiction in Mumbai,
+                    Maharashtra shall have jurisdiction over disputes.
+
+                </p>
+
+            </div>
+
+
+            <!-- PRIVACY -->
+
+            <div class="legal-box">
+
+                <h3>
+                    Privacy Policy
+                </h3>
+
+
+                <p>
+                    <strong>Effective Date:</strong>
+                    28 August 2026
+                </p>
+
+
+                <h4>
+                    1. Information We Collect
+                </h4>
+
+                <p>
+
+                    Depending on the enquiry or service, Trust&Co
+                    may receive names, business names, email
+                    addresses, telephone numbers, business details,
+                    documents and other information voluntarily
+                    supplied by users.
+
+                </p>
+
+
+                <h4>
+                    2. How Information Is Used
+                </h4>
+
+                <ul>
+
+                    <li>
+                        Responding to enquiries.
+                    </li>
+
+                    <li>
+                        Providing requested services.
+                    </li>
+
+                    <li>
+                        Communicating about business requirements.
+                    </li>
+
+                    <li>
+                        Processing relevant referrals.
+                    </li>
+
+                    <li>
+                        Maintaining business records.
+                    </li>
+
+                    <li>
+                        Preventing fraud and misuse.
+                    </li>
+
+                    <li>
+                        Maintaining website security.
+                    </li>
+
+                    <li>
+                        Complying with applicable law.
+                    </li>
+
+                </ul>
+
+
+                <h4>
+                    3. Sensitive Credentials
+                </h4>
+
+                <p>
+
+                    Users should never send passwords, OTPs, PINs,
+                    CVV numbers, banking login credentials or
+                    payment authentication credentials to Trust&Co
+                    through ordinary email, WhatsApp or other
+                    communication channels.
+
+                </p>
+
+
+                <h4>
+                    4. Third-Party Services
+                </h4>
+
+                <p>
+
+                    Information may be processed by third-party
+                    services when users voluntarily use services
+                    such as payment gateways, hosting providers,
+                    email providers, Google services or social-media
+                    platforms.
+
+                </p>
+
+
+                <h4>
+                    5. Disclosure
+                </h4>
+
+                <p>
+
+                    Trust&Co does not knowingly sell personal
+                    information as a commercial product.
+
+                    Information may be disclosed where reasonably
+                    necessary to provide a requested service,
+                    process a referral, comply with law, respond to
+                    lawful government or regulatory requirements,
+                    prevent fraud or protect rights and security.
+
+                </p>
+
+
+                <h4>
+                    6. Security
+                </h4>
+
+                <p>
+
+                    Trust&Co takes reasonable measures appropriate
+                    to the nature of information handled to protect
+                    it against unauthorised access, misuse,
+                    alteration, disclosure or destruction.
+
+                </p>
+
+                <p>
+
+                    No internet transmission or electronic storage
+                    system can be guaranteed to be completely secure.
+
+                </p>
+
+
+                <h4>
+                    7. Data Retention
+                </h4>
+
+                <p>
+
+                    Information may be retained for as long as
+                    reasonably necessary for legitimate business,
+                    contractual, accounting, dispute-resolution,
+                    fraud-prevention or legal purposes.
+
+                </p>
+
+
+                <h4>
+                    8. Cookies
+                </h4>
+
+                <p>
+
+                    This website may use cookies or similar
+                    technologies where required for functionality,
+                    security, performance or analytics.
+
+                </p>
+
+
+                <h4>
+                    9. External Websites
+                </h4>
+
+                <p>
+
+                    Trust&Co is not responsible for the privacy
+                    practices, security or content of independent
+                    third-party websites.
+
+                </p>
+
+
+                <h4>
+                    10. Privacy Contact
+                </h4>
+
+                <p>
+
+                    <strong>
+                        Trust&Co Web Services
+                    </strong><br>
+
+                    Proprietor:
+                    Omkar Dilip Kurlekar
+
+                </p>
+
+
+                <p>
+
+                    Email:
+                    <a href="mailto:trustcoservices28@gmail.com">
+                        trustcoservices28@gmail.com
+                    </a>
+
+                </p>
+
+
+                <p>
+
+                    Additional Email:
+                    <a href="mailto:Omkarkurlekar1210@gmail.com">
+                        Omkarkurlekar1210@gmail.com
+                    </a>
+
+                </p>
+
+            </div>
+
+
+            <!-- PAYMENT DISCLAIMER -->
+
+            <div class="legal-box">
+
+                <h3>
+                    Payment Gateway Disclaimer
+                </h3>
+
+
+                <p>
+
+                    Trust&Co Web Services may act as a referral
+                    or assistance partner in connection with
+                    third-party payment gateway services.
+
+                </p>
+
+
+                <p>
+
+                    Trust&Co does not control a merchant's payment
+                    gateway account, transaction processing,
+                    settlement, reserves, chargebacks, refunds,
+                    KYC decisions, compliance decisions, fraud
+                    monitoring or account restrictions imposed by
+                    a third-party provider.
+
+                </p>
+
+
+                <p>
+
+                    Merchants are responsible for complying with
+                    the payment provider's merchant agreement,
+                    prohibited-business requirements, KYC
+                    requirements, transaction rules and applicable
+                    laws.
+
+                </p>
+
+
+                <p>
+
+                    Trust&Co does not authorise or knowingly
+                    facilitate unlawful transactions or the
+                    processing of funds connected with unlawful
+                    activity.
+
+                </p>
+
+            </div>
+
+
+            <!-- GST -->
+
+            <div class="legal-box">
+
+                <h3>
+                    GST Information
+                </h3>
+
+
+                <p>
+
+                    GST registration details are not displayed on
+                    this website at present. GST information can
+                    be added when the applicable registration
+                    information is available.
+
+                </p>
+
+            </div>
+
+
+            <!-- LEGAL CONTACT -->
+
+            <div class="legal-box">
+
+                <h3>
+                    Business Contact
+                </h3>
+
+
+                <p>
+
+                    <strong>
+                        Trust&Co Web Services
+                    </strong><br>
+
+                    Proprietor:
+                    Omkar Dilip Kurlekar
+
+                </p>
+
+
+                <p>
+
+                    B 205, Shantidoot Building,<br>
+                    Charkop Sector-2 Block 2,<br>
+                    RSC 2,<br>
+                    Mumbai, Maharashtra - 400067
+
+                </p>
+
+
+                <p>
+
+                    Phone:
+                    <a href="tel:8097361210">
+                        8097361210
+                    </a>
+
+                </p>
+
+
+                <p>
+
+                    Email:
+                    <a href="mailto:trustcoservices28@gmail.com">
+                        trustcoservices28@gmail.com
+                    </a>
+
+                </p>
+
+
+                <p>
+
+                    Additional Email:
+                    <a href="mailto:Omkarkurlekar1210@gmail.com">
+                        Omkarkurlekar1210@gmail.com
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================== -->
+
+<footer>
+
+    <div class="container">
+
+
+        <div class="footer-top">
+
+
+            <div class="footer-brand">
+
+                Trust<span>&</span>Co Web Services
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#package">
+                    Package
+                </a>
+
+                <a href="#services">
+                    Services
+                </a>
+
+                <a href="#business">
+                    Business
+                </a>
+
+                <a href="#partner">
+                    Payment Partner
+                </a>
+
+                <a href="#legal">
+                    Legal
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Trust&Co Web Services. All rights reserved.
+            </span>
+
+
+            <span>
+                UDYAM-MH-18-0580594
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     FLOATING WHATSAPP
+========================================================== -->
+
+<a
+    href="https://wa.me/918097361210"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="floating-whatsapp"
+    aria-label="Chat with Trust&Co on WhatsApp"
+    title="Chat on WhatsApp"
+>
+    ☎
+</a>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================== -->
+
+<script>
+
+
+    /* =========================================================
+       MOBILE MENU
+    ========================================================== */
+
+    const menuButton =
+        document.getElementById("menuButton");
+
+    const mobileMenu =
+        document.getElementById("mobileMenu");
+
+
+    menuButton.addEventListener("click", function () {
+
+        if (
+            mobileMenu.style.display === "block"
+        ) {
+
+            mobileMenu.style.display = "none";
+
+        } else {
+
+            mobileMenu.style.display = "block";
+
+        }
+
+    });
+
+
+    document
+        .querySelectorAll(".mobile-menu a")
+        .forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+                mobileMenu.style.display = "none";
+
+            });
+
+        });
+
+
+    /* =========================================================
+       WEBSITE URL
+    ========================================================== */
+
+    const websiteURL =
+        window.location.href;
+
+
+    /* =========================================================
+       FORM DATA
+    ========================================================== */
+
+    function getFormData() {
+
+        const name =
+            document.getElementById("name").value.trim();
+
+        const business =
+            document.getElementById("businessName").value.trim();
+
+        const email =
+            document.getElementById("email").value.trim();
+
+        const phone =
+            document.getElementById("phone").value.trim();
+
+        const message =
+            document.getElementById("message").value.trim();
+
+
+        return {
+            name,
+            business,
+            email,
+            phone,
+            message
+        };
+
+    }
+
+
+    /* =========================================================
+       EMAIL ENQUIRY
+    ========================================================== */
+
+    document
+        .getElementById("contactForm")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+
+            const data =
+                getFormData();
+
+
+            const subject =
+                encodeURIComponent(
+                    "Website Enquiry - Trust&Co Web Services"
+                );
+
+
+            const body =
+                encodeURIComponent(
+
+                    "New Website Enquiry\n\n" +
+
+                    "Name: " +
+                    data.name +
+                    "\n" +
+
+                    "Business: " +
+                    data.business +
+                    "\n" +
+
+                    "Email: " +
+                    data.email +
+                    "\n" +
+
+                    "Phone: " +
+                    data.phone +
+                    "\n\n" +
+
+                    "Requirement:\n" +
+                    data.message
+
+                );
+
+
+            window.location.href =
+                "mailto:trustcoservices28@gmail.com" +
+                "?subject=" +
+                subject +
+                "&body=" +
+                body;
+
+        });
+
+
+    /* =========================================================
+       WHATSAPP ENQUIRY
+    ========================================================== */
+
+    document
+        .getElementById("whatsappEnquiry")
+        .addEventListener("click", function() {
+
+            const data =
+                getFormData();
+
+
+            const message =
+                encodeURIComponent(
+
+                    "Hello Trust&Co Web Services,\n\n" +
+
+                    "I am interested in the website package.\n\n" +
+
+                    "Name: " +
+                    data.name +
+                    "\n" +
+
+                    "Business: " +
+                    data.business +
+                    "\n" +
+
+                    "Email: " +
+                    data.email +
+                    "\n" +
+
+                    "Phone: " +
+                    data.phone +
+                    "\n\n" +
+
+                    "Requirement:\n" +
+                    data.message
+
+                );
+
+
+            window.open(
+                "https://wa.me/918097361210?text=" +
+                message,
+                "_blank"
+            );
+
+        });
+
+
+    /* =========================================================
+       WHATSAPP SHARE
+    ========================================================== */
+
+    document
+        .getElementById("shareWhatsApp")
+        .addEventListener("click", function(event) {
+
+            event.preventDefault();
+
+
+            const text =
+                encodeURIComponent(
+                    "Check out Trust&Co Web Services: " +
+                    websiteURL
+                );
+
+
+            window.open(
+                "https://wa.me/?text=" + text,
+                "_blank"
+            );
+
+        });
+
+
+    /* =========================================================
+       FACEBOOK SHARE
+    ========================================================== */
+
+    document
+        .getElementById("shareFacebook")
+        .addEventListener("click", function(event) {
+
+            event.preventDefault();
+
+
+            window.open(
+
+                "https://www.facebook.com/sharer/sharer.php?u=" +
+                encodeURIComponent(websiteURL),
+
+                "_blank"
+
+            );
+
+        });
+
+
+    /* =========================================================
+       X SHARE
+    ========================================================== */
+
+    document
+        .getElementById("shareX")
+        .addEventListener("click", function(event) {
+
+            event.preventDefault();
+
+
+            const text =
+                encodeURIComponent(
+                    "Trust&Co Web Services"
+                );
+
+
+            window.open(
+
+                "https://twitter.com/intent/tweet?text=" +
+                text +
+                "&url=" +
+                encodeURIComponent(websiteURL),
+
+                "_blank"
+
+            );
+
+        });
+
+
+    /* =========================================================
+       COPY WEBSITE LINK
+    ========================================================== */
+
+    document
+        .getElementById("copyLink")
+        .addEventListener("click", async function(event) {
+
+            event.preventDefault();
+
+
+            try {
+
+                await navigator.clipboard.writeText(
+                    websiteURL
+                );
+
+
+                this.textContent =
+                    "Copied ✓";
+
+
+                setTimeout(() => {
+
+                    this.textContent =
+                        "Copy Website Link";
+
+                }, 1800);
+
+
+            } catch (error) {
+
+                window.prompt(
+                    "Copy this website link:",
+                    websiteURL
+                );
+
+            }
+
+        });
+
+</script>
+
 
 </body>
 </html>
